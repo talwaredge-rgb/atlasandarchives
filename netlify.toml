@@ -3,5 +3,5 @@
 
 [[redirects]]
   from = "/"
-  to = "/atlas-archives-v5.html"
+  to = "/index.html"
   status = 200
