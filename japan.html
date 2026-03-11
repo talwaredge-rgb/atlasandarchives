@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why We Keep Going Back to Japan Every Autumn — Atlas & Archives</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1410;
+    --gold: #b8924a;
+    --gold-light: #d4a96a;
+    --cream: #faf6f0;
+    --parchment: #f5efe6;
+    --warm-dark: #2c2118;
+    --text: #3a2e24;
+    --muted: #7a6a58;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.2rem 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(26,20,16,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(184,146,74,0.15);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 300; letter-spacing: 0.25em;
+    color: var(--gold-light); text-decoration: none; text-transform: uppercase;
+  }
+  .nav-back {
+    font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(245,239,230,0.45); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--gold-light); }
+  .nav-back::before { content: "← "; }
+
+  /* ── HERO ── */
+  .blog-hero {
+    height: 92vh; min-height: 580px;
+    position: relative; overflow: hidden;
+    display: flex; align-items: flex-end;
+  }
+  .blog-hero img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%; object-fit: cover;
+    object-position: center 30%;
+  }
+  .blog-hero::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(26,20,16,0.1) 0%,
+      rgba(26,20,16,0.05) 40%,
+      rgba(26,20,16,0.75) 80%,
+      rgba(26,20,16,0.92) 100%
+    );
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 0 5vw 4rem;
+    max-width: 900px;
+  }
+  .hero-eyebrow {
+    font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold-light); margin-bottom: 1.2rem;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    font-weight: 300; line-height: 1.1;
+    color: #f5efe6; margin-bottom: 1.4rem;
+  }
+  .hero-title em { font-style: italic; color: var(--gold-light); }
+  .hero-meta {
+    font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(245,239,230,0.45);
+  }
+  .hero-meta span { color: rgba(245,239,230,0.2); margin: 0 0.6rem; }
+
+  /* ── ARTICLE BODY ── */
+  .article-wrap {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+  }
+
+  /* Drop cap intro */
+  .article-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; font-weight: 300; line-height: 1.85;
+    color: var(--text); margin-bottom: 2.5rem;
+  }
+  .article-intro::first-letter {
+    float: left;
+    font-size: 4.2rem; line-height: 0.8;
+    font-weight: 400; color: var(--gold);
+    margin: 0.1rem 0.15rem 0 0;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  p {
+    font-size: 0.95rem; line-height: 1.9;
+    color: var(--text); margin-bottom: 1.4rem;
+  }
+  p em { font-style: italic; color: #5a4535; }
+  p strong { font-weight: 400; color: var(--ink); }
+
+  /* Section headers */
+  .section-break {
+    margin: 3.5rem 0 2rem;
+    display: flex; align-items: center; gap: 1.5rem;
+  }
+  .section-break h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem; font-weight: 300; font-style: italic;
+    color: var(--ink); white-space: nowrap;
+  }
+  .section-break::after {
+    content: ''; flex: 1;
+    height: 1px; background: rgba(184,146,74,0.25);
+  }
+
+  /* Full-bleed image */
+  .img-full {
+    width: calc(100% + 4rem); margin-left: -2rem;
+    margin-bottom: 2rem; margin-top: 0.5rem;
+    overflow: hidden;
+    max-height: 520px;
+  }
+  .img-full img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+  }
+
+  /* Two-up image pair */
+  .img-pair {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    width: calc(100% + 4rem); margin-left: -2rem;
+    margin-bottom: 2rem; margin-top: 0.5rem;
+  }
+  .img-pair img {
+    width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block;
+  }
+
+  /* Single inset image */
+  .img-inset {
+    margin: 1.5rem 0 2rem;
+    overflow: hidden;
+  }
+  .img-inset img {
+    width: 100%; display: block;
+    max-height: 440px; object-fit: cover;
+  }
+  .img-caption {
+    font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted); margin-top: 0.5rem;
+    text-align: right;
+  }
+
+  /* Pull quote */
+  .pull-quote {
+    margin: 2.5rem -1rem;
+    padding: 1.8rem 2rem;
+    border-left: 2px solid var(--gold);
+    background: rgba(184,146,74,0.04);
+  }
+  .pull-quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem; font-style: italic; font-weight: 300;
+    line-height: 1.65; color: var(--ink); margin: 0;
+  }
+
+  /* Tip box */
+  .tip-box {
+    margin: 2rem 0;
+    padding: 1.2rem 1.5rem;
+    border: 1px solid rgba(184,146,74,0.3);
+    background: rgba(184,146,74,0.03);
+  }
+  .tip-box-label {
+    font-size: 0.52rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.5rem;
+  }
+  .tip-box p { margin: 0; font-size: 0.85rem; line-height: 1.75; }
+
+  /* Horizontal rule */
+  hr.story-rule {
+    border: none; border-top: 1px solid rgba(184,146,74,0.2);
+    margin: 3rem 0;
+  }
+
+  /* CTA footer */
+  .blog-cta {
+    background: var(--ink);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+  }
+  .blog-cta p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-style: italic;
+    color: rgba(245,239,230,0.7); margin-bottom: 1.5rem;
+    max-width: 540px; margin-left: auto; margin-right: auto;
+  }
+  .blog-cta a {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    text-decoration: none;
+    font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+    transition: all 0.25s;
+  }
+  .blog-cta a:hover {
+    background: var(--gold);
+    color: var(--ink);
+  }
+
+  @media (max-width: 600px) {
+    nav { padding: 1rem 1.5rem; }
+    .hero-content { padding: 0 1.5rem 3rem; }
+    .article-wrap { padding: 3rem 1.5rem 5rem; }
+    .img-full, .img-pair { width: 100%; margin-left: 0; }
+    .section-break h2 { font-size: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Atlas &amp; Archives</a>
+  <a class="nav-back" href="/#journal">Back to Journal</a>
+</nav>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <img src="images/japan/Kawaguchiko5.JPG" alt="Autumn maple canopy Japan">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Japan · November · 14 Days</div>
+    <h1 class="hero-title">Why We Keep Going Back to<br><em>Japan Every Autumn</em></h1>
+    <div class="hero-meta">Osaka <span>·</span> Nara <span>·</span> Kyoto <span>·</span> Kawaguchiko <span>·</span> Tokyo</div>
+  </div>
+</section>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+
+  <p class="article-intro">This was our third time in Japan — and all three times in November. You'd think by the third visit the sense of arrival would soften, that the strangeness would have worn off, that the country would have started to feel familiar in the way that places do when you've been before. It hasn't. Japan still manages, every single time, to feel like the first time.</p>
+
+  <p>We landed in Osaka on a Tuesday afternoon, took the Nankai Airport Express straight into Namba, and by 7pm we were standing in Dotonbori with <em>takoyaki</em> (octopus balls — chewy, hot, slightly dangerous) burning our fingers and the Glico Running Man glowing above the canal. The jetlag hadn't even arrived yet and Japan had already delivered.</p>
+
+  <!-- OSAKA -->
+  <div class="section-break"><h2>Osaka</h2></div>
+  <p>Most people treat Osaka as a one-night stopover on the way to Kyoto. We think that's a mistake.</p>
+  <p>Osaka has an energy that Kyoto doesn't — looser, louder, more focused on eating well and enjoying itself. The city's unofficial motto is <em>kuidaore</em>, which roughly translates to "eat until you drop." We tried our best.</p>
+
+  <div class="img-inset">
+    <img src="images/japan/Osakacastle.JPG" alt="Osaka Castle in autumn">
+    <div class="img-caption">Osaka Castle · Day 3</div>
+  </div>
+
+  <p>Back in Osaka on day three: the Umeda Sky Building's floating observatory looks out over the entire Kansai plain from the 40th floor, which is the correct place to begin to understand how large this city actually is. Then Osaka Castle in the afternoon, the Tonbori River cruise at dusk, and crab at Kani Douraku — the place with the enormous mechanical crab over the entrance, which turns out to be excellent rather than just theatrical.</p>
+
+  <div class="tip-box">
+    <div class="tip-box-label">On Osaka Food</div>
+    <p>Shinsaibashi: Canelita Sweets for vegan pastries, Pablo for the cheese tart. End every evening with Rikuro's cheesecake — soft as a cloud, dangerously easy to eat an entire box of.</p>
+  </div>
+
+  <!-- NARA -->
+  <div class="section-break"><h2>Nara</h2></div>
+  <p>Day two took us to <strong>Nara</strong> on the Kintetsu train — 40 minutes, no changes, completely straightforward. Nara Deer Park is the kind of place that sounds gimmicky in theory and is quietly magnificent in reality. The deer have lived alongside the city for over 1,200 years and they know it. They bow for food. They follow you through temple gates. One attached itself to us near Todaiji and spent a companionable 20 minutes investigating our bags.</p>
+
+  <div class="img-pair">
+    <img src="images/japan/Nara.JPG" alt="Deer under red maple Nara">
+    <img src="images/japan/nara2.JPG" alt="Autumn reflection Nara pond">
+  </div>
+
+  <p>We ate mochi from Nakatanidou — fresh-pounded on the street, chewy and warm — and then lunch at the okonomiyaki place near the station. It's run by an old couple, both well into their seventies, and the food was excellent. It also gave us, frankly, a little motivation for what we might want to do after retirement.</p>
+
+  <!-- KYOTO -->
+  <div class="section-break"><h2>Kyoto</h2></div>
+  <p>The train from Osaka to Kyoto takes exactly one hour. We've made this journey three times now and it still feels like a shift in register — from Osaka's street-level energy to Kyoto's quieter, more considered pace. Kyoto is the kind of city that rewards not having a plan.</p>
+  <p>That said, we had two things we weren't willing to skip.</p>
+
+  <div class="img-inset">
+    <img src="images/japan/Fushimi Inari.jpg" alt="Fushimi Inari torii gates">
+    <div class="img-caption">Fushimi Inari · Best visited at 4pm</div>
+  </div>
+
+  <p><strong>Fushimi Inari</strong> in the late afternoon. Everyone goes to Fushimi Inari and everyone goes at the wrong time — mid-morning, in the middle of a tour group. Go at 4pm. Walk up past the first ridge where the crowds thin out. The path keeps climbing through thousands of vermilion gates and eventually you decide it's enough walking for the day and head back — but not before that hour of near-silence in the gates stays with you.</p>
+
+  <div class="img-inset">
+    <img src="images/japan/Kinkakuji2.JPG" alt="Kinkaku-ji Golden Pavilion">
+    <div class="img-caption">Kinkaku-ji · Arrive at opening time</div>
+  </div>
+
+  <p><strong>Kinkaku-ji</strong> — the Golden Pavilion — at opening time. We arrived at 9am and had perhaps fifteen minutes before the crowds filled the viewing area. In those fifteen minutes, with the gold reflection sitting perfectly still in the pond and the maple trees burning behind it, we both understood why people photograph this place obsessively. It is, quite simply, one of the most beautiful things we have ever seen. You will also hear "Kawaii!" — Japanese for cute, lovely — at every turn.</p>
+
+  <div class="pull-quote">
+    <p>"The bamboo forest gets photographed so heavily that it's easy to assume it will disappoint in person. It doesn't."</p>
+  </div>
+
+  <div class="img-inset">
+    <img src="images/japan/Geisha.JPG" alt="Kimono walkers at Arashiyama bamboo forest">
+    <div class="img-caption">Arashiyama Bamboo Forest · Kyoto</div>
+  </div>
+
+  <p>The second Kyoto day was for <strong>Arashiyama</strong>. Stand inside the bamboo on a November morning and look up — the stalks are forty feet tall and the light comes through in long filtered shafts. Then spend the afternoon in Gion, walking the stone-paved lanes when the lanterns are lit. Dinner: ramen at Mushoshin Gion, a hole-in-the-wall with a queue outside and a rich, deeply-seasoned broth that's completely worth it. Then matcha parfait at Saryo Tsujiri — one of those things you think about on the flight home.</p>
+
+  <div class="img-inset">
+    <img src="images/japan/Kawaguchiko3.JPG" alt="Ramen bowls Mushoshin Gion">
+    <div class="img-caption">Dinner at Mushoshin Gion · Kyoto</div>
+  </div>
+
+  <!-- KAWAGUCHIKO -->
+  <div class="section-break"><h2>Kawaguchiko</h2></div>
+
+  <p>Here's the thing about Mt. Fuji that no one tells you: you probably won't see it. Fuji is covered by cloud roughly 60% of the time. It is famously, almost perversely shy for the most iconic mountain in the world. We knew this going in — this was our second time in the Fuji Five Lakes area — and we still felt the particular low-grade anxiety of watching the weather app and trying to will a mountain into visibility.</p>
+  <p>We got lucky. Both mornings were clear.</p>
+
+  <div class="img-pair">
+    <img src="images/japan/Kawaguchiko.JPG" alt="Chureito Pagoda autumn leaves Kawaguchiko">
+    <img src="images/japan/Kawaguchiko2.JPG" alt="Autumn maple Japan">
+  </div>
+
+  <p>Two days here: the Panoramic Ropeway on day one for a view of both the lake and the mountain simultaneously. Day two: the Narusawa Ice Cave, and a Swan Boat on the lake in late afternoon when the light is going amber. We sent our bags ahead to Tokyo overnight (¥1,500, delivered to our hotel by morning — Japan does things like this), ate ramen at a street-side van, and went to bed early.</p>
+
+  <!-- TOKYO -->
+  <div class="section-break"><h2>Tokyo</h2></div>
+  <p>We have stayed in Tokyo for three days, five days, and now six days. It is never enough.</p>
+
+  <div class="img-inset">
+    <img src="images/japan/Disneyland.JPG" alt="Tokyo Disneyland castle night">
+    <div class="img-caption">Tokyo Disneyland · 40th Anniversary</div>
+  </div>
+
+  <p><strong>Disneyland</strong> — a full day, and we are not embarrassed about this. Tokyo Disneyland is operating at a level that other Disney parks aren't. Everything runs. The food is better. The crowds are managed with extraordinary precision. We were there from opening to closing and came home demolished and happy.</p>
+  <p><strong>Team Labs Borderless</strong> — an evening of digital art that genuinely defies description. Rooms that react to your movement, light that pools on the floor like water, flowers that grow and bloom around you. We spent three hours there and it felt like thirty minutes.</p>
+
+  <div class="img-inset">
+    <img src="images/japan/Teamlabs.JPG" alt="Team Labs Borderless Tokyo">
+    <div class="img-caption">Team Lab Borderless · Tokyo</div>
+  </div>
+
+  <p><strong>Toyosu Fish Market</strong> at dawn. <strong>Senso-ji</strong> in Asakusa at 7am, before the tourist groups arrive. <strong>Shibuya Crossing</strong> at night — yes, it's touristy, and yes you have to do it. Stand on the second floor of the Starbucks opposite and watch the human tide. Then take the lift up to Shibuya Sky and see the entire city laid out at night. Don't forget to find the statue of Hachiko nearby — the loyal dog immortalised in the Richard Gere film.</p>
+
+  <div class="img-inset">
+    <img src="images/japan/Tokyo.JPG" alt="Shibuya Sky rooftop Tokyo night view">
+    <div class="img-caption">Shibuya Sky · Tokyo</div>
+  </div>
+
+  <p><strong>Golden Gai</strong> in Shinjuku — a tiny grid of lanes packed with bars the size of large wardrobes, most with six seats, each with its own personality. We squeezed into one playing old French film soundtracks, ordered whisky, and spent two hours talking to a retired Japanese architect. This is why you travel.</p>
+  <p>And dinner at <strong>Florilege</strong>. We had been trying to book this restaurant for two years. The French-Japanese tasting menu — eight courses, each one precise and surprising — was everything we'd hoped for. It may be in the top five meals we've had anywhere. It was our anniversary, and as they say — Happy Wife, Happy Life.</p>
+
+  <hr class="story-rule">
+
+  <!-- CLOSING -->
+  <div class="section-break"><h2>The Part We Didn't Expect</h2></div>
+  <p>We've been to Japan three times. We expected the temples, the food, the efficiency, the autumn colour. What we didn't fully expect, even this time, was how <em>gentle</em> the whole experience was.</p>
+
+  <div class="tip-box">
+    <div class="tip-box-label">What to Wear · November</div>
+    <p>November in Japan is crisp and dry — Osaka and Kyoto sit around 10–16°C during the day, Tokyo slightly cooler. Light layers work perfectly: a base, a mid-layer sweater, and a packable jacket for evenings. Kawaguchiko drops to near-zero after dark so bring something warm for lakeside evenings. Good walking shoes are non-negotiable — you will cover 12–15km on most days.</p>
+  </div>
+  <p>Japan is a country that takes enormous care of you as a visitor. The trains announce stations in four languages. The convenience store staff wrap your purchase with the same attention a department store would. A stranger at Kawaguchiko station noticed we were looking at the bus map and spent ten minutes walking us to the right platform. Nobody asked for anything in return.</p>
+
+  <div class="pull-quote">
+    <p>"There is a word in Japanese — omotenashi — that gets translated as 'hospitality' but means something closer to 'anticipating what someone needs before they ask.' Japan runs on this principle."</p>
+  </div>
+
+  <p>After 14 days you start to take it for granted, and then you land at home and notice its absence immediately. That's why we keep going back.</p>
+
+</div><!-- /article-wrap -->
+
+<div class="blog-cta">
+  <p>Planning a trip to Japan? The itinerary that we ran — Osaka, Nara, Kyoto, Kawaguchiko, Tokyo, 14 days — is on the site.</p>
+  <a href="https://wa.me/919845602165">Message us on WhatsApp</a>
+</div>
+
+</body>
+</html>
