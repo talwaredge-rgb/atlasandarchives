@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turkey Is Not One Country. It Is Several. — Atlas &amp; Archives</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root { --ink: #1a1410; --gold: #b8924a; --gold-light: #d4a96a; --cream: #faf6f0; --text: #3a2e24; --muted: #7a6a58; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--cream); color: var(--text); font-family: 'Josefin Sans', sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.2rem 3rem; display: flex; align-items: center; justify-content: space-between; background: rgba(26,20,16,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(184,146,74,0.15); }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; letter-spacing: 0.25em; color: var(--gold-light); text-decoration: none; text-transform: uppercase; }
+  .nav-back { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,239,230,0.45); text-decoration: none; transition: color 0.2s; }
+  .nav-back:hover { color: var(--gold-light); }
+  .nav-back::before { content: "← "; }
+  .blog-hero { height: 92vh; min-height: 580px; position: relative; overflow: hidden; display: flex; align-items: flex-end; }
+  .blog-hero img.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+  .blog-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,20,16,0.05) 0%, rgba(26,20,16,0.0) 35%, rgba(26,20,16,0.65) 75%, rgba(26,20,16,0.9) 100%); }
+  .hero-content { position: relative; z-index: 2; padding: 0 5vw 4rem; max-width: 900px; }
+  .hero-eyebrow { font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 1.2rem; }
+  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 300; line-height: 1.1; color: #f5efe6; margin-bottom: 1.4rem; }
+  .hero-title em { font-style: italic; color: var(--gold-light); }
+  .hero-meta { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,239,230,0.45); }
+  .hero-meta span { color: rgba(245,239,230,0.2); margin: 0 0.6rem; }
+  .article-wrap { max-width: 740px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+  .article-intro { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 300; line-height: 1.85; color: var(--text); margin-bottom: 2.5rem; }
+  .article-intro::first-letter { float: left; font-size: 4.2rem; line-height: 0.8; font-weight: 400; color: var(--gold); margin: 0.1rem 0.15rem 0 0; font-family: 'Cormorant Garamond', serif; }
+  p { font-size: 0.95rem; line-height: 1.9; color: var(--text); margin-bottom: 1.4rem; }
+  p em { font-style: italic; color: #5a4535; }
+  p strong { font-weight: 400; color: var(--ink); }
+  .section-break { margin: 3.5rem 0 2rem; display: flex; align-items: center; gap: 1.5rem; }
+  .section-break h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; font-style: italic; color: var(--ink); white-space: nowrap; }
+  .section-break::after { content: ''; flex: 1; height: 1px; background: rgba(184,146,74,0.25); }
+  .img-full { width: calc(100% + 4rem); margin-left: -2rem; margin-bottom: 0.5rem; margin-top: 1rem; overflow: hidden; }
+  .img-full img { width: 100%; display: block; max-height: 560px; object-fit: cover; object-position: center; }
+  .img-full.tall img { max-height: 700px; }
+  .img-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; width: calc(100% + 4rem); margin-left: -2rem; margin-bottom: 0.5rem; margin-top: 1rem; }
+  .img-pair img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
+  .img-pair img.land { aspect-ratio: 4/3; }
+  .img-inset { margin: 1.5rem 0 0.5rem; overflow: hidden; }
+  .img-inset img { width: 100%; display: block; max-height: 460px; object-fit: cover; }
+  .img-caption { font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-top: 0.5rem; margin-bottom: 2rem; text-align: right; }
+  .pull-quote { margin: 2.5rem -1rem; padding: 1.8rem 2rem; border-left: 2px solid var(--gold); background: rgba(184,146,74,0.04); }
+  .pull-quote p { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-style: italic; font-weight: 300; line-height: 1.65; color: var(--ink); margin: 0; }
+  .tip-box { margin: 2rem 0; padding: 1.2rem 1.5rem; border: 1px solid rgba(184,146,74,0.3); background: rgba(184,146,74,0.03); }
+  .tip-box-label { font-size: 0.52rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+  .tip-box p { margin: 0; font-size: 0.85rem; line-height: 1.75; }
+  hr.story-rule { border: none; border-top: 1px solid rgba(184,146,74,0.2); margin: 3rem 0; }
+  .blog-cta { background: var(--ink); padding: 4rem 2rem; text-align: center; margin-top: 4rem; }
+  .blog-cta p { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-style: italic; color: rgba(245,239,230,0.7); margin-bottom: 1.5rem; max-width: 540px; margin-left: auto; margin-right: auto; }
+  .blog-cta a { display: inline-block; padding: 0.9rem 2.5rem; border: 1px solid var(--gold); color: var(--gold-light); text-decoration: none; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; transition: all 0.25s; }
+  .blog-cta a:hover { background: var(--gold); color: var(--ink); }
+  @media (max-width: 600px) { nav { padding: 1rem 1.5rem; } .hero-content { padding: 0 1.5rem 3rem; } .img-full, .img-pair { width: 100%; margin-left: 0; } .section-break h2 { white-space: normal; font-size: 1.5rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Atlas &amp; Archives</a>
+  <a class="nav-back" href="/#journal">Back to Journal</a>
+</nav>
+
+<section class="blog-hero">
+  <img class="hero-img" src="images/Turkey/Galata Tower.jpg" alt="Galata Tower Istanbul with red dress and spring blossoms">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Turkey · April · 13 Days</div>
+    <h1 class="hero-title">Turkey Is Not<br>One Country.<br><em>It Is Several.</em></h1>
+    <div class="hero-meta">Istanbul <span>·</span> Cappadocia <span>·</span> Antalya <span>·</span> Pamukkale <span>·</span> Kusadasi</div>
+  </div>
+</section>
+
+<div class="article-wrap">
+
+  <p class="article-intro">Turkey is the only country we have been to where the landscape, the food, the architecture, and the entire feeling of a place changes so completely every two days that it stops feeling like one trip and starts feeling like five. Istanbul is not Cappadocia. Cappadocia is not the Aegean coast. The coast is not the thermal terraces of Pamukkale. None of it is anything like anywhere else we have been across fifty countries.</p>
+
+  <p>We went in April and the timing turned out to be near-perfect. Istanbul was in full tulip festival bloom — the parks carpeted in reds and yellows, the city at its most alive before summer crowds arrive. The temperature was warm but not punishing. The evenings were long. Turkey in April is a strong recommendation.</p>
+
+  <div class="section-break"><h2>Istanbul: Tulips, Cats, and a Magnificent Abundance of Mosques</h2></div>
+
+  <p>Istanbul arrived at us in a rush of colour. The <strong>Gulhane Park tulip festival</strong> was in full swing — hundreds of thousands of tulips planted across the park below Topkapi Palace, in reds and yellows and oranges, the kind of display that stops you mid-step. Istanbul actually has strong historical roots in the tulip — the Ottoman period was called the Tulip Era, and the city takes the flower seriously every April.</p>
+
+  <div class="img-full">
+    <img src="images/Turkey/Tulips.jpg" alt="Istanbul tulip festival Gulhane Park April">
+  </div>
+  <div class="img-caption">Gulhane Park · Istanbul Tulip Festival · April</div>
+
+  <p>And then there are the cats. Istanbul's street cats are famous for good reason — they are everywhere, they are looked after by the whole neighbourhood collectively, and they have an air of complete ownership over the city that is both charming and accurate. Every cafe, every alley, every rooftop terrace. We photographed more cats in four days than we had in the previous four years of travel.</p>
+
+  <div class="img-pair">
+    <img src="images/Turkey/Cat1.jpg" alt="Istanbul street cat with bandana">
+    <img src="images/Turkey/Mosque1.jpg" alt="Istanbul mosque skyline from the water">
+  </div>
+  <div class="img-caption">Istanbul · Street Cats and the Old City Skyline</div>
+
+  <p>The mosque skyline from across the Golden Horn is one of the great urban views anywhere — domes and minarets layered against the sky, the New Mosque in the foreground and Suleymaniye behind it. We spent time inside both <strong>Hagia Sophia</strong> and the <strong>Blue Mosque</strong> on consecutive mornings, and the interiors of both are extraordinary in completely different ways.</p>
+
+  <div class="img-pair">
+    <img src="images/Turkey/Mosque.jpg" alt="Hagia Sophia interior golden dome Istanbul">
+    <img src="images/Turkey/Mosque2.jpg" alt="Blue Mosque interior ceiling tiles Istanbul">
+  </div>
+  <div class="img-caption">Hagia Sophia and the Blue Mosque · Istanbul</div>
+
+  <p>Hagia Sophia's interior is ancient gold and scale — a dome completed in 537 AD that still feels ambitious today. The Blue Mosque is the opposite: intricate blue Iznik tile work covering every surface, the light coming through hundreds of stained glass windows, the ceiling a layered geometry of domes and semi-domes that you just stand beneath and look up at for longer than you planned.</p>
+
+  <p>The <strong>Galata Tower</strong> is an icon of the European side of the city — a medieval Genoese tower that has stood since 1348, rising above the Galata neighbourhood. We did a photoshoot there in April with the cherry blossoms in full bloom around it, and that photograph — red dress, pink blossom, stone tower against blue sky — is the one that captures Istanbul's particular layered beauty better than any other we took on the trip.</p>
+
+  <div class="pull-quote">
+    <p>"Istanbul contains twenty centuries of architecture, two continents, and roughly four thousand cats. It takes hold of you immediately and does not let go. We left wanting more days."</p>
+  </div>
+
+  <div class="tip-box">
+    <div class="tip-box-label">Istanbul Food Notes</div>
+    <p>The food in Istanbul is some of the best we have eaten anywhere. The lamb in particular is exceptional — the lamb chops and mixed grill plates are the thing to order, with fresh flatbread, charred vegetables, and the kind of depth of flavour that comes from a cuisine that has been refining these dishes for centuries. Do not leave without eating proper kunafa — the original Turkish version, not the versions that have spread across the Middle East, made fresh with clotted cream and crisp pastry and eaten warm. Gulhane Sark Sofrasi for lunch near the palace. For the full meat feast experience, find a neighbourhood kebab house and order the mixed platter.</p>
+  </div>
+
+  <div class="img-full">
+    <img src="images/Turkey/Food.jpg" alt="Turkish lamb chops mixed grill feast Istanbul" style="object-position: center 60%;">
+  </div>
+  <div class="img-caption">Lamb Chops and Mixed Grill · Istanbul</div>
+
+  <div class="section-break"><h2>Cappadocia: The Landscape That Does Not Look Real</h2></div>
+
+  <p>We flew from Istanbul to Kayseri and drove into Cappadocia as the light was going. Even at dusk, with the fairy chimneys in silhouette, the landscape is disorienting. It looks like a film set. It does not look like somewhere that exists. It is not a feeling that goes away.</p>
+
+  <div class="img-full tall">
+    <img src="images/Turkey/Cappadocia.jpg" alt="Hot air balloons inflating at dawn Cappadocia">
+  </div>
+  <div class="img-caption">Cappadocia · 4:30am Balloon Launch · Göreme Valley</div>
+
+  <p>We set an alarm for 4:30am to watch the balloons launch. The launch field before dawn: dozens of balloons being inflated simultaneously, the burners firing, everything lit orange against the pre-dawn dark. Then they lift off — one by one, then in groups, until a hundred balloons are drifting in complete silence over the valleys and the chimneys and the sleeping town below. We stood in the cold and watched until the last one disappeared.</p>
+
+  <div class="img-pair">
+    <img src="images/Turkey/Cappadocia2.JPG" alt="Many hot air balloons over Cappadocia at sunrise">
+    <img src="images/Turkey/Cappadocia3.JPG" alt="Red vintage car hot air balloon Cappadocia">
+  </div>
+  <div class="img-caption">A Hundred Balloons · Cappadocia at First Light</div>
+
+  <p>The valleys are best explored on foot or by rental car once the balloons are down. The <strong>Red Tour</strong> covers the major viewpoints and the underground city of Derinkuyu — a subterranean city carved eight levels deep into the volcanic rock, once home to thousands of early Christians hiding from persecution. Walking its low corridors is one of the stranger and more affecting experiences of the trip.</p>
+
+  <div class="img-full">
+    <img src="images/Turkey/Cave.jpg" alt="Cave church interior carved rock Cappadocia">
+  </div>
+  <div class="img-caption">Rock-Cut Church Interior · Cappadocia Valleys</div>
+
+  <p>The cave churches scattered through the valleys — carved directly into the volcanic tuff, crosses etched into the stone walls, light falling through openings onto rock floors worn smooth by centuries of use — are among the most quietly extraordinary things we encountered on the entire trip.</p>
+
+  <div class="section-break"><h2>Antalya: The Mediterranean as a Reward</h2></div>
+
+  <p>We flew from Cappadocia to Antalya late one evening and woke up to the Mediterranean. After the surreal interior of the country, the coast felt like exactly the right reward: long beaches, pine-covered cliffs dropping to turquoise water, the pace dropping to something close to nothing. We spent time on <strong>Konyalti Beach</strong> at sunset — the Taurus mountains behind the bay, the light going amber on the water — and it was the simplest and most contentedly pleasant few hours of the trip.</p>
+
+  <div class="section-break"><h2>Pamukkale: White Terraces, Thermal Water, Roman Columns</h2></div>
+
+  <p>Three hours by road from Antalya and the landscape shifts again — from Mediterranean coast to the wide Anatolian interior. <strong>Pamukkale</strong> is exactly what every photograph suggests: white calcium carbonate terraces cascading down a hillside, each pool filled with warm thermal water, the whole formation glowing bright against the valley below.</p>
+
+  <div class="img-full">
+    <img src="images/Turkey/Pamukkale.jpg" alt="Pamukkale white travertine terraces thermal pools">
+  </div>
+  <div class="img-caption">Pamukkale · Cotton Castle · Thermal Terraces</div>
+
+  <p>You walk barefoot from the bottom. The water is warm and the calcium surface is smooth under your feet. Looking back down the hill, the town of Denizli visible in the valley, mountains behind it — it is a genuinely odd and beautiful thing. The <strong>Cleopatra Antique Pool</strong> at the top, where you swim among actual sunken Roman columns in warm mineral water, is the kind of experience that sounds gimmicky and turns out to be quietly wonderful.</p>
+
+  <div class="section-break"><h2>Kusadasi & Ephesus: History at Its Most Intact</h2></div>
+
+  <p>A final drive to the Aegean coast, and <strong>Kusadasi</strong> delivered the kind of sunset that makes you understand why people have been coming to this particular stretch of Turkish coastline for millennia. Pine-covered headlands dropping into still water, the light going pink and gold, Greece visible across the strait.</p>
+
+  <div class="img-full">
+    <img src="images/Turkey/Kusadasi.jpg" alt="Kusadasi Aegean coast at sunset">
+  </div>
+  <div class="img-caption">Aegean Coast · Kusadasi</div>
+
+  <p>The following morning: <strong>Ephesus</strong>. One of the best-preserved Roman cities in the world, and walking it does something to you that photographs never quite convey. The marble street that Mark Antony and Cleopatra walked. The Library of Celsus, two storeys of facade still standing. The Great Theatre, which seated 25,000 people and still could. The scale of it — the ambition of the civilisation that built it — sits with you for days after.</p>
+
+  <div class="img-full">
+    <img src="images/Turkey/Ephsius.jpg" alt="Ephesus Great Theatre ancient Roman ruins">
+  </div>
+  <div class="img-caption">The Great Theatre · Ephesus · 1st Century BC</div>
+
+  <hr class="story-rule">
+
+  <div class="section-break"><h2>On Nazar, Evil Eyes, and Buying Everything in the Grand Bazaar</h2></div>
+
+  <p>Turkey's <em>nazar boncugu</em> — the blue glass evil eye amulet — hangs from the rear-view mirrors of taxis, over the doorways of shops, on the walls of hotels, around the necks of cats. It is everywhere and it is for sale in every possible size in the <strong>Grand Bazaar</strong>, where an entire section of shops sells nothing but variations on the blue eye. We bought several. They are in our house now, which perhaps explains our good fortune since.</p>
+
+  <div class="img-full">
+    <img src="images/Turkey/Nazar.jpg" alt="Turkish nazar evil eye amulets Grand Bazaar Istanbul">
+  </div>
+  <div class="img-caption">Nazar Boncugu · Evil Eye Amulets · Grand Bazaar</div>
+
+  <div class="tip-box">
+    <div class="tip-box-label">What to Wear · April</div>
+    <p>April is close to perfect timing for Turkey. Istanbul sits around 14–19°C — warm enough for light layers but not yet the summer heat. The tulip festival runs through most of April and the city is at its most beautiful. Cappadocia nights drop to around 5°C so bring a real jacket for the early morning balloon launch. The coast and Pamukkale reach 20–24°C by day. Comfortable walking shoes throughout — Istanbul's cobblestones and Cappadocia's valley trails punish anything impractical.</p>
+  </div>
+
+</div>
+
+<div class="blog-cta">
+  <p>Planning a Turkey trip? Our 13-day route — Istanbul, Cappadocia, Antalya, Pamukkale, Kusadasi — is on the site.</p>
+  <a href="https://wa.me/919845602165">Message us on WhatsApp</a>
+</div>
+
+</body>
+</html>
