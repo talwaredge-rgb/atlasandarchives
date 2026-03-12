@@ -349,45 +349,77 @@
   .ph-it3 { background: linear-gradient(160deg, #c0a070 0%, #906840 50%, #603020 100%); }
   .ph-it4 { background: linear-gradient(160deg, #a0b0a0 0%, #607060 50%, #303830 100%); }
 
-  /* ── RESTAURANTS ── */
-  .restaurants-section { background: var(--parchment); }
-  .resto-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    margin-top: 1rem;
+  /* ── RESTAURANTS CAROUSEL ── */
+  .restaurants-section { background: var(--parchment); padding-bottom: 4rem; }
+  .resto-carousel-wrap { position: relative; margin-top: 1rem; }
+  .resto-carousel {
+    display: flex;
+    gap: 1.8rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.5rem 4rem 1.5rem;
+    cursor: grab;
   }
-  .resto-card { position: relative; }
-  .resto-img {
-    width: 100%; height: 200px; overflow: hidden; margin-bottom: 1.2rem;
+  .resto-carousel::-webkit-scrollbar { display: none; }
+  .resto-carousel.dragging { cursor: grabbing; scroll-snap-type: none; }
+  .resto-card {
+    flex: 0 0 calc((100% - 8rem - 3.6rem) / 3);
+    scroll-snap-align: start;
     position: relative;
   }
-  .resto-img-inner { width: 100%; height: 100%; }
-  .ph-r1 { background: linear-gradient(135deg, #d4a878 0%, #9a6840 100%); }
-  .ph-r2 { background: linear-gradient(135deg, #8ab0a8 0%, #4a7870 100%); }
-  .ph-r3 { background: linear-gradient(135deg, #c8a060 0%, #886030 100%); }
-  .ph-r4 { background: linear-gradient(135deg, #a8b890 0%, #587848 100%); }
+  .resto-img {
+    width: 100%; height: 240px; overflow: hidden; margin-bottom: 1.2rem;
+    position: relative;
+  }
+  .resto-img img { transition: transform 0.6s ease; }
+  .resto-card:hover .resto-img img { transform: scale(1.04); }
   .resto-country {
     font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--gold); margin-bottom: 0.4rem;
   }
   .resto-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.25rem; font-weight: 400;
-    color: var(--ink); margin-bottom: 0.4rem;
-    line-height: 1.2;
-  }
-  .resto-desc {
-    font-size: 0.67rem; line-height: 1.7;
-    color: var(--text-muted); letter-spacing: 0.03em;
+    font-size: 1.25rem; font-weight: 500; color: var(--ink);
+    margin-bottom: 0.5rem; line-height: 1.2;
   }
   .resto-divider {
     width: 2rem; height: 1px; background: var(--gold);
-    margin: 0.8rem 0;
+    margin-bottom: 0.5rem;
   }
   .resto-type {
-    font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--text-muted);
+    font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: #9a8070; margin-bottom: 0.5rem;
+  }
+  .resto-desc {
+    font-size: 0.88rem; line-height: 1.65; color: #5a4a3a;
+    margin-top: 0.6rem;
+  }
+  .resto-carousel-nav {
+    display: flex; align-items: center; justify-content: center;
+    gap: 1.2rem; margin-top: 0.5rem;
+  }
+  .resto-nav-btn {
+    background: none; border: 1px solid var(--gold);
+    color: var(--gold); width: 2.4rem; height: 2.4rem;
+    border-radius: 50%; cursor: pointer; font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .resto-nav-btn:hover { background: var(--gold); color: #fff; }
+  .resto-nav-dots { display: flex; gap: 0.5rem; align-items: center; }
+  .resto-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #d4c4b0; cursor: pointer; transition: background 0.2s, transform 0.2s;
+  }
+  .resto-dot.active { background: var(--gold); transform: scale(1.35); }
+  @media (max-width: 900px) {
+    .resto-card { flex: 0 0 calc((100% - 8rem - 1.8rem) / 2); }
+  }
+  @media (max-width: 600px) {
+    .resto-card { flex: 0 0 80vw; }
+    .resto-carousel { padding: 0.5rem 1.5rem 1.5rem; }
   }
 
   /* ── BLOG ── */
@@ -1148,47 +1180,147 @@
       <h2 class="section-title">Meals We Still <em>Dream About</em></h2>
     </div>
     <div class="ornament">◆</div>
-    <div class="resto-grid fade-in">
+  </div>
+  <div class="resto-carousel-wrap fade-in">
+    <div class="resto-carousel" id="restoCarousel">
+
       <div class="resto-card">
         <div class="resto-img">
-          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Italy%20food.JPG" alt="Da Michele Pizza, Naples" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Sashimi%20Kyoto.jpeg" alt="Sashimi, Kyoto" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
         </div>
-        <div class="resto-country">Naples, Italy</div>
-        <div class="resto-name">Da Michele Pizzeria</div>
+        <div class="resto-country">Kyoto, Japan</div>
+        <div class="resto-name">Nishiki Market Sashimi</div>
         <div class="resto-divider"></div>
-        <div class="resto-type">Trattoria · Since 1870</div>
-        <div class="resto-desc" style="margin-top:0.6rem;">The original Margherita. No reservations. A two-hour queue that is absolutely worth it.</div>
+        <div class="resto-type">Market Counter · Morning</div>
+        <div class="resto-desc">Sliced to order at a narrow market stall. The kind of sashimi that makes every other version feel like a pale imitation.</div>
       </div>
+
       <div class="resto-card">
         <div class="resto-img">
-          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Korea%20food.jpeg" alt="Tosokchon Samgyetang, Seoul" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
-        </div>
-        <div class="resto-country">Seoul, South Korea</div>
-        <div class="resto-name">Tosokchon Samgyetang</div>
-        <div class="resto-divider"></div>
-        <div class="resto-type">Korean · Since 1983</div>
-        <div class="resto-desc" style="margin-top:0.6rem;">Ginseng chicken soup served in a 600-year-old hanok village. A bowl that somehow tastes like history.</div>
-      </div>
-      <div class="resto-card">
-        <div class="resto-img">
-          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Tokyo%20food.JPG" alt="Sushi Bowl, Tokyo" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Tokyo%20food.JPG" alt="Tokyo Food" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
         </div>
         <div class="resto-country">Tokyo, Japan</div>
-        <div class="resto-name">Tsukiji Fish Market</div>
+        <div class="resto-name">Tsukiji Outer Market</div>
         <div class="resto-divider"></div>
-        <div class="resto-type">Market Breakfast · Since 1935</div>
-        <div class="resto-desc" style="margin-top:0.6rem;">The freshest sushi and sashimi you'll ever eat, standing at a counter at 7am. No better start to a Tokyo morning.</div>
+        <div class="resto-type">Market Breakfast · 7am</div>
+        <div class="resto-desc">The freshest sushi standing at a counter before the city wakes up. No better start to a Tokyo morning.</div>
       </div>
+
       <div class="resto-card">
         <div class="resto-img">
-          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Turkey%20Food.JPG" alt="Pistachio Lamb Chops, Sultanahmet Kebab House, Istanbul" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Turkey%20Food.JPG" alt="Turkey Food" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
         </div>
         <div class="resto-country">Istanbul, Turkey</div>
         <div class="resto-name">Sultanahmet Kebab House</div>
         <div class="resto-divider"></div>
         <div class="resto-type">Turkish Grill · Old City</div>
-        <div class="resto-desc" style="margin-top:0.6rem;">Pistachio-crusted lamb chops grilled over charcoal, eaten on a sun-drenched terrace steps from the Blue Mosque. Unforgettable.</div>
+        <div class="resto-desc">Pistachio-crusted lamb chops grilled over charcoal, eaten on a terrace steps from the Blue Mosque.</div>
       </div>
+
+      <div class="resto-card">
+        <div class="resto-img">
+          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Korea%20food.jpeg" alt="Korea Food" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+        </div>
+        <div class="resto-country">Seoul, South Korea</div>
+        <div class="resto-name">Tosokchon Samgyetang</div>
+        <div class="resto-divider"></div>
+        <div class="resto-type">Korean · Since 1983</div>
+        <div class="resto-desc">Ginseng chicken soup in a hanok village. A bowl that somehow tastes like history.</div>
+      </div>
+
+      <div class="resto-card">
+        <div class="resto-img">
+          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Korean%20Fried%20Chicken%20Busan.jpeg" alt="Korean Fried Chicken, Busan" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+        </div>
+        <div class="resto-country">Busan, South Korea</div>
+        <div class="resto-name">Korean Fried Chicken</div>
+        <div class="resto-divider"></div>
+        <div class="resto-type">Street Food · Night Market</div>
+        <div class="resto-desc">Double-fried, lacquered in a sauce that is simultaneously sweet, spicy and completely addictive. Eaten at midnight.</div>
+      </div>
+
+      <div class="resto-card">
+        <div class="resto-img">
+          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Din%20Tai%20Fung%20Taipei.jpeg" alt="Din Tai Fung, Taipei" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+        </div>
+        <div class="resto-country">Taipei, Taiwan</div>
+        <div class="resto-name">Din Tai Fung</div>
+        <div class="resto-divider"></div>
+        <div class="resto-type">Dim Sum · Since 1958</div>
+        <div class="resto-desc">The original. Eighteen pleats on every xiao long bao, timed to the second. The standard every other dumpling is measured against.</div>
+      </div>
+
+      <div class="resto-card">
+        <div class="resto-img">
+          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Beef%20Pho%20Ho%20Chi%20Minh.jpeg" alt="Beef Pho, Ho Chi Minh City" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+        </div>
+        <div class="resto-country">Ho Chi Minh City, Vietnam</div>
+        <div class="resto-name">Pho Hoa Pasteur</div>
+        <div class="resto-divider"></div>
+        <div class="resto-type">Vietnamese · Since 1960</div>
+        <div class="resto-desc">Beef broth simmered for twelve hours, served with a pile of fresh herbs at a table shared with strangers. Perfect.</div>
+      </div>
+
+      <div class="resto-card">
+        <div class="resto-img">
+          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Pizza%204Ps%20Hanoi.jpeg" alt="Pizza 4Ps, Hanoi" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+        </div>
+        <div class="resto-country">Hanoi, Vietnam</div>
+        <div class="resto-name">Pizza 4P's</div>
+        <div class="resto-divider"></div>
+        <div class="resto-type">Japanese-Italian · Book Ahead</div>
+        <div class="resto-desc">Japanese precision applied to a wood-fired Neapolitan base. The half-burrata, half-tomato pizza is one of the great surprises of Southeast Asia.</div>
+      </div>
+
+      <div class="resto-card">
+        <div class="resto-img">
+          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Mango%20Sticky%20Rice%20Bangkok.jpeg" alt="Mango Sticky Rice, Bangkok" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+        </div>
+        <div class="resto-country">Bangkok, Thailand</div>
+        <div class="resto-name">Mango Sticky Rice</div>
+        <div class="resto-divider"></div>
+        <div class="resto-type">Street Dessert · April–June</div>
+        <div class="resto-desc">Nam Dok Mai mango in peak season over warm glutinous rice, finished with salted coconut cream. Eaten on the street, standing up. Worth flying to Bangkok for.</div>
+      </div>
+
+      <div class="resto-card">
+        <div class="resto-img">
+          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Macrons%20on%20Champs%20Elysse%20Paris.jpeg" alt="Macarons, Paris" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+        </div>
+        <div class="resto-country">Paris, France</div>
+        <div class="resto-name">Ladurée, Champs-Élysées</div>
+        <div class="resto-divider"></div>
+        <div class="resto-type">Pâtisserie · Since 1862</div>
+        <div class="resto-desc">The macaron that all other macarons are trying to be. Buy a box, eat one on the pavement outside, immediately buy another box.</div>
+      </div>
+
+      <div class="resto-card">
+        <div class="resto-img">
+          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Black%20Bun%20Burger%20Australia.jpeg" alt="Black Bun Burger, Australia" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+        </div>
+        <div class="resto-country">Australia</div>
+        <div class="resto-name">Black Bun Burger</div>
+        <div class="resto-divider"></div>
+        <div class="resto-type">Craft Burger · Casual</div>
+        <div class="resto-desc">Charcoal brioche bun, wagyu patty, truffle mayo. The kind of burger that makes you question every burger you've had before it.</div>
+      </div>
+
+      <div class="resto-card">
+        <div class="resto-img">
+          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Italy%20food.JPG" alt="Italy Food" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+        </div>
+        <div class="resto-country">Naples, Italy</div>
+        <div class="resto-name">Da Michele Pizzeria</div>
+        <div class="resto-divider"></div>
+        <div class="resto-type">Trattoria · Since 1870</div>
+        <div class="resto-desc">The original Margherita. No reservations, a long queue, two items on the menu. Absolutely worth every minute of the wait.</div>
+      </div>
+
+    </div>
+    <div class="resto-carousel-nav">
+      <button class="resto-nav-btn" id="restoPrev" onclick="scrollCarousel(-1)" aria-label="Previous">&#8592;</button>
+      <div class="resto-nav-dots" id="restoDotsWrap"></div>
+      <button class="resto-nav-btn" id="restoNext" onclick="scrollCarousel(1)" aria-label="Next">&#8594;</button>
     </div>
   </div>
 </section>
@@ -1906,6 +2038,66 @@ function closeItinerary() {
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeItinerary();
 });
+
+// ── RESTAURANT CAROUSEL ──
+(function() {
+  const carousel = document.getElementById('restoCarousel');
+  if (!carousel) return;
+
+  const cards = carousel.querySelectorAll('.resto-card');
+  const dotsWrap = document.getElementById('restoDotsWrap');
+  const totalDots = Math.ceil(cards.length / 3);
+
+  // Build dots
+  for (let i = 0; i < totalDots; i++) {
+    const d = document.createElement('div');
+    d.className = 'resto-dot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => scrollToPage(i));
+    dotsWrap.appendChild(d);
+  }
+
+  function getCardWidth() {
+    return cards[0].offsetWidth + parseFloat(getComputedStyle(carousel).gap);
+  }
+
+  function getCardsPerPage() {
+    const w = carousel.offsetWidth;
+    return w < 600 ? 1 : w < 900 ? 2 : 3;
+  }
+
+  function scrollToPage(page) {
+    const cpp = getCardsPerPage();
+    carousel.scrollTo({ left: page * cpp * getCardWidth(), behavior: 'smooth' });
+  }
+
+  window.scrollCarousel = function(dir) {
+    const cpp = getCardsPerPage();
+    carousel.scrollBy({ left: dir * cpp * getCardWidth(), behavior: 'smooth' });
+  };
+
+  carousel.addEventListener('scroll', () => {
+    const cpp = getCardsPerPage();
+    const page = Math.round(carousel.scrollLeft / (cpp * getCardWidth()));
+    dotsWrap.querySelectorAll('.resto-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === page);
+    });
+  });
+
+  // Drag to scroll
+  let isDragging = false, startX, startScroll;
+  carousel.addEventListener('mousedown', e => {
+    isDragging = true; startX = e.pageX; startScroll = carousel.scrollLeft;
+    carousel.classList.add('dragging');
+  });
+  document.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    carousel.scrollLeft = startScroll - (e.pageX - startX);
+  });
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+    carousel.classList.remove('dragging');
+  });
+})();
 </script>
 
 </body>
