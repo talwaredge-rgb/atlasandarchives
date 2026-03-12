@@ -2304,7 +2304,7 @@ document.addEventListener('keydown', e => {
  });
  document.addEventListener('mousemove', e => {
  if (!isDragging) return;
- carousel.scrollLeft = startScroll, (e.pageX, startX);
+ carousel.scrollLeft = startScroll - (e.pageX - startX);
  });
  document.addEventListener('mouseup', () => {
  isDragging = false;
