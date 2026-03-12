@@ -396,7 +396,7 @@
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    padding: 0.5rem 4rem 1.5rem;
+    padding: 0.5rem 4rem 1.5rem 4rem;
     cursor: grab;
   }
   .resto-carousel::-webkit-scrollbar { display: none; }
@@ -407,7 +407,10 @@
     position: relative;
   }
   .resto-img {
-    width: 100%; height: 320px; overflow: hidden; margin-bottom: 1.2rem;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    overflow: hidden; margin-bottom: 1.2rem;
     position: relative;
   }
   .resto-img img { transition: transform 0.6s ease; }
@@ -457,6 +460,84 @@
   @media (max-width: 600px) {
     .resto-card { flex: 0 0 80vw; }
     .resto-carousel { padding: 0.5rem 1.5rem 1.5rem; }
+  }
+
+  /* ── ABOUT ── */
+  .about-section {
+    background: #2c2118;
+    padding: 6rem 0;
+  }
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .about-photo {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    position: relative;
+  }
+  .about-photo img { transition: transform 0.6s ease; }
+  .about-photo:hover img { transform: scale(1.03); }
+  .about-text .section-eyebrow { color: var(--gold-light); }
+  .about-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.6rem; font-weight: 300; line-height: 1.15;
+    color: #fff; margin: 0.8rem 0 1.5rem;
+  }
+  .about-title em { color: var(--gold-light); font-style: italic; }
+  .about-divider {
+    width: 3rem; height: 1px; background: var(--gold);
+    margin-bottom: 1.8rem;
+  }
+  .about-body {
+    font-size: 0.95rem; line-height: 1.85;
+    color: rgba(255,255,255,0.72);
+    margin-bottom: 1.2rem;
+  }
+  .about-cta-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.85rem 2rem;
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.25s, color 0.25s;
+  }
+  .about-cta-btn:hover {
+    background: var(--gold); color: #2c2118;
+  }
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .about-stat {
+    border-left: 1px solid rgba(255,255,255,0.12);
+    padding-left: 1.5rem;
+  }
+  .about-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem; font-weight: 300;
+    color: var(--gold-light); line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .about-stat-label {
+    font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+  }
+  @media (max-width: 900px) {
+    .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .about-photo { aspect-ratio: 16 / 9; }
+    .about-stats { grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .about-stat { padding-left: 1rem; }
+  }
+  @media (max-width: 600px) {
+    .about-stats { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .about-title { font-size: 2rem; }
   }
 
   /* ── BLOG ── */
@@ -1022,6 +1103,7 @@
     <li><a href="#itineraries">Itineraries</a></li>
     <li><a href="#restaurants">Dining</a></li>
     <li><a href="#journal">Journal</a></li>
+    <li><a href="#about">About</a></li>
   </ul>
   <a href="https://wa.me/919845602165" class="nav-cta">Plan My Trip</a>
 </nav>
@@ -1419,6 +1501,44 @@
             <div class="blog-side-title">Seoul After Midnight: A City That Never Stops</div>
             <div class="blog-side-date" style="color:var(--text-muted);font-size:0.6rem;letter-spacing:0.15em;">In progress</div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-inner fade-in">
+      <div class="about-photo">
+        <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/About%20Us.JPG" alt="Rohan and Romi — Atlas & Archives" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+      </div>
+      <div class="about-text">
+        <div class="section-eyebrow">Who We Are</div>
+        <h2 class="about-title">Two People From Bangalore.<br>One <em>Shared Obsession.</em></h2>
+        <div class="about-divider"></div>
+        <p class="about-body">We are Rohan and Romi — a couple who have spent 200+ days travelling across 30+ countries over the last decade. We are not travel writers. We are not influencers. We are people who plan obsessively, eat everything, stay in places that make us feel something, and come home already thinking about the next trip.</p>
+        <p class="about-body">Atlas & Archives started as a way to stop re-explaining our itineraries to friends. It became something we genuinely love building. Every recommendation on this site is one we've made with our own money, on our own time.</p>
+        <p class="about-body">If you want to do a trip like the ones here — or somewhere else entirely — we'd love to help you plan it.</p>
+        <a href="https://wa.me/919845602165" class="about-cta-btn">☎ &nbsp;Talk to Us on WhatsApp</a>
+      </div>
+      <div class="about-stats">
+        <div class="about-stat">
+          <div class="about-stat-num">30+</div>
+          <div class="about-stat-label">Countries</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-num">200+</div>
+          <div class="about-stat-label">Days Travelling</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-num">5</div>
+          <div class="about-stat-label">Itineraries Built</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-num">∞</div>
+          <div class="about-stat-label">Meals Remembered</div>
         </div>
       </div>
     </div>
