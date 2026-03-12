@@ -118,6 +118,7 @@
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
     padding-top: 5rem;
     overflow: hidden;
   }
@@ -1327,7 +1328,7 @@
 
       <div class="resto-card">
         <div class="resto-img">
-          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Turkey%20Food.JPG" alt="Turkey Food" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Turkey%20Food.JPG" alt="Turkey Food" style="width:100%;height:100%;object-fit:cover;object-position:center 80%;display:block;">
         </div>
         <div class="resto-country">Istanbul, Turkey</div>
         <div class="resto-name">Sultanahmet Kebab House</div>
@@ -1393,7 +1394,7 @@
 
       <div class="resto-card">
         <div class="resto-img">
-          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Mango%20Sticky%20Rice%20Bangkok.jpeg" alt="Mango Sticky Rice, Bangkok" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Mango%20Sticky%20Rice%20Bangkok.jpeg" alt="Mango Sticky Rice, Bangkok" style="width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block;">
         </div>
         <div class="resto-country">Bangkok, Thailand</div>
         <div class="resto-name">Mango Sticky Rice</div>
@@ -1415,7 +1416,7 @@
 
       <div class="resto-card">
         <div class="resto-img">
-          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Black%20Bun%20Burger%20Australia.jpeg" alt="Black Bun Burger, Australia" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+          <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Black%20Bun%20Burger%20Australia.jpeg" alt="Black Bun Burger, Australia" style="width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block;">
         </div>
         <div class="resto-country">Australia</div>
         <div class="resto-name">Black Bun Burger</div>
@@ -1512,13 +1513,13 @@
   <div class="container">
     <div class="about-inner fade-in">
       <div class="about-photo">
-        <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/About%20Us.JPG" alt="Rohan and Romi — Atlas & Archives" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+        <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/About%20Us.JPG" alt="Rohan and Ana — Atlas & Archives" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
       </div>
       <div class="about-text">
         <div class="section-eyebrow">Who We Are</div>
         <h2 class="about-title">Two People From Bangalore.<br>One <em>Shared Obsession.</em></h2>
         <div class="about-divider"></div>
-        <p class="about-body">We are Rohan and Romi — a couple who have spent 200+ days travelling across 30+ countries over the last decade. We are not travel writers. We are not influencers. We are people who plan obsessively, eat everything, stay in places that make us feel something, and come home already thinking about the next trip.</p>
+        <p class="about-body">We are Rohan and Ana — a couple who have spent 200+ days travelling across 30+ countries over the last decade. We are not travel writers. We are not influencers. We are people who plan obsessively, eat everything, stay in places that make us feel something, and come home already thinking about the next trip.</p>
         <p class="about-body">Atlas & Archives started as a way to stop re-explaining our itineraries to friends. It became something we genuinely love building. Every recommendation on this site is one we've made with our own money, on our own time.</p>
         <p class="about-body">If you want to do a trip like the ones here — or somewhere else entirely — we'd love to help you plan it.</p>
         <a href="https://wa.me/919845602165" class="about-cta-btn">☎ &nbsp;Talk to Us on WhatsApp</a>
@@ -2101,18 +2102,51 @@ const itinData = {
       </div>
 
       <div class="itin-day-row">
-        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">5–7</span></div></div>
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">5</span></div></div>
         <div class="itin-day-col-right">
-          <div class="itin-day-location-label">Melbourne</div>
-          <div class="itin-day-headline">The Coffee City, the Laneways & Philip Island Penguins</div>
-          <div class="itin-day-story">Flight Sydney → Melbourne (1.5 hours). Check in to CBD hotel. Melbourne rewards wandering — the laneways (Hosier Lane, Degraves Street, Centre Place) are the point. Free City Circle tram loops the CBD. <strong>Day 6:</strong> Melbourne Cricket Ground (MCG) tour — one of the world's great sporting venues. Rod Laver Arena nearby. Queen Victoria Market in the morning for breakfast and produce. Full-day Klook tour to Philip Island (11 hours): the little penguins coming ashore at dusk is one of the most quietly remarkable wildlife experiences in Australia. Nothing prepares you for how endearing it is. <strong>Day 7:</strong> Royal Botanic Gardens. St Kilda beach and the Luna Park facade. Free City Circle tram. Dinner in Fitzroy or Collingwood.</div>
-          <div class="itin-highlights"><span class="itin-highlight">Melbourne Laneways</span><span class="itin-highlight">Queen Victoria Market</span><span class="itin-highlight">Philip Island Penguin Parade</span><span class="itin-highlight">MCG</span><span class="itin-highlight">St Kilda</span><span class="itin-highlight">City Circle Tram</span></div>
-          <div class="itin-tip"><div class="itin-tip-label">Meals in Melbourne</div><div class="itin-tip-text">Lunch: Supernormal — pan-Asian, always buzzing, no reservations, arrive early. Dinners: Hardware Societe for all-day breakfast, Hochi Mama for Vietnamese, Brick Lane for a final Melbourne dinner. The flat white here is a different drink from everywhere else in the world. Order one your first morning and you'll understand Melbourne immediately.</div></div>
+          <div class="itin-day-location-label">Sydney → Melbourne</div>
+          <div class="itin-day-headline">Flight Day & First Melbourne Evening</div>
+          <div class="itin-day-story">Morning flight Sydney → Melbourne (1.5 hours). Check in to CBD hotel. Melbourne rewards wandering from the first hour — the laneways (Hosier Lane, Degraves Street, Centre Place) are the point. Free City Circle tram loops the CBD and is the best introduction to the city. Walk the Yarra riverfront in the evening.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Melbourne CBD Check-in</span><span class="itin-highlight">Hosier Lane</span><span class="itin-highlight">Yarra Riverfront</span><span class="itin-highlight">Free City Circle Tram</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Myki Card</div><div class="itin-tip-text">Pick up a Myki card at Melbourne Airport or 7-Eleven on arrival — it covers all trams, trains and buses. Load AUD 20 to start.</div></div>
         </div>
       </div>
 
       <div class="itin-day-row">
-        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">8–9</span></div></div>
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">6</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Melbourne</div>
+          <div class="itin-day-headline">Markets, MCG & the Penguins of Philip Island</div>
+          <div class="itin-day-story">Queen Victoria Market in the morning — fresh produce, local food stalls, Melbourne's best breakfast options. Melbourne Cricket Ground tour (MCG) — one of the world's great sporting venues, the tour runs even on non-match days. Then a full-day Klook tour to Philip Island (11 hours total): the little penguins coming ashore at dusk is one of the most quietly remarkable wildlife experiences in Australia. Nothing prepares you for how endearing it is.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Queen Victoria Market</span><span class="itin-highlight">MCG Tour</span><span class="itin-highlight">Philip Island Penguin Parade</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Breakfast at QV Market food stalls. Dinner: Hardware Societe for all-day breakfast plates, or Hochi Mama for Vietnamese.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">7</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Melbourne</div>
+          <div class="itin-day-headline">Botanic Gardens, St Kilda & the Laneways at Night</div>
+          <div class="itin-day-story">Royal Botanic Gardens in the morning — free, beautiful, and a genuine Melbourne institution. St Kilda beach and the Luna Park facade in the afternoon. Rod Laver Arena and the Melbourne Park precinct if tennis is your thing. Evening back in the laneways — Melbourne's bar scene is concentrated in hidden basement bars and converted warehouses. Golden Gai vibes, Australian edition.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Royal Botanic Gardens</span><span class="itin-highlight">St Kilda Beach</span><span class="itin-highlight">Luna Park</span><span class="itin-highlight">Rod Laver Arena</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch: Supernormal — pan-Asian, always buzzing, no reservations, arrive early. Dinner: Brick Lane — good wine list, Melbourne crowd, relaxed close to the CBD.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">8</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Melbourne · Rest Day</div>
+          <div class="itin-day-headline">Coffee, Art & Fitzroy</div>
+          <div class="itin-day-story">Build this day around Melbourne's café culture — the flat white here is a different drink from everywhere else in the world. Order one at a Fitzroy café with no agenda and you'll understand Melbourne immediately. ArtVo immersive art museum if you want something structured. Fitzroy and Collingwood for independent bookshops, record stores and some of Melbourne's best street art. NGV (National Gallery of Victoria) is world-class and free for the permanent collection.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Fitzroy neighbourhood</span><span class="itin-highlight">ArtVo</span><span class="itin-highlight">NGV National Gallery</span><span class="itin-highlight">Collingwood</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">The Melbourne Coffee Rule</div><div class="itin-tip-text">Never order a cappuccino as your first coffee in Melbourne. Order a flat white. The barista will respect you immediately.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">9–10</span></div></div>
         <div class="itin-day-col-right">
           <div class="itin-day-location-label">Great Ocean Road · Apollo Bay</div>
           <div class="itin-day-headline">The Most Beautiful Coastal Drive in the World</div>
@@ -2123,7 +2157,7 @@ const itinData = {
       </div>
 
       <div class="itin-day-row">
-        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">10</span></div></div>
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">11</span></div></div>
         <div class="itin-day-col-right">
           <div class="itin-day-location-label">Yarra Valley</div>
           <div class="itin-day-headline">Wine Country, an Hour from the City</div>
@@ -2134,7 +2168,29 @@ const itinData = {
       </div>
 
       <div class="itin-day-row">
-        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">11</span></div></div>
+        <div class="itin-day-col-left"><div class="itin-day-dot"><div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">12</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Melbourne</div>
+          <div class="itin-day-headline">Slow Morning, Afternoon at the Beach</div>
+          <div class="itin-day-story">No agenda today. Melbourne mornings without a schedule are best spent with a long breakfast in Fitzroy or Brunswick — Brunswick Street has the highest concentration of good cafés per block of any street in Australia. Afternoon at St Kilda beach or a tram ride down to Port Melbourne. Pick up Yarra Valley wine and Tim Tams from the Woolworths at Southern Cross Station for gifts.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Brunswick Street</span><span class="itin-highlight">St Kilda Beach</span><span class="itin-highlight">Southern Cross Station</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Souvenirs</div><div class="itin-tip-text">Woolworths or Coles for Tim Tams, Vegemite, Arnott's biscuits. Dan Murphy's for Yarra Valley Pinot Noir (Devil's Corner is excellent and packs well). Ugg boots from a dedicated store — not airport gift shops.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">13–14</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Melbourne · Wind Down</div>
+          <div class="itin-day-headline">Final Two Days: Your Melbourne, Your Rules</div>
+          <div class="itin-day-story">These two days are deliberately unplanned. Melbourne reveals itself best when you're not trying to see it — a Saturday morning market, a record shop in Collingwood, an afternoon cricket match at the MCG if the timing works, a long lunch that becomes dinner. If you haven't yet done the NGV, now is the time. If you want a day trip, the Mornington Peninsula is an hour's drive: wineries, hot springs at Peninsula Hot Springs, and a very good cheese shop at Arthur's Seat.</div>
+          <div class="itin-highlights"><span class="itin-highlight">NGV International</span><span class="itin-highlight">Mornington Peninsula (optional)</span><span class="itin-highlight">Peninsula Hot Springs</span><span class="itin-highlight">Chapel Street Shopping</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Final Dinner</div><div class="itin-tip-text">Attica in Ripponlea for a truly memorable send-off — one of Australia's best restaurants, book months ahead. Alternatively, Vue de Monde at the top of the Rialto Tower for the view alone. Both require advance reservations.</div></div>
+        </div>
+      </div>
+
+      <span class="itin-day-dot-num">15</span></div></div>
         <div class="itin-day-col-right">
           <div class="itin-day-location-label">Melbourne → Home</div>
           <div class="itin-day-headline">6:30am Flight, Final Flat White</div>
