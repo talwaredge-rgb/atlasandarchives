@@ -12,7 +12,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Atlas & Archives, Luxury Travel Itineraries & Trip Planning</title>
-<meta name="description" content="Curated travel itineraries from two people who've spent 200+ days across 30+ countries. Japan, Turkey, Australia, South Korea and beyond, real trips, practical planning, honest advice.">
+<meta name="description" content="Curated travel itineraries from two people who've travelled across 50+ countries. Japan, Turkey, Australia, South Korea and beyond, real trips, practical planning, honest advice.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.atlasandarchives.com/">
 
@@ -20,8 +20,10 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.atlasandarchives.com/">
 <meta property="og:title" content="Atlas & Archives, Luxury Travel Itineraries & Trip Planning">
-<meta property="og:description" content="Curated travel itineraries from two people who've spent 200+ days across 30+ countries. Real trips, practical planning, honest advice.">
-<meta property="og:image" content="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/hero/Japan%20home%20page.JPG">
+<meta property="og:description" content="Curated travel itineraries from two people who've travelled across 50+ countries. Real trips, practical planning, honest advice.">
+<meta property="og:image" content="https://www.atlasandarchives.com/images/hero/Japan%20home%20page.JPG">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Atlas & Archives">
 
 <!-- Twitter Card -->
@@ -480,7 +482,7 @@
  overflow: hidden;
  position: relative;
  }
-.about-photo img { transition: transform 0.6s ease; }
+.about-photo img { transition: transform 0.6s ease; width: 100%; height: 100%; object-fit: cover; object-position: center top; position: absolute; inset: 0; }
 .about-photo:hover img { transform: scale(1.03); }
 .about-text.section-eyebrow { color: var(--gold-light); }
 .about-title {
@@ -539,6 +541,8 @@
  @media (max-width: 600px) {
 .about-stats { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
 .about-title { font-size: 2rem; }
+.blog-layout { grid-template-columns: 1fr; gap: 2rem; }
+.blog-featured-img { height: 280px; }
  }
 
  /* ── BLOG ── */
@@ -1525,19 +1529,19 @@
  <div class="section-eyebrow">Who We Are</div>
  <h2 class="about-title">Two People From Bangalore.<br>One <em>Shared Obsession.</em></h2>
  <div class="about-divider"></div>
- <p class="about-body">We are Rohan and Ana, a couple who have spent 200+ days travelling across 30+ countries over the last decade. We are not travel writers. We are not influencers. We are people who plan obsessively, eat everything, stay in places that make us feel something, and come home already thinking about the next trip.</p>
+ <p class="about-body">We are Rohan and Ana, a couple who have travelled across 50+ countries over the last decade. We are not travel writers. We are not influencers. We are people who plan obsessively, eat everything, stay in places that make us feel something, and come home already thinking about the next trip.</p>
  <p class="about-body">Atlas & Archives started as a way to stop re-explaining our itineraries to friends. It became something we genuinely love building. Every recommendation on this site is one we've made with our own money, on our own time.</p>
  <p class="about-body">If you want to do a trip like the ones here, or somewhere else entirely, we'd love to help you plan it.</p>
  <a href="https://wa.me/919845602165" class="about-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'about'});">☎ &nbsp;Talk to Us on WhatsApp</a>
  </div>
  <div class="about-stats">
  <div class="about-stat">
- <div class="about-stat-num">30+</div>
+ <div class="about-stat-num">50+</div>
  <div class="about-stat-label">Countries</div>
  </div>
  <div class="about-stat">
- <div class="about-stat-num">200+</div>
- <div class="about-stat-label">Days Travelling</div>
+ <div class="about-stat-num">5</div>
+ <div class="about-stat-label">Itineraries Built</div>
  </div>
  <div class="about-stat">
  <div class="about-stat-num">5</div>
