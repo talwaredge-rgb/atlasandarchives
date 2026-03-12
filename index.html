@@ -327,7 +327,20 @@
 
  /* ── ITINERARIES ── */
 .itineraries-section { background: var(--cream); }
-.itineraries-grid {
+@media (max-width: 600px) {
+    .itinerary-japan { order: 1; }
+    .itinerary-turkey { order: 2; }
+    .itinerary-australia { order: 3; }
+    .itinerary-iceland { order: 4; }
+    .itinerary-korea { order: 5; }
+    .itineraries-grid { display: flex; flex-direction: column; }
+  }
+  .journeys-hint {
+    text-align: center; font-size: 0.65rem; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--gold); opacity: 0.7;
+    margin: -1rem 0 2rem;
+  }
+  .itineraries-grid {
  display: grid;
  grid-template-columns: repeat(3, 1fr);
  gap: 1.5rem;
@@ -746,7 +759,20 @@
 .hero { grid-template-columns: 1fr; min-height: auto; }
 .hero-right { grid-template-rows: auto; height: 400px; padding: 0; margin-top: 2rem; }
 .hero-left { padding: 6rem 2rem 2rem; }
-.itineraries-grid { grid-template-columns: 1fr 1fr; }
+@media (max-width: 600px) {
+    .itinerary-japan { order: 1; }
+    .itinerary-turkey { order: 2; }
+    .itinerary-australia { order: 3; }
+    .itinerary-iceland { order: 4; }
+    .itinerary-korea { order: 5; }
+    .itineraries-grid { display: flex; flex-direction: column; }
+  }
+  .journeys-hint {
+    text-align: center; font-size: 0.65rem; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--gold); opacity: 0.7;
+    margin: -1rem 0 2rem;
+  }
+  .itineraries-grid { grid-template-columns: 1fr 1fr; }
 .itinerary-card:first-child { grid-column: span 2; }
 .resto-grid { grid-template-columns: 1fr 1fr; }
  }
@@ -754,7 +780,20 @@
  nav { padding: 1rem 1.5rem; }
 .nav-links { display: none; }
 .container { padding: 0 1.5rem; }
-.itineraries-grid { grid-template-columns: 1fr; }
+@media (max-width: 600px) {
+    .itinerary-japan { order: 1; }
+    .itinerary-turkey { order: 2; }
+    .itinerary-australia { order: 3; }
+    .itinerary-iceland { order: 4; }
+    .itinerary-korea { order: 5; }
+    .itineraries-grid { display: flex; flex-direction: column; }
+  }
+  .journeys-hint {
+    text-align: center; font-size: 0.65rem; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--gold); opacity: 0.7;
+    margin: -1rem 0 2rem;
+  }
+  .itineraries-grid { grid-template-columns: 1fr; }
 .itinerary-card:first-child { grid-column: span 1; }
 .resto-grid { grid-template-columns: 1fr 1fr; }
 .hero-stats { gap: 1.5rem; }
@@ -1243,8 +1282,9 @@
  <h2 class="section-title">Itineraries Worth <em>Your Money</em></h2>
  </div>
  <div class="ornament">◆</div>
+ <p class="journeys-hint">Tap any destination to view the full itinerary</p>
  <div class="itineraries-grid fade-in">
- <div class="itinerary-card" onclick="openItinerary('japan')" style="cursor:pointer;">
+ <div class="itinerary-card itinerary-japan" onclick="openItinerary('japan')" style="cursor:pointer;">
  <div class="card-img">
  <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/journeys/Japan.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Kyoto Golden Pavilion">
  <div class="card-gradient-overlay"></div>
@@ -1255,7 +1295,7 @@
  <div class="card-meta">Best in <span>October–November</span></div>
  </div>
  </div>
- <div class="itinerary-card" style="cursor:default;">
+ <div class="itinerary-card itinerary-iceland" style="cursor:default;">
  <div class="card-img">
  <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/journeys/Iceland.jpeg" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Iceland Waterfall">
  <div class="card-gradient-overlay"></div>
@@ -1266,7 +1306,7 @@
  <div class="card-meta"><span>Coming Soon</span></div>
  </div>
  </div>
- <div class="itinerary-card" onclick="openItinerary('turkey')" style="cursor:pointer;">
+ <div class="itinerary-card itinerary-turkey" onclick="openItinerary('turkey')" style="cursor:pointer;">
  <div class="card-img">
  <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/journeys/Turkey.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Cappadocia Hot Air Balloons">
  <div class="card-gradient-overlay"></div>
@@ -1277,7 +1317,7 @@
  <div class="card-meta">Best in <span>April–June, Sep–Oct</span></div>
  </div>
  </div>
- <div class="itinerary-card" onclick="openItinerary('australia')" style="cursor:pointer;">
+ <div class="itinerary-card itinerary-australia" onclick="openItinerary('australia')" style="cursor:pointer;">
  <div class="card-img">
  <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/journeys/Australia.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Twelve Apostles, Australia">
  <div class="card-gradient-overlay"></div>
@@ -1288,7 +1328,7 @@
  <div class="card-meta">Best in <span>March–May, Sep–Nov</span></div>
  </div>
  </div>
- <div class="itinerary-card" style="cursor:default;">
+ <div class="itinerary-card itinerary-korea" style="cursor:default;">
  <div class="card-img">
  <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/journeys/Korea.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Seoul, South Korea">
  <div class="card-gradient-overlay"></div>
@@ -1416,7 +1456,7 @@
 
  <div class="resto-card">
  <div class="resto-img">
- <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Macrons%20on%20Champs%20Elysse%20Paris.jpeg" alt="Macarons, Paris" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+ <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Macrons%20on%20Champs%20Elysse%20Paris.jpeg" alt="Macarons, Paris" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;">
  </div>
  <div class="resto-country">Paris, France</div>
  <div class="resto-name">Ladurée, Champs-Élysées</div>
@@ -1438,7 +1478,7 @@
 
  <div class="resto-card">
  <div class="resto-img">
- <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Italy%20food.JPG" alt="Italy Food" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+ <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/food/Italy%20food.JPG" alt="Italy Food" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;">
  </div>
  <div class="resto-country">Naples, Italy</div>
  <div class="resto-name">Da Michele Pizzeria</div>
