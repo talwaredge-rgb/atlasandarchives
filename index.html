@@ -2234,6 +2234,13 @@ const itinData = {
  iceland: `<div style="padding:4rem 2.5rem;text-align:center;font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:#1a1410;">Iceland itinerary coming soon.<br><span style="font-size:1rem;color:#8a7a6a;font-family:'Josefin Sans',sans-serif;letter-spacing:0.1em;">Call us to plan yours, +91 98456 02165</span></div>`
 };
 
+const tripTitles = {
+ japan: 'Japan 14-Day Autumn Itinerary: Tokyo, Kyoto, Osaka & Kawaguchiko — Atlas & Archives',
+ turkey: 'Turkey 12-Day Itinerary: Istanbul, Cappadocia & the Aegean Coast — Atlas & Archives',
+ australia: 'Australia 15-Day Itinerary: Sydney, Melbourne & the Great Ocean Road — Atlas & Archives'
+};
+const baseTitle = document.title;
+
 function openItinerary(trip) {
  const modal = document.getElementById('itinModal');
  const content = document.getElementById('itinContent');
@@ -2241,11 +2248,13 @@ function openItinerary(trip) {
  modal.classList.add('open');
  document.body.style.overflow = 'hidden';
  document.getElementById('itinPanel').scrollTop = 0;
+ if (tripTitles[trip]) document.title = tripTitles[trip];
 }
 
 function closeItinerary() {
  document.getElementById('itinModal').classList.remove('open');
  document.body.style.overflow = '';
+ document.title = baseTitle;
 }
 
 document.addEventListener('keydown', e => {
