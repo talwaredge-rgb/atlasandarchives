@@ -773,7 +773,7 @@
  transition: transform 0.45s cubic-bezier(0.16,1,0.3,1);
  display: flex; flex-direction: column;
  }
-.itin-modal.open.itin-modal-panel { transform: translateX(0); }
+.itin-modal.open .itin-modal-panel { transform: translateX(0); }
 .itin-modal-close {
  position: sticky; top: 0; z-index: 10;
  display: flex; align-items: center; justify-content: space-between;
@@ -956,9 +956,9 @@
 .itin-modal-budget-row--mid {
  background: #2c2118; border-color: #2c2118;
  }
-.itin-modal-budget-row--mid.itin-modal-budget-tier,
-.itin-modal-budget-row--mid.itin-modal-budget-amt,
-.itin-modal-budget-row--mid.itin-modal-budget-desc { color: #fff; }
+.itin-modal-budget-row--mid .itin-modal-budget-tier,
+.itin-modal-budget-row--mid .itin-modal-budget-amt,
+.itin-modal-budget-row--mid .itin-modal-budget-desc { color: #fff; }
 .itin-modal-budget-tier {
  font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
  color: #8c6d4f; font-weight: 700;
@@ -983,7 +983,7 @@
  color: #d4a96a; margin-bottom: 1rem;
  display: flex; align-items: center; justify-content: center; gap: 0.8rem;
  }
-.itin-modal-cta-eyebrow::before.itin-modal-cta-eyebrow::after {
+.itin-modal-cta-eyebrow::before, .itin-modal-cta-eyebrow::after {
  content: ''; width: 1.5rem; height: 1px; background: #d4a96a; opacity: 0.4;
  }
 .itin-modal-cta-title {
