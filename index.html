@@ -403,7 +403,7 @@
 .resto-carousel::-webkit-scrollbar { display: none; }
 .resto-carousel.dragging { cursor: grabbing; scroll-snap-type: none; }
 .resto-card {
- flex: 0 0 calc((100%, 8rem, 3.6rem) / 3);
+ flex: 0 0 calc((100% - 8rem - 3.6rem) / 3);
  scroll-snap-align: start;
  position: relative;
  }
@@ -456,7 +456,7 @@
  }
 .resto-dot.active { background: var(--gold); transform: scale(1.35); }
  @media (max-width: 900px) {
-.resto-card { flex: 0 0 calc((100%, 8rem, 1.8rem) / 2); }
+.resto-card { flex: 0 0 calc((100% - 8rem - 1.8rem) / 2); }
  }
  @media (max-width: 600px) {
 .resto-card { flex: 0 0 80vw; }
@@ -2194,7 +2194,7 @@ const itinData = {
  <div class="itin-day-col-right">
  <div class="itin-day-location-label">Melbourne → Home</div>
  <div class="itin-day-headline">6:30am Flight, Final Flat White</div>
- <div class="itin-day-story">Early departure, 6:30am flight means a 4am wake-up. Bags packed the night before. Have your last Melbourne coffee at the airport if you must. The city will make you want to come back. It always does.</div>
+ <div class="itin-day-story">Early departure: 6:30am means a 4am wake-up. Bags packed the night before. Have your last Melbourne coffee at the airport if you must. The city will make you want to come back. It always does.</div>
  <div class="itin-highlights"><span class="itin-highlight">Melbourne Airport</span></div>
  </div>
  </div>
