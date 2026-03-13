@@ -1144,6 +1144,125 @@
 .continents-grid { grid-template-columns: 1fr; }
  }
 
+
+  /* ── MOBILE TYPOGRAPHY FIX ── */
+  @media (max-width: 768px) {
+    /* Modal panel: full width on mobile, allow natural scroll */
+    .itin-modal-panel {
+      width: 100vw;
+      max-height: 100dvh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Day stories — main body copy in modal */
+    .itin-day-story {
+      font-size: 1rem;
+      line-height: 1.85;
+      letter-spacing: 0.01em;
+    }
+
+    /* Day headlines */
+    .itin-day-headline {
+      font-size: 1.25rem;
+    }
+
+    /* Tip/meals text */
+    .itin-tip-text {
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+
+    /* Modal intro paragraph */
+    .itin-modal-intro p {
+      font-size: 0.95rem;
+      line-height: 1.85;
+    }
+
+    /* Budget description */
+    .itin-modal-budget-desc {
+      font-size: 0.85rem;
+    }
+
+    /* Modal tag, meta items */
+    .itin-modal-tag {
+      font-size: 0.7rem;
+    }
+    .itin-modal-meta-item {
+      font-size: 0.75rem;
+    }
+
+    /* Hero section body copy */
+    .hero-sub {
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    /* About section */
+    .about-body {
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+
+    /* Food cards */
+    .resto-desc {
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    /* Journey cards meta */
+    .card-tag {
+      font-size: 0.7rem;
+    }
+
+    /* Modal CTA paragraph */
+    .itin-modal-cta-sub {
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+
+    /* Section tag labels */
+    .itin-modal-intro-label,
+    .itin-modal-days-hdr,
+    .itin-modal-days-sub {
+      font-size: 0.7rem;
+    }
+
+    /* Fact numbers */
+    .itin-modal-fact-num {
+      font-size: 1.6rem;
+    }
+
+    /* Padding adjustments so text doesn't hug edges */
+    .itin-modal-days {
+      padding: 1.5rem 1.2rem;
+    }
+    .itin-modal-intro {
+      padding: 1.8rem 1.2rem 1rem;
+    }
+    .itin-modal-hero-content {
+      padding: 1.5rem 1.2rem;
+    }
+    .itin-modal-budget {
+      padding: 1.5rem 1.2rem;
+    }
+    .itin-modal-cta {
+      padding: 2rem 1.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .itin-day-story {
+      font-size: 1.02rem;
+    }
+    .itin-modal-title {
+      font-size: 2.4rem;
+    }
+    .itin-day-headline {
+      font-size: 1.2rem;
+    }
+  }
+
 </style>
 </head>
 <body>
