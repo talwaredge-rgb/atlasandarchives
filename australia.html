@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKRDT0DKKN"></script>
 <script>
@@ -12,7 +11,7 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Australia at Its Own Pace, Atlas &amp; Archives</title>
+<title>Australia at Its Own Pace — Atlas &amp; Archives</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
 <style>
@@ -25,14 +24,14 @@
   .nav-back:hover { color: var(--gold-light); }
   .nav-back::before { content: "← "; }
   .blog-hero { height: 92vh; min-height: 580px; position: relative; overflow: hidden; display: flex; align-items: flex-end; }
-  .blog-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
+  .blog-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
   .blog-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,20,16,0.1) 0%, rgba(26,20,16,0.05) 40%, rgba(26,20,16,0.75) 80%, rgba(26,20,16,0.92) 100%); }
   .hero-content { position: relative; z-index: 2; padding: 0 5vw 4rem; max-width: 900px; }
   .hero-eyebrow { font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 1.2rem; }
   .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 300; line-height: 1.1; color: #f5efe6; margin-bottom: 1.4rem; }
   .hero-title em { font-style: italic; color: var(--gold-light); }
-  .hero-meta { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,239,230,1); }
-  .hero-meta span { color: rgba(245,239,230,0.6); margin: 0 0.6rem; }
+  .hero-meta { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,239,230,0.45); }
+  .hero-meta span { color: rgba(245,239,230,0.2); margin: 0 0.6rem; }
   .article-wrap { max-width: 740px; margin: 0 auto; padding: 4rem 2rem 6rem; }
   .article-intro { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 300; line-height: 1.85; color: var(--text); margin-bottom: 2.5rem; }
   .article-intro::first-letter { float: left; font-size: 4.2rem; line-height: 0.8; font-weight: 400; color: var(--gold); margin: 0.1rem 0.15rem 0 0; font-family: 'Cormorant Garamond', serif; }
@@ -44,8 +43,6 @@
   .section-break::after { content: ''; flex: 1; height: 1px; background: rgba(184,146,74,0.25); }
   .img-full { width: calc(100% + 4rem); margin-left: -2rem; margin-bottom: 0.5rem; margin-top: 0.5rem; overflow: hidden; max-height: 520px; }
   .img-full img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .img-trio { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.6rem; width: calc(100% + 4rem); margin-left: -2rem; margin-bottom: 0.5rem; margin-top: 0.5rem; }
-  .img-trio img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
   .img-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; width: calc(100% + 4rem); margin-left: -2rem; margin-bottom: 0.5rem; margin-top: 0.5rem; }
   .img-pair img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
   .img-pair .landscape { aspect-ratio: 4/3; }
@@ -63,12 +60,6 @@
   .blog-cta a { display: inline-block; padding: 0.9rem 2.5rem; border: 1px solid var(--gold); color: var(--gold-light); text-decoration: none; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; transition: all 0.25s; }
   .blog-cta a:hover { background: var(--gold); color: var(--ink); }
   @media (max-width: 600px) { nav { padding: 1rem 1.5rem; } .hero-content { padding: 0 1.5rem 3rem; } .img-full, .img-pair { width: 100%; margin-left: 0; } .section-break h2 { font-size: 1.5rem; white-space: normal; } }
-
-  .blog-disclaimer {
-    font-size: 0.65rem; line-height: 1.8; color: #9a8a7a;
-    border-top: 1px solid #e8ddd0; padding-top: 1.5rem;
-    margin-top: 3rem; text-align: center; letter-spacing: 0.03em;
-  }
 </style>
 </head>
 <body>
@@ -89,66 +80,70 @@
 
 <div class="article-wrap">
 
-  <p class="article-intro">Australia is a long way to go. That is the first thing to reckon with, the flight from India is eleven and a half hours, you cross multiple time zones, and by the time you land you have been awake for what feels like a small eternity. And then you step outside and the light hits you, that particular southern hemisphere brightness that is sharper than anywhere else we have been, and the distance stops mattering immediately.</p>
+  <p class="article-intro">Australia is a long way to go. That is the first thing to reckon with — the flight from India is eleven and a half hours, you cross multiple time zones, and by the time you land you have been awake for what feels like a small eternity. And then you step outside and the light hits you, that particular southern hemisphere brightness that is sharper than anywhere else we have been, and the distance stops mattering immediately.</p>
 
-  <p>We went in March, late summer in the southern hemisphere. Warm without being punishing, the tourist peak just thinning out, the evenings long and golden. Fifteen days across Sydney, Melbourne, the Great Ocean Road, and Philip Island. It was not enough, but more on that later.</p>
+  <p>We went in March — late summer in the southern hemisphere. Warm without being punishing, the tourist peak just thinning out, the evenings long and golden. Fifteen days across Sydney, Melbourne, the Great Ocean Road, and Philip Island. It was not enough — but more on that later.</p>
 
   <div class="section-break"><h2>Sydney: The Harbour City Does Not Disappoint</h2></div>
 
-  <p>Four days in Sydney and every single one felt necessary. The city is arranged around its harbour in a way that makes orientation easy and exploration endlessly rewarding, wherever you walk, the water is never far.</p>
+  <p>Four days in Sydney and every single one felt necessary. The city is arranged around its harbour in a way that makes orientation easy and exploration endlessly rewarding — wherever you walk, the water is never far.</p>
 
   <div class="img-inset">
     <img src="images/australia/Operahouse2.JPG" alt="Sydney Opera House from the harbour">
   </div>
   <div class="img-caption">Sydney Opera House · Watson Bay Ferry</div>
 
-  <p>The <strong>Opera House</strong> from outside is the photograph everyone takes. The Opera House from inside, we did a morning tour, is something else entirely. The tiled ceilings, the curved timber walls, the acoustic engineering made visible in the form of the building. Go inside.</p>
+  <p>The <strong>Opera House</strong> from outside is the photograph everyone takes. The Opera House from inside — we did a morning tour — is something else entirely. The tiled ceilings, the curved timber walls, the acoustic engineering made visible in the form of the building. Go inside.</p>
 
-  <p>The <strong>Bondi to Coogee coastal walk</strong> is three and a half kilometres of clifftop path between two beaches, the Pacific crashing below and the Australian sky above. Do it mid-morning, end at Icebergs, the pool hanging over the ocean, lunch with a view, and you will understand why Sydneysiders move the way they do through the world.</p>
+  <p>The <strong>Bondi to Coogee coastal walk</strong> is three and a half kilometres of clifftop path between two beaches, the Pacific crashing below and the Australian sky above. Do it mid-morning, end at Icebergs — the pool hanging over the ocean, lunch with a view — and you will understand why Sydneysiders move the way they do through the world.</p>
 
   <div class="img-inset">
     <img src="images/australia/Philip Island.JPG" alt="Surfer at Bondi Beach">
   </div>
   <div class="img-caption">Bondi Beach · Sydney</div>
 
-  <p>We also visited the <strong>Sydney Cricket Ground</strong>, a must for any cricket-mad traveller from India. Finding the Brian Lara–Sachin Tendulkar Gates at the SCG was a genuinely moving moment. The plaque records that Tendulkar scored three centuries in five Tests here and averaged 157, calling it his favourite cricket ground outside India. Standing at the gate where Sachin walked out, there are worse places to spend a morning.</p>
+  <p>We also visited the <strong>Sydney Cricket Ground</strong> — a must for any cricket-mad traveller from India. Finding the Brian Lara–Sachin Tendulkar Gates at the SCG was a genuinely moving moment. The plaque records that Tendulkar scored three centuries in five Tests here and averaged 157, calling it his favourite cricket ground outside India. Standing at the gate where Sachin walked out — there are worse places to spend a morning.</p>
 
   <div class="img-inset">
     <img src="images/australia/SCG.JPG" alt="Brian Lara Sachin Tendulkar Gates at SCG">
   </div>
-  <div class="img-caption">The Brian Lara, Sachin Tendulkar Gates · Sydney Cricket Ground</div>
+  <div class="img-caption">The Brian Lara – Sachin Tendulkar Gates · Sydney Cricket Ground</div>
 
   <div class="tip-box">
     <div class="tip-box-label">Sydney Food Notes</div>
-    <p>Lunch at Aalia near the CBD for modern Middle Eastern at a high level. Cafe Sydney or Aria for harbour views with real substance. Fish at the Rocks for straightforward excellent seafood. Coffee from Single O, Sydney takes coffee seriously and this is the best entry point.</p>
+    <p>Lunch at Aalia near the CBD for modern Middle Eastern at a high level. Cafe Sydney or Aria for harbour views with real substance. Fish at the Rocks for straightforward excellent seafood. Coffee from Single O — Sydney takes coffee seriously and this is the best entry point.</p>
   </div>
 
   <div class="section-break"><h2>Melbourne: The Sporting Capital of Australia</h2></div>
 
   <p>The Melbourne-Sydney rivalry is something both cities take seriously. Having spent real time in both: Sydney has the harbour, Melbourne has everything else. The food is better, the coffee is better, the arts scene is more alive, the neighbourhoods are more interesting. But the thing that separates Melbourne from every other city we have visited anywhere is sport. It is the sporting capital of Australia, possibly of the southern hemisphere, and the infrastructure to prove it is extraordinary.</p>
 
-  <p>We did the trifecta. The <strong>MCG</strong> (Melbourne Cricket Ground), a stadium tour of the 100,000-seat ground, standing on the outfield and feeling appropriately small. <strong>Rod Laver Arena</strong>, home of the Australian Open, walking the blue courts where the Grand Slam is decided every January. And <strong>Albert Park</strong>, where the Formula 1 Australian Grand Prix is held each year, a street circuit carved around a lake in the middle of the city. Three iconic venues, three sports, one city. It is a remarkable concentration of sporting heritage.</p>
+  <p>We did the trifecta. The <strong>MCG</strong> (Melbourne Cricket Ground) — a stadium tour of the 100,000-seat ground, standing on the outfield and feeling appropriately small. <strong>Rod Laver Arena</strong>, home of the Australian Open — walking the blue courts where the Grand Slam is decided every January. And <strong>Albert Park</strong>, where the Formula 1 Australian Grand Prix is held each year — a street circuit carved around a lake in the middle of the city. Three iconic venues, three sports, one city. It is a remarkable concentration of sporting heritage.</p>
 
-  <div class="img-trio">
-    <img src="images/australia/MCG.JPG" alt="MCG Melbourne Cricket Ground">
-    <img src="images/australia/Rod Laver Arena.JPG" alt="Rod Laver Arena Melbourne">
-    <img src="images/australia/Albert park.jpeg" alt="Albert Park Formula 1 Circuit Melbourne">
+  <div class="img-pair">
+    <img src="images/australia/MCG.JPG" alt="MCG Melbourne Cricket Ground" class="landscape">
+    <img src="images/australia/Albert park.jpeg" alt="Rod Laver Arena Melbourne">
   </div>
-  <div class="img-caption">MCG · Rod Laver Arena · Albert Park · Melbourne</div>
+  <div class="img-caption">MCG and Rod Laver Arena · Melbourne</div>
 
   <div class="section-break"><h2>Great Ocean Road: One of the World's Great Drives</h2></div>
 
-  <p>We left Melbourne early and drove southwest toward the coast. One practical note for Indian travellers: Australia drives on the left, with the steering wheel on the right, exactly like India. If you are comfortable driving at home, renting a car here is completely intuitive. No adjustment required, which made the whole road trip considerably more relaxed.</p>
+  <p>We left Melbourne early and drove southwest toward the coast. One practical note for Indian travellers: Australia drives on the left, with the steering wheel on the right — exactly like India. If you are comfortable driving at home, renting a car here is completely intuitive. No adjustment required, which made the whole road trip considerably more relaxed.</p>
 
   <div class="img-pair">
-    <img src="images/australia/Apollo Bay.JPG" alt="Apollo Bay Great Ocean Road">
+    <img src="images/australia/Rod Laver Arena.JPG" alt="Sailboat on the Southern Ocean">
     <img src="images/australia/Apollo Bay2.JPG" alt="Cape Otway Lighthouse Great Ocean Road">
   </div>
-  <div class="img-caption">Apollo Bay · Cape Otway Lighthouse · Great Ocean Road</div>
+  <div class="img-caption">Southern Ocean · Cape Otway Lighthouse · Great Ocean Road</div>
 
-  <p>The Great Ocean Road begins at Torquay and runs for 240 kilometres along cliff edges, through rainforest, past surf beaches and fishing villages. We took two days, staying overnight in <strong>Apollo Bay</strong>, a small fishing town that has not yet been discovered by the right Instagram accounts, which is entirely its charm. We ate well, walked the beach at low tide, and woke early for the drive to the Apostles.</p>
+  <p>The Great Ocean Road begins at Torquay and runs for 240 kilometres along cliff edges, through rainforest, past surf beaches and fishing villages. We took two days, staying overnight in <strong>Apollo Bay</strong> — a small fishing town that has not yet been discovered by the right Instagram accounts, which is entirely its charm. We ate well, walked the beach at low tide, and woke early for the drive to the Apostles.</p>
 
-  <p>The <strong>Cape Otway Lighthouse</strong>, the oldest surviving lighthouse on mainland Australia, built in 1848, sits at the point where the Southern Ocean and Bass Strait meet. The view from the clifftop, with the ocean stretching south all the way to Antarctica, has a particular kind of vastness to it.</p>
+  <div class="img-inset">
+    <img src="images/australia/Apollo Bay.JPG" alt="Apollo Bay green hills and coast">
+  </div>
+  <div class="img-caption">Apollo Bay · Great Ocean Road</div>
+
+  <p>The <strong>Cape Otway Lighthouse</strong> — the oldest surviving lighthouse on mainland Australia, built in 1848 — sits at the point where the Southern Ocean and Bass Strait meet. The view from the clifftop, with the ocean stretching south all the way to Antarctica, has a particular kind of vastness to it.</p>
 
   <div class="img-inset">
     <img src="images/australia/Apostles.JPG" alt="Twelve Apostles Great Ocean Road">
@@ -156,38 +151,39 @@
   <div class="img-caption">Twelve Apostles · Great Ocean Road</div>
 
   <div class="pull-quote">
-    <p>"The Twelve Apostles: limestone stacks rising from the Southern Ocean, the waves breaking at their base, the scale of it making you feel appropriately small. There were originally nine, not twelve, but the name stuck and the drama is real regardless."</p>
+    <p>"The Twelve Apostles: limestone stacks rising from the Southern Ocean, the waves breaking at their base, the scale of it making you feel appropriately small. There were originally nine — not twelve — but the name stuck and the drama is real regardless."</p>
   </div>
+
+  <p>There is one thing we would do differently if we went back: the <strong>helicopter ride over the Twelve Apostles</strong>. Several operators run 15 to 20-minute flights departing from a small helipad just off the Great Ocean Road near the viewing platform. From the ground, the stacks are impressive. From directly above, with the Southern Ocean spread out beneath you and the full formation visible in one frame, it is a different experience entirely. Book in advance, as it fills up quickly in summer. One specific tip: ask for the front two seats. The unobstructed forward view makes a meaningful difference to what you see and what you photograph.</p>
 
   <div class="section-break"><h2>Philip Island: Penguins at Dusk</h2></div>
 
-  <p>We did a full-day trip to <strong>Philip Island</strong>, about 90 minutes from Melbourne, and it was one of the best days of the trip. The island is home to the world's largest Little Penguin colony, and every evening at sunset, hundreds of penguins emerge from the surf and waddle up the beach to their burrows. No torches, no flash photography, just the penguins going about their evening routine in the near-dark.</p>
+  <p>We did a full-day trip to <strong>Philip Island</strong>, about 90 minutes from Melbourne — and it was one of the best days of the trip. The island is home to the world's largest Little Penguin colony, and every evening at sunset, hundreds of penguins emerge from the surf and waddle up the beach to their burrows. No torches, no flash photography — just the penguins going about their evening routine in the near-dark.</p>
 
   <div class="img-inset">
     <img src="images/australia/Philip Island2.JPG" alt="Kangaroo and duck at Philip Island wildlife park">
   </div>
   <div class="img-caption">Philip Island · Wildlife Park</div>
 
-  <p>The island also has a wildlife park where you can walk among kangaroos, they are entirely unbothered by visitors and will eat from your hand if you are patient. We spent an hour there before the penguin parade and it was the children's favourite part of the trip, even without children. The combination of kangaroos in the afternoon and penguins at dusk makes Philip Island a genuinely remarkable single day out.</p>
+  <p>The island also has a wildlife park where you can walk among kangaroos — they are entirely unbothered by visitors and will eat from your hand if you are patient. We spent an hour there before the penguin parade and it was the children's favourite part of the trip, even without children. The combination of kangaroos in the afternoon and penguins at dusk makes Philip Island a genuinely remarkable single day out.</p>
 
   <hr class="story-rule">
 
   <div class="section-break"><h2>A Continent Deserves More Than 15 Days</h2></div>
 
-  <p>Australia is not a country you can tick off. It is a continent, and in fifteen days we covered a small speck of it, the southeastern corner alone. We did not see the Great Barrier Reef, or Uluru, or the Kimberley, or the Gold Coast, or Tasmania, or Western Australia. Each of those is a trip in itself. Australia is going to need a return visit, probably more than one. We are already planning the next one around the reef and the north. The southeastern corner, at least, we can now say we know a little.</p>
+  <p>Australia is not a country you can tick off. It is a continent, and in fifteen days we covered a small speck of it — the southeastern corner alone. We did not see the Great Barrier Reef, or Uluru, or the Kimberley, or the Gold Coast, or Tasmania, or Western Australia. Each of those is a trip in itself. Australia is going to need a return visit — probably more than one. We are already planning the next one around the reef and the north. The southeastern corner, at least, we can now say we know a little.</p>
 
   <div class="tip-box">
     <div class="tip-box-label">What to Wear · March</div>
-    <p>March is late summer in Australia, Sydney and Melbourne sit around 22–28°C during the day, warm and mostly sunny. Light summer clothes work well, with a layer for Melbourne evenings which can turn cooler than expected. The Great Ocean Road is frequently windy on the clifftops even on a warm day, so keep a light jacket in the car. Philip Island in the evening gets cold, bring something warm for the penguin parade. Good walking shoes throughout.</p>
+    <p>March is late summer in Australia — Sydney and Melbourne sit around 22–28°C during the day, warm and mostly sunny. Light summer clothes work well, with a layer for Melbourne evenings which can turn cooler than expected. The Great Ocean Road is frequently windy on the clifftops even on a warm day, so keep a light jacket in the car. Philip Island in the evening gets cold — bring something warm for the penguin parade. Good walking shoes throughout.</p>
   </div>
 
 </div>
 
 <div class="blog-cta">
-  <p>Planning an Australia trip? Our 15-day route, Sydney, Melbourne, Great Ocean Road, Philip Island, is on the site.</p>
+  <p>Planning an Australia trip? Our 15-day route — Sydney, Melbourne, Great Ocean Road, Philip Island — is on the site.</p>
   <a href="https://wa.me/919845602165">Message us on WhatsApp</a>
 </div>
 
-<p class="blog-disclaimer">All photographs, itineraries, and written content on this website are the original work of Atlas &amp; Archives and are protected under copyright law. No image, text, or itinerary may be reproduced, distributed, or used in any form without prior written permission from the authors.</p>
 </body>
 </html>
