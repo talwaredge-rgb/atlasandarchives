@@ -986,7 +986,9 @@
  }
 
  /* MODAL CTA */
-.itin-modal-budget {
+.itin-modal-section-break { padding: 2rem 2.5rem 0.5rem; border-top: 1px solid rgba(255,255,255,0.08); margin-top: 1rem; }
+  .itin-modal-section-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--gold-light); letter-spacing: 0.02em; }
+  .itin-modal-budget {
  background: #f7f3ee; padding: 2.5rem 2.5rem 2rem;
  border-top: 1px solid #e8ddd3;
  }
@@ -1328,7 +1330,7 @@
  <div class="card-meta">Best in <span>March–May, Sep–Nov</span></div>
  </div>
  </div>
- <div class="itinerary-card itinerary-korea" style="cursor:default;">
+ <div class="itinerary-card itinerary-korea" onclick="openItinerary('korea')" style="cursor:pointer;">
  <div class="card-img">
  <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/journeys/Korea.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Seoul, South Korea">
  <div class="card-gradient-overlay"></div>
@@ -1336,7 +1338,7 @@
  <div class="card-body">
  <div class="card-tag">11 Days · South Korea</div>
  <div class="card-title">Seoul, Busan<br>& Jeju in Autumn</div>
- <div class="card-meta"><span>Coming Soon</span></div>
+ <div class="card-meta">Best in <span>Apr–Jun, Sep–Nov</span></div>
  </div>
  </div>
  </div>
@@ -1573,7 +1575,6 @@
  <p class="about-body">We are Rohan and Ana, a couple who have travelled across 50+ countries over the last decade. We are not travel writers. We are not influencers. We are people who plan obsessively, eat everything, stay in places that make us feel something, and come home already thinking about the next trip.</p>
  <p class="about-body">Atlas & Archives started as a way to stop re-explaining our itineraries to friends. It became something we genuinely love building. Every recommendation on this site is one we've made with our own money, on our own time.</p>
  <p class="about-body">If you want to do a trip like the ones here, or somewhere else entirely, we'd love to help you plan it.</p>
- <a href="https://wa.me/919845602165" class="about-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'about'});">☎ &nbsp;Talk to Us on WhatsApp</a>
  </div>
  <div class="about-stats">
  <div class="about-stat">
@@ -1610,7 +1611,7 @@
  </p>
  <a href="https://wa.me/919845602165" class="cta-phone-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'cta_section'});">
  <span class="cta-phone-icon">☎</span>
- +91 98456 02165
+ Talk to Us on WhatsApp
  </a>
  <div class="cta-note">WhatsApp & Calls · Mon–Sat, 10am–7pm IST</div>
  </div>
@@ -1847,7 +1848,7 @@ const itinData = {
  <div class="itin-modal-cta-eyebrow">Plan Your Own Journey</div>
  <h3 class="itin-modal-cta-title">Want to Do a Trip<br>Like <em>This One?</em></h3>
  <p class="itin-modal-cta-sub">We've done this trip three times. We know exactly what worked, what to skip, and how to make every day count. Message us, we'll plan it around you.</p>
- <a href="https://wa.me/919845602165" class="itin-modal-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'journey_modal'});">☎ &nbsp;+91 98456 02165</a>
+ <a href="https://wa.me/919845602165" class="itin-modal-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'journey_modal'});">☎ &nbsp;Talk to Us on WhatsApp</a>
  <div class="itin-modal-cta-note">WhatsApp & Calls · Mon–Sat, 10am–7pm IST</div>
  </div>`,
  turkey: `
@@ -2041,7 +2042,7 @@ const itinData = {
  <div class="itin-modal-cta-eyebrow">Plan Your Own Journey</div>
  <h3 class="itin-modal-cta-title">Want to Do a Trip<br>Like <em>This One?</em></h3>
  <p class="itin-modal-cta-sub">We've done this trip. We know exactly what worked, what to skip, and how to make every day count. Message us, we'll plan it around you.</p>
- <a href="https://wa.me/919845602165" class="itin-modal-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'journey_modal'});">☎ &nbsp;+91 98456 02165</a>
+ <a href="https://wa.me/919845602165" class="itin-modal-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'journey_modal'});">☎ &nbsp;Talk to Us on WhatsApp</a>
  <div class="itin-modal-cta-note">WhatsApp & Calls · Mon–Sat, 10am–7pm IST</div>
  </div>`,
 
@@ -2279,11 +2280,241 @@ const itinData = {
  <div class="itin-modal-cta-eyebrow">Plan Your Own Journey</div>
  <h3 class="itin-modal-cta-title">Want to Do a Trip<br>Like <em>This One?</em></h3>
  <p class="itin-modal-cta-sub">We've done this trip. We know exactly what worked, what to skip, and how to make every day count. Message us, we'll plan it around you.</p>
- <a href="https://wa.me/919845602165" class="itin-modal-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'journey_modal'});">☎ &nbsp;+91 98456 02165</a>
+ <a href="https://wa.me/919845602165" class="itin-modal-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'journey_modal'});">☎ &nbsp;Talk to Us on WhatsApp</a>
  <div class="itin-modal-cta-note">WhatsApp & Calls · Mon–Sat, 10am–7pm IST</div>
  </div>`,
 
- iceland: `<div style="padding:4rem 2.5rem;text-align:center;font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:#1a1410;">Iceland itinerary coming soon.<br><span style="font-size:1rem;color:#8a7a6a;font-family:'Josefin Sans',sans-serif;letter-spacing:0.1em;">Call us to plan yours, +91 98456 02165</span></div>`
+ iceland: `<div style="padding:4rem 2.5rem;text-align:center;font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:#1a1410;">Iceland itinerary coming soon.<br><span style="font-size:1rem;color:#8a7a6a;font-family:'Josefin Sans',sans-serif;letter-spacing:0.1em;">Message us to plan yours</span></div>`,
+
+  korea: `
+    <div class="itin-modal-hero">
+      <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/journeys/South%20Korea%20Inside.JPG" alt="South Korea">
+      <div class="itin-modal-hero-overlay"></div>
+      <div class="itin-modal-hero-content">
+        <div class="itin-modal-tag">11 Days · November</div>
+        <h2 class="itin-modal-title">Seoul, Jeju<br>& <em>Busan</em></h2>
+        <div class="itin-modal-meta">
+          <div class="itin-modal-meta-item">Destinations <span>Seoul, Jeju, Busan</span></div>
+          <div class="itin-modal-meta-item">Best Season <span>Apr–Jun, Sep–Nov</span></div>
+          <div class="itin-modal-meta-item">Fly into <span>Seoul (Incheon)</span></div>
+          <div class="itin-modal-meta-item">Fly out of <span>Seoul (Incheon)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="itin-modal-intro">
+      <div class="itin-modal-intro-label">Trip Architecture</div>
+      <p>Korea works as a loop, not a line. Unlike Japan where open jaw makes perfect sense because the country has a clear geographic spine, Korea fans out from Seoul in multiple directions. Jeju is an island you reach only by air, and Busan is 2.5 hours south by KTX. The cleanest routing is Seoul to Jeju by air, Jeju to Busan by air, then KTX back to Seoul for your flight out. You cover everything, never backtrack, and always end where you need to be. <em>Open jaw does not work here</em>. There is no second international gateway that makes geographic sense for a trip this length. Fly Seoul return, build the circuit inland.</p>
+    </div>
+
+    <div class="itin-modal-facts">
+      <div class="itin-modal-fact"><div class="itin-modal-fact-num">11</div><div class="itin-modal-fact-label">Days</div></div>
+      <div class="itin-modal-fact"><div class="itin-modal-fact-num">3</div><div class="itin-modal-fact-label">Cities</div></div>
+      <div class="itin-modal-fact"><div class="itin-modal-fact-num">2</div><div class="itin-modal-fact-label">Domestic flights</div></div>
+      <div class="itin-modal-fact"><div class="itin-modal-fact-num">KTX</div><div class="itin-modal-fact-label">Busan to Seoul</div></div>
+    </div>
+
+    <div class="itin-modal-days">
+      <div class="itin-modal-days-hdr">Why We Built It This Way</div>
+      <div class="itin-modal-days-sub">Routing · Transit Card · Korea vs Japan · First-timer Notes</div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">🏨</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Where to Stay</div>
+          <div class="itin-day-headline">Seoul · Jeju · Busan</div>
+          <div class="itin-day-story"><strong>Seoul:</strong> Stay near Seoul Station for Days 1 to 4. The AREX airport express terminates here, every subway line passes through, and you are 20 minutes from the palaces and 15 from Myeongdong. Convenient from the moment you land to the moment you leave.<br><br><strong>Jeju:</strong> Any hotel near Jeju City centre works for the base. You will be on tours both days so location matters less than price.<br><br><strong>Busan:</strong> Stay near Gwangalli Beach rather than Haeundae. Gwangalli is quieter, more local, food at street level is better, and the night views of the Gwangan Bridge from the beach are one of the best free sights in Korea.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Seoul Station area</span><span class="itin-highlight">AREX Express</span><span class="itin-highlight">Gwangalli Beach</span></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">💡</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Before You Go</div>
+          <div class="itin-day-headline">T-Money Card · Discover Seoul Pass · Transport</div>
+          <div class="itin-day-story">Pick up a T-Money climate card the moment you land at Incheon. It covers every subway line, every bus, and the AREX airport express. Top it up at any convenience store. Get one per person. The Discover Seoul Pass (DSP) covers palace entries, the Han River cruise, Namsan cable car, and the city bus night tour, and pays for itself if you do all four. Buy it for Days 1 and 2. Seoul's subway is among the best-signed in the world, with English on every platform.</div>
+          <div class="itin-highlights"><span class="itin-highlight">T-Money Card</span><span class="itin-highlight">Discover Seoul Pass</span><span class="itin-highlight">Line 4 (Blue)</span></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">✈</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Arrival · Seoul</div>
+          <div class="itin-day-headline">Incheon to Seoul Station</div>
+          <div class="itin-day-story">Fly into Incheon. Clear immigration, collect your T-Money card, take the AREX express to Seoul Station (43 minutes). Check in near Seoul Station and get your bearings. If your flight connects through Hong Kong and the layover is four hours or more, Tim Ho Wan inside the airport is Michelin-starred dim sum with no queue and no need to exit. The Star Ferry across Victoria Harbour takes 8 minutes and costs almost nothing.</div>
+          <div class="itin-highlights"><span class="itin-highlight">AREX Express</span><span class="itin-highlight">Seoul Station</span><span class="itin-highlight">Tim Ho Wan HK (if stopover)</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Dinner: Myeongdong Street Food strip, 10 minutes from Seoul Station. Tteokbokki (spicy rice cakes), hotteok (sweet pancake), Korean fried chicken. Eat standing, keep moving. Loud, touristy, genuinely delicious.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">1</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Seoul · Day 1</div>
+          <div class="itin-day-headline">Palaces, Hanbok & Namsan at Sunset</div>
+          <div class="itin-day-story">Start at Gyeongbokgung Palace. The changing of the guard happens at 10AM, time your arrival around it. Rent a hanbok from Hanboknam nearby and palace entry is free in traditional dress. Walk to Bukchon Hanok Village, the preserved neighbourhood of traditional wooden houses above the city. In the afternoon, Changdeokgung Palace with the Secret Garden is a separate ticket and a completely different experience: smaller, forested, and far less visited. End the day at Namsan Tower by cable car. The city at sunset from up there earns every photograph.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Gyeongbokgung Palace</span><span class="itin-highlight">Hanboknam Dress Rental</span><span class="itin-highlight">Bukchon Hanok Village</span><span class="itin-highlight">Changdeokgung Secret Garden</span><span class="itin-highlight">Namsan Tower</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch: Tosokchon Samgyetang, the most famous ginseng chicken soup in Korea. A whole young chicken stuffed with glutinous rice and ginseng, slow-cooked until the meat falls apart. Queue starts before opening, moves fast. Near Gyeongbokgung. Dinner: Myeongdong street food or sit-down Korean BBQ nearby.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">2</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Seoul · Day 2</div>
+          <div class="itin-day-headline">Gangnam, Han River & Hongdae by Night</div>
+          <div class="itin-day-story">Gangnam is worth a morning for what it represents as much as what it looks like. COEX Mall and the Starfield Library inside it are genuinely striking: a multi-storey open library built inside a shopping mall, entirely free to walk through. The Han River sunset cruise in the late afternoon is easy to book via DSP and reliably good. In the evening, take the train to Hongdae. The university neighbourhood comes alive after 7PM with street performances, independent restaurants, and a crowd that is young and entirely unself-conscious. Korean BBQ here costs a third of what you pay near the palaces.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Starfield Library COEX</span><span class="itin-highlight">Han River Sunset Cruise</span><span class="itin-highlight">Hongdae</span><span class="itin-highlight">City Bus Night Tour</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch: Lotte World Mall food court or The Chefs at COEX. Dinner: Korean BBQ in Hongdae at GIT TTEUL. Order the beef short rib and the pork belly. The combination of grilled meat, banchan side dishes, and soju at a low table with overhead ventilation is the defining Korea dining experience.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">3</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Seoul · Day 3</div>
+          <div class="itin-day-headline">Nami Island, Morning Calm Garden & Railbike</div>
+          <div class="itin-day-story">A full day tour out of Seoul and one of the best single days on the itinerary. The combination covers three entirely different experiences in one loop: Nami Island (the tree-lined island made famous by a Korean drama), the Garden of Morning Calm (a formal garden at peak autumn foliage), and the Gapyeong Railbike (a two-person bike on an old train track cutting through the countryside). Book through Klook. Tours depart early morning and return by 7:30PM. It is a long day that never drags.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Nami Island</span><span class="itin-highlight">Garden of Morning Calm</span><span class="itin-highlight">Gapyeong Railbike</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Most Klook tours include a lunch stop. Dinner back in Seoul: the area around Seoul Station has good options for a late meal after a long day. Alternatively, Insadong has a cluster of traditional Korean restaurants worth trying if you have the energy.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">4</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Seoul · Day 4</div>
+          <div class="itin-day-headline">DMZ Tour</div>
+          <div class="itin-day-story">Standing at the most heavily militarised border in the world, looking into North Korea across a few hundred metres of silence, is an experience that does not translate into photographs. Half-day and full-day tours depart from central Seoul. The full-day version includes the Joint Security Area at Panmunjom where you can technically stand on North Korean soil under UN supervision. Book through an authorised operator. Carry your original passport, not a copy. Check current access rules with your operator at booking as they change periodically.</div>
+          <div class="itin-highlights"><span class="itin-highlight">DMZ</span><span class="itin-highlight">Joint Security Area</span><span class="itin-highlight">Panmunjom</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Most DMZ tours include lunch. Evening back in Seoul: Cheonggyecheon Stream is walking distance from central Seoul and beautiful at night with the LED light installations. Good final evening in the city before flying to Jeju the next day.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">5</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Seoul to Jeju</div>
+          <div class="itin-day-headline">Fly Gimpo to Jeju</div>
+          <div class="itin-day-story">Fly from Gimpo, not Incheon. Gimpo is the domestic airport, 30 minutes from Seoul Station on the AREX all-stop service. The flight to Jeju is under an hour. Afternoon free to explore near your hotel. The island is large and driving makes sense if you are comfortable on Korean roads, otherwise book guided tours for both days which cover the highlights efficiently and without the stress of navigation.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Gimpo Airport</span><span class="itin-highlight">AREX All-Stop</span><span class="itin-highlight">Jeju City</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Dinner in Jeju: Black pork (heukdwaeji) is the island speciality, a darker, richer breed of pig that is distinctly different from mainland Korean pork. Every local will point you to a black pork street near Jeju City. Go there for dinner on your first night.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">6</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Jeju · Day 6</div>
+          <div class="itin-day-headline">West & South Coast: Waterfalls, Cliffs & Lava Fields</div>
+          <div class="itin-day-story">Jeju's coastline is the main event. Volcanic rock formations, waterfalls that drop directly into the sea, crater lakes, and a pace that is noticeably slower than Seoul. The west and south coast tour covers the highlights in a single day. Cheonjeyeon and Cheonjiyeon waterfalls, Jusangjeolli Cliff (hexagonal basalt columns formed by ancient lava cooling at the sea), and Seongsan Ilchulbong (the sunrise peak, worth an early morning climb for the view of the crater inside). Book the full day tour through Klook.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Jusangjeolli Cliff</span><span class="itin-highlight">Seongsan Ilchulbong</span><span class="itin-highlight">Cheonjeyeon Falls</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch on tour. Dinner: Lotte Duty Free Mall shopping in the evening if that is on the agenda, then dinner nearby. Haenyeo (female divers) restaurants near the eastern coast serve the freshest seafood on the island, caught the same morning.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">7</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Jeju to Busan</div>
+          <div class="itin-day-headline">Fly Direct to Busan, Settle at Gwangalli</div>
+          <div class="itin-day-story">Fly Jeju to Busan directly, do not return to Seoul first. The route exists and saves you a full wasted day. Check in near Gwangalli Beach. Walk the beach in the evening. The Gwangan Bridge lights up at night and the strip of restaurants and cafes facing it is where Busan actually lives, as opposed to Haeundae which is more expensive and more tourist-facing.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Jeju to Busan direct</span><span class="itin-highlight">Gwangalli Beach</span><span class="itin-highlight">Gwangan Bridge at night</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Dinner at Gwangalli Beach: pick any restaurant facing the bridge and order whatever is grilled. The atmosphere does the rest. Busan fried chicken is a local institution, order it once while you are here.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">8</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Busan · Day 8</div>
+          <div class="itin-day-headline">Sky Capsule, Busan X The Sky & BIFF Square</div>
+          <div class="itin-day-story">The Haeundae Blueline Park Beach Train and Sky Capsule runs along the coast on a narrow-gauge track with views that are disproportionately cinematic for what is a slow train ride. Book the Sky Capsule ahead online, it is a 4-person glass pod on rails above the coast and always full. Busan X The Sky on the 100th floor of the Haeundae LCT is the highest observation deck in Korea. BIFF Square in Nampo-dong is Korea's answer to Hollywood's Walk of Fame, worth an evening walk, and Jagalchi Fish Market nearby is one of the best seafood markets in Asia.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Haeundae Sky Capsule</span><span class="itin-highlight">Busan X The Sky</span><span class="itin-highlight">BIFF Square</span><span class="itin-highlight">Jagalchi Market</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch: Jagalchi Fish Market. Walk the ground floor of live tanks, point at what you want, take it upstairs to a restaurant and it arrives at your table 10 minutes later. No fixed menu, no ambiguity. Best at lunch when the market is at full volume. Dinner: Haeundae Traditional Market for street food, or back to Gwangalli for the view.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">9</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Busan · Day 9</div>
+          <div class="itin-day-headline">Songdo Cable Car, Oryukdo Skywalk & Busan Luge</div>
+          <div class="itin-day-story">The Songdo Air Cruise cable car crosses the bay in glass-bottomed cars. Oryukdo Skywalk is a horseshoe-shaped glass walkway cantilevered over the sea at the southern tip of Busan's coastline. The Busan Luge is an outdoor gravity luge track cut into the hillside with city views. Centum City in the afternoon: holds the record as the world's largest department store and has a full spa inside if you need one after nine days of moving.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Songdo Air Cruise</span><span class="itin-highlight">Oryukdo Skywalk</span><span class="itin-highlight">Busan Luge</span><span class="itin-highlight">Centum City Spa</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch: Songdo Beach area has good seafood restaurants at reasonable prices away from the tourist centre. Dinner: final night in Busan, splurge on a proper Korean BBQ sit-down near Gwangalli. Order the beef short rib. It is the right way to leave the city.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">10</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Busan to Seoul · KTX</div>
+          <div class="itin-day-headline">High Speed Train Back to Seoul</div>
+          <div class="itin-day-story">KTX from Busan to Seoul takes 2 hours 36 minutes. Take the 10:28AM departure and you arrive by 1PM with the afternoon free. Book on the Korail website or Let's Korail app, window seats on the left side going Seoul-bound give city views as you arrive. Gangnam for the last night: Lotte World area or near Cheonggyecheon Stream. The stream is beautiful at night with the seasonal light installations, free to walk, and a good final memory of the city.</div>
+          <div class="itin-highlights"><span class="itin-highlight">KTX Busan to Seoul</span><span class="itin-highlight">Cheonggyecheon Stream</span><span class="itin-highlight">Gangnam</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch on the train or at Seoul Station on arrival. Dinner: anniversary dinner or final splurge in Gangnam. The neighbourhood has Seoul's best concentration of high-end restaurants. Alternatively, a Diamond Bay Yacht charter on the Han River is a fitting way to end the trip if the budget allows.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">11</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Seoul · Departure</div>
+          <div class="itin-day-headline">Final Morning, Then Incheon</div>
+          <div class="itin-day-story">Final morning, checkout, AREX express from Seoul Station to Incheon in 43 minutes. Flight home, typically mid-afternoon from Incheon. Korea has a way of feeling both relentless and deeply satisfying at the same time. You will already be thinking about the next one before you board.</div>
+          <div class="itin-highlights"><span class="itin-highlight">AREX to Incheon</span><span class="itin-highlight">Seoul Station</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Breakfast at hotel. Incheon Airport has a very good food court landside if you have time before security. Korean convenience store breakfast (GS25 or CU) is also entirely acceptable and better than it sounds.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="itin-modal-section-break">
+      <div class="itin-modal-section-title">Korea vs Japan: Not the Same Country</div>
+    </div>
+
+    <div class="itin-modal-days">
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">◆</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-headline">The Most Common Question We Get</div>
+          <div class="itin-day-story">People who have done Japan ask whether Korea will feel repetitive. It does not. Japan is ancient, meditative, and obsessively precise. Korea is fast, loud, emotionally direct, and proudly modern. Japan's food culture is about restraint and technique. Korea's is about heat, fermentation, and abundance at the table. Japan asks you to walk slowly through something old. Korea surprises you with how alive a city can feel at midnight on a Tuesday. They share a broad geography and an aesthetic register. Everything else is different. Do not approach Korea trying to find what you loved about Japan. What it gives you instead is different and entirely worth the trip.</div>
+          <div class="itin-tip"><div class="itin-tip-label">If You've Done Japan First</div><div class="itin-tip-text">The temples are fewer and less prominent. The nature is different. What Korea offers instead: nightlife that runs until 5AM, the world's best fried chicken, beauty culture taken more seriously than in most European capitals, and a tech infrastructure that makes the rest of the world feel slow. Plan both trips. Do them in either order.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="itin-modal-budget">
+      <div class="itin-modal-budget-hdr">Budget Signal</div>
+      <div class="itin-modal-budget-sub">Per couple · 11 nights · Includes accommodation, meals, activities, 2 domestic flights & KTX</div>
+      <div class="itin-modal-budget-rows">
+        <div class="itin-modal-budget-row">
+          <div class="itin-modal-budget-tier">Budget</div>
+          <div class="itin-modal-budget-amt">₹2 – 2.5 Lakhs</div>
+          <div class="itin-modal-budget-desc">Guesthouses, street food and convenience stores, skip paid attractions</div>
+        </div>
+        <div class="itin-modal-budget-row itin-modal-budget-row--mid">
+          <div class="itin-modal-budget-tier">Mid-Range</div>
+          <div class="itin-modal-budget-amt">₹3.5 – 5 Lakhs</div>
+          <div class="itin-modal-budget-desc">Good city hotels, all meals out, Klook tours, Sky Capsule, KTX, 2 domestic flights included</div>
+        </div>
+        <div class="itin-modal-budget-row">
+          <div class="itin-modal-budget-tier">Luxury</div>
+          <div class="itin-modal-budget-amt">₹7 – 9 Lakhs</div>
+          <div class="itin-modal-budget-desc">JW Marriott or Lotte, private DMZ tour, yacht charter on the Han River, Centum City spa</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="itin-modal-cta">
+      <div class="itin-modal-cta-eyebrow">Plan Your Own Journey</div>
+      <h3 class="itin-modal-cta-title">Want to Do a Trip<br>Like <em>This One?</em></h3>
+      <p class="itin-modal-cta-sub">We've done this trip. We know exactly what worked, what to skip, and how to make every day count. Message us, we'll plan it around you.</p>
+      <a href="https://wa.me/919845602165" class="itin-modal-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'journey_modal'});">Plan My Korea Trip →</a>
+    </div>
+  `,
 };
 
 const tripTitles = {
