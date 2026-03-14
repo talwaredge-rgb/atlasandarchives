@@ -986,7 +986,9 @@
  }
 
  /* MODAL CTA */
-.itin-modal-budget {
+.itin-modal-section-break { padding: 2rem 2.5rem 0.5rem; border-top: 1px solid rgba(255,255,255,0.08); margin-top: 1rem; }
+  .itin-modal-section-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--gold-light); letter-spacing: 0.02em; }
+  .itin-modal-budget {
  background: #f7f3ee; padding: 2.5rem 2.5rem 2rem;
  border-top: 1px solid #e8ddd3;
  }
@@ -1143,7 +1145,6 @@
  }
 
 
-  
   .country-search-wrap {
     max-width: 420px; margin: 0 auto 2.5rem;
   }
@@ -1160,8 +1161,7 @@
     background: rgba(255,255,255,0.07);
   }
   .country-search-icon {
-    font-size: 1.1rem; color: rgba(184,146,74,0.6); flex-shrink: 0;
-    line-height: 1;
+    font-size: 1.1rem; color: rgba(184,146,74,0.6); flex-shrink: 0; line-height: 1;
   }
   .country-search-input {
     flex: 1; background: none; border: none; outline: none;
@@ -1259,13 +1259,13 @@
  </div>
  <div class="hero-img-row">
  <div class="hero-img-sm" style="cursor:pointer;" onclick="openItinerary('iceland')">
-        <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/hero/Iceland%20home%20page.jpeg" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Reykjavik, Iceland">
+ <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/hero/Iceland%20home%20page.jpeg" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Reykjavik, Iceland">
  <div class="img-overlay">Reykjavik, Iceland · January</div>
  </div>
  <div class="hero-img-sm" style="cursor:pointer;" onclick="openItinerary('turkey')">
-        <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/journeys/Turkey.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center 35%;" alt="Cappadocia, Turkey">
-        <div class="img-overlay">Cappadocia, Turkey · April</div>
-      </div>
+ <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/journeys/Turkey.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Cappadocia, Turkey">
+ <div class="img-overlay">Cappadocia, Turkey · April</div>
+ </div>
  </div>
  </div>
 </section>
@@ -1287,14 +1287,7 @@
  <div class="country-search-wrap fade-in">
       <div class="country-search-inner">
         <span class="country-search-icon">⌕</span>
-        <input
-          type="text"
-          id="countrySearch"
-          class="country-search-input"
-          placeholder="Search a country..."
-          autocomplete="off"
-          oninput="filterCountries(this.value)"
-        >
+        <input type="text" id="countrySearch" class="country-search-input" placeholder="Search a country..." autocomplete="off" oninput="filterCountries(this.value)">
         <button class="country-search-clear" id="searchClear" onclick="clearSearch()" style="display:none;">✕</button>
       </div>
       <div class="country-search-no-results" id="searchNoResults" style="display:none;">
@@ -1308,7 +1301,7 @@
  <div class="continent-count">27</div>
  <div class="continent-name">Europe</div>
  </div>
- <div class="continent-countries"><span class="country-tag">Austria</span><span class="country-tag">Belgium</span><span class="country-tag">Croatia</span><span class="country-tag">Czech Republic</span><span class="country-tag">Denmark</span><span class="country-tag">England</span><span class="country-tag">Estonia</span><span class="country-tag">Finland</span><span class="country-tag">France</span><span class="country-tag">Germany</span><span class="country-tag">Greece</span><span class="country-tag">Hungary</span><span class="country-tag">Iceland</span><span class="country-tag">Ireland</span><span class="country-tag">Italy</span><span class="country-tag">Netherlands</span><span class="country-tag">Norway</span><span class="country-tag">Poland</span><span class="country-tag">San Marino</span><span class="country-tag">Scotland</span><span class="country-tag">Slovakia</span><span class="country-tag">Slovenia</span><span class="country-tag">Spain</span><span class="country-tag">Sweden</span><span class="country-tag">Switzerland</span><span class="country-tag country-tag--linked" onclick="openItinerary('turkey')" style="cursor:pointer;" title="View Turkey itinerary">Turkey →</span><span class="country-tag">Vatican City</span></div>
+ <div class="continent-countries"><span class="country-tag">Austria</span><span class="country-tag">Belgium</span><span class="country-tag">Croatia</span><span class="country-tag">Czech Republic</span><span class="country-tag">Denmark</span><span class="country-tag">England</span><span class="country-tag">Estonia</span><span class="country-tag">Finland</span><span class="country-tag">France</span><span class="country-tag">Germany</span><span class="country-tag">Greece</span><span class="country-tag">Hungary</span><span class="country-tag country-tag--linked" onclick="openItinerary('iceland')" style="cursor:pointer;" title="View Iceland itinerary">Iceland →</span><span class="country-tag">Ireland</span><span class="country-tag">Italy</span><span class="country-tag">Netherlands</span><span class="country-tag">Norway</span><span class="country-tag">Poland</span><span class="country-tag">San Marino</span><span class="country-tag">Scotland</span><span class="country-tag">Slovakia</span><span class="country-tag">Slovenia</span><span class="country-tag">Spain</span><span class="country-tag">Sweden</span><span class="country-tag">Switzerland</span><span class="country-tag country-tag--linked" onclick="openItinerary('turkey')" style="cursor:pointer;" title="View Turkey itinerary">Turkey →</span><span class="country-tag">Vatican City</span></div>
  </div>
  <div class="continent-card" style="">
  <div class="continent-header">
@@ -1370,7 +1363,7 @@
  <div class="card-meta">Best in <span>October–November</span></div>
  </div>
  </div>
- <div class="itinerary-card itinerary-iceland" style="cursor:default;">
+ <div class="itinerary-card itinerary-iceland" onclick="openItinerary('iceland')" style="cursor:pointer;">
  <div class="card-img">
  <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/journeys/Iceland.jpeg" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Iceland Waterfall">
  <div class="card-gradient-overlay"></div>
@@ -1378,7 +1371,7 @@
  <div class="card-body">
  <div class="card-tag">8 Days · Iceland</div>
  <div class="card-title">Ring Road, Geysers<br>& the Northern Lights</div>
- <div class="card-meta"><span>Coming Soon</span></div>
+ <div class="card-meta">Best in <span>Nov-Feb (Aurora)</span></div>
  </div>
  </div>
  <div class="itinerary-card itinerary-turkey" onclick="openItinerary('turkey')" style="cursor:pointer;">
@@ -1403,7 +1396,7 @@
  <div class="card-meta">Best in <span>March–May, Sep–Nov</span></div>
  </div>
  </div>
- <div class="itinerary-card itinerary-korea" style="cursor:default;">
+ <div class="itinerary-card itinerary-korea" onclick="openItinerary('korea')" style="cursor:pointer;">
  <div class="card-img">
  <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/journeys/Korea.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Seoul, South Korea">
  <div class="card-gradient-overlay"></div>
@@ -1411,7 +1404,7 @@
  <div class="card-body">
  <div class="card-tag">11 Days · South Korea</div>
  <div class="card-title">Seoul, Busan<br>& Jeju in Autumn</div>
- <div class="card-meta"><span>Coming Soon</span></div>
+ <div class="card-meta">Best in <span>Apr–Jun, Sep–Nov</span></div>
  </div>
  </div>
  </div>
@@ -1646,18 +1639,13 @@
  <h2 class="about-title">Two People From Bangalore, India.<br>One <em>Shared Obsession.</em></h2>
  <div class="about-divider"></div>
  <p class="about-body">We are Rohan and Ana, a couple who have travelled across 50+ countries over the last decade. We are not travel writers. We are not influencers. We are people who plan obsessively, eat everything, stay in places that make us feel something, and come home already thinking about the next trip.</p>
- <p class="about-body">Atlas & Archives started as a way to stop re-explaining our itineraries to friends. It became something we genuinely love building. Every recommendation on this site is one we've made with our own money, on our own time. Every photograph on this site was taken by us. No stock images, no licensed content, no AI. If you see a shot here, we were standing there.</p>
+ <p class="about-body">Atlas & Archives started as a way to stop re-explaining our itineraries to friends. It became something we genuinely love building. Every recommendation on this site is one we've made with our own money, on our own time.</p>
  <p class="about-body">If you want to do a trip like the ones here, or somewhere else entirely, we'd love to help you plan it.</p>
- <a href="https://wa.me/919845602165" class="about-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'about'});">☎ &nbsp;Talk to Us on WhatsApp</a>
  </div>
  <div class="about-stats">
  <div class="about-stat">
  <div class="about-stat-num">50+</div>
  <div class="about-stat-label">Countries</div>
- </div>
- <div class="about-stat">
- <div class="about-stat-num">5</div>
- <div class="about-stat-label">Itineraries Built</div>
  </div>
  <div class="about-stat">
  <div class="about-stat-num">5</div>
@@ -1685,7 +1673,7 @@
  </p>
  <a href="https://wa.me/919845602165" class="cta-phone-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'cta_section'});">
  <span class="cta-phone-icon">☎</span>
- +91 98456 02165
+ Talk to Us on WhatsApp
  </a>
  <div class="cta-note">WhatsApp & Calls · Mon–Sat, 10am–7pm IST</div>
  </div>
@@ -1922,7 +1910,7 @@ const itinData = {
  <div class="itin-modal-cta-eyebrow">Plan Your Own Journey</div>
  <h3 class="itin-modal-cta-title">Want to Do a Trip<br>Like <em>This One?</em></h3>
  <p class="itin-modal-cta-sub">We've done this trip three times. We know exactly what worked, what to skip, and how to make every day count. Message us, we'll plan it around you.</p>
- <a href="https://wa.me/919845602165" class="itin-modal-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'journey_modal'});">☎ &nbsp;+91 98456 02165</a>
+ <a href="https://wa.me/919845602165" class="itin-modal-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'journey_modal'});">☎ &nbsp;Talk to Us on WhatsApp</a>
  <div class="itin-modal-cta-note">WhatsApp & Calls · Mon–Sat, 10am–7pm IST</div>
  </div>`,
  turkey: `
@@ -2116,7 +2104,7 @@ const itinData = {
  <div class="itin-modal-cta-eyebrow">Plan Your Own Journey</div>
  <h3 class="itin-modal-cta-title">Want to Do a Trip<br>Like <em>This One?</em></h3>
  <p class="itin-modal-cta-sub">We've done this trip. We know exactly what worked, what to skip, and how to make every day count. Message us, we'll plan it around you.</p>
- <a href="https://wa.me/919845602165" class="itin-modal-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'journey_modal'});">☎ &nbsp;+91 98456 02165</a>
+ <a href="https://wa.me/919845602165" class="itin-modal-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'journey_modal'});">☎ &nbsp;Talk to Us on WhatsApp</a>
  <div class="itin-modal-cta-note">WhatsApp & Calls · Mon–Sat, 10am–7pm IST</div>
  </div>`,
 
@@ -2354,189 +2342,420 @@ const itinData = {
  <div class="itin-modal-cta-eyebrow">Plan Your Own Journey</div>
  <h3 class="itin-modal-cta-title">Want to Do a Trip<br>Like <em>This One?</em></h3>
  <p class="itin-modal-cta-sub">We've done this trip. We know exactly what worked, what to skip, and how to make every day count. Message us, we'll plan it around you.</p>
- <a href="https://wa.me/919845602165" class="itin-modal-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'journey_modal'});">☎ &nbsp;+91 98456 02165</a>
+ <a href="https://wa.me/919845602165" class="itin-modal-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'journey_modal'});">☎ &nbsp;Talk to Us on WhatsApp</a>
  <div class="itin-modal-cta-note">WhatsApp & Calls · Mon–Sat, 10am–7pm IST</div>
  </div>`,
 
- iceland: `<div class="itin-modal-hero">
+ iceland: `
+ <div class="itin-modal-hero">
  <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/journeys/Iceland.jpeg" alt="Northern Lights over Iceland">
  <div class="itin-modal-hero-overlay"></div>
  <div class="itin-modal-hero-content">
-  <div class="itin-modal-tag">8 Days · January</div>
-  <h2 class="itin-modal-title">Iceland in <em>Midwinter</em></h2>
-  <div class="itin-modal-meta">
-   <div class="itin-modal-meta-item">Destinations <span>Reykjavik, South Coast, Ring Road</span></div>
-   <div class="itin-modal-meta-item">Best Season <span>Nov-Feb (Aurora), Jun-Aug (Midnight Sun)</span></div>
-   <div class="itin-modal-meta-item">Fly into <span>Reykjavik (KEF)</span></div>
-   <div class="itin-modal-meta-item">Fly out of <span>Reykjavik (KEF)</span></div>
-  </div>
+ <div class="itin-modal-tag">8 Days · January</div>
+ <h2 class="itin-modal-title">Iceland in <em>Midwinter</em></h2>
+ <div class="itin-modal-meta">
+ <div class="itin-modal-meta-item">Destinations <span>Reykjavik, South Coast, Ring Road</span></div>
+ <div class="itin-modal-meta-item">Best Season <span>Nov-Feb (Aurora)</span></div>
+ <div class="itin-modal-meta-item">Fly into <span>Reykjavik (KEF)</span></div>
+ <div class="itin-modal-meta-item">Fly out of <span>Reykjavik (KEF)</span></div>
  </div>
-</div>
+ </div>
+ </div>
 
-<div class="itin-modal-intro">
+ <div class="itin-modal-intro">
  <div class="itin-modal-intro-label">Trip Architecture</div>
- <p>Iceland is a return trip, fly into and out of Keflavik. The most natural routing from India is via a Nordic hub: Oslo, Copenhagen, Helsinki or Stockholm all have direct connections to Reykjavik, and the stopover city adds another destination for no extra flight. The trip is built around three zones: Reykjavik as base, the South Coast as the essential day-drive, and two nights on the Ring Road to reach the places the day-trippers never do. One day is kept deliberately buffer, both for aurora chasing at night and because Iceland's weather will rearrange your plans regardless.</p>
-</div>
+ <p>Iceland is a return trip, fly into and out of Keflavik. The most natural routing from India is via a Nordic hub: Oslo, Copenhagen, Helsinki or Stockholm all have direct connections to Reykjavik, and the stopover city adds another destination for no extra flight. The trip is built around three zones: Reykjavik as base, the South Coast as the essential day-drive, and two nights on the Ring Road to reach the places the day-trippers never do. One day is kept deliberately as buffer, both for aurora chasing at night and because Iceland's weather will rearrange your plans regardless.</p>
+ </div>
 
-<div class="itin-modal-facts">
+ <div class="itin-modal-facts">
  <div class="itin-modal-fact"><div class="itin-modal-fact-num">8</div><div class="itin-modal-fact-label">Days</div></div>
  <div class="itin-modal-fact"><div class="itin-modal-fact-num">1</div><div class="itin-modal-fact-label">Rental Car</div></div>
- <div class="itin-modal-fact"><div class="itin-modal-fact-num">3</div><div class="itin-modal-fact-label">Aurora attempts</div></div>
+ <div class="itin-modal-fact"><div class="itin-modal-fact-num">3</div><div class="itin-modal-fact-label">Aurora Attempts</div></div>
  <div class="itin-modal-fact"><div class="itin-modal-fact-num">Jan</div><div class="itin-modal-fact-label">Peak Aurora</div></div>
-</div>
+ </div>
 
-<div class="itin-modal-days">
+ <div class="itin-modal-days">
  <div class="itin-modal-days-hdr">Why We Built It This Way</div>
- <div class="itin-modal-days-sub">8 days · Return from Reykjavik</div>
+ <div class="itin-modal-days-sub">Routing · Where to Stay · First-Timer Notes</div>
 
  <div class="itin-day-row">
-  <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">✈</span></div></div>
-  <div class="itin-day-col-right">
-   <div class="itin-day-location-label">The Routing</div>
-   <div class="itin-day-headline">Return to Keflavik, via a Nordic City</div>
-   <div class="itin-day-story">Iceland is return only: fly into Keflavik (KEF), fly out of Keflavik. There is no second international airport. From India, route via Oslo, Copenhagen, Helsinki or Stockholm, all of which have Icelandair or SAS connections to Reykjavik. A 10-12 hour layover in any Nordic capital turns your transit into a bonus half-day. Pick up your rental car at the airport on arrival, you will need it for the entire trip. Automatic transmission, and check that the insurance covers gravel roads (F-roads), which are unpaved mountain tracks. In January you do not need a 4x4 for the Ring Road, but ground clearance helps.</div>
-   <div class="itin-highlights"><span class="itin-highlight">KEF Airport</span><span class="itin-highlight">Nordic Layover</span><span class="itin-highlight">Rental Car Pickup</span></div>
-   <div class="itin-tip"><div class="itin-tip-label">Best Time to Go</div><div class="itin-tip-text">November to February for maximum aurora darkness and snow landscapes. June to August for the midnight sun, green valleys and puffins. March and October are shoulder seasons: shorter aurora windows but less cold. January is our recommendation: the darkness is long, the aurora probability is high, and the tourist numbers are the lowest of the year.</div></div><div class="itin-tip" style="margin-top:0.8rem;"><div class="itin-tip-label">Pack Smart. We Learned This the Hard Way.</div><div class="itin-tip-text">Our airline misplaced our bags on the Oslo to Reykjavik leg. We landed in Iceland in January with nothing but our cabin bags. Always pack a small carry-on with essentials: charger, one warm layer, medications, camera. Report lost bags at the desk immediately, get a Property Irregularity Report number, then go buy what you need. Airlines reimburse reasonable emergency purchases if you keep receipts. The bags arrived next day. Travel insurance covers the rest. Do not skip it for Iceland.</div>
-  </div>
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">✈</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">The Routing</div>
+ <div class="itin-day-headline">Return to Keflavik, via a Nordic City</div>
+ <div class="itin-day-story">Iceland is return only: fly into Keflavik (KEF), fly out of Keflavik. There is no second international airport. From India, route via Oslo, Copenhagen, Helsinki or Stockholm - all have direct connections to Reykjavik. A 10-12 hour layover in any Nordic capital turns your transit into a bonus half-day. Pick up your rental car at the airport on arrival. Automatic transmission, confirm insurance covers gravel roads. In January you do not need a 4x4 for the Ring Road.</div>
+ <div class="itin-tip"><div class="itin-tip-label">Best Time to Go</div><div class="itin-tip-text">November to February for maximum aurora darkness and snow landscapes. June to August for the midnight sun, green valleys and puffins. January is our recommendation: darkness is long, aurora probability is high, and tourist numbers are the lowest of the year.</div></div>
+ </div>
  </div>
 
  <div class="itin-day-row">
-  <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">🏨</span></div></div>
-  <div class="itin-day-col-right">
-   <div class="itin-day-location-label">Where to Stay</div>
-   <div class="itin-day-headline">Reykjavik · South Coast · Ring Road</div>
-   <div class="itin-day-story">Reykjavik: stay in the 101 district, walking distance from Hallgrimskirkja, the harbour and the restaurant strip on Laugavegur. Days 1 to 4 base here and drive out daily. Airbnb works particularly well in Reykjavik: the apartments are well-heated, well-equipped, and often cheaper than hotels with more space. South Coast detour: Vik or Selfoss for nights 5 and 6. Ring Road nights: a guesthouse or hotel near Jokulsarlon gives you the best shot at an aurora reflection over the water.</div>
-   <div class="itin-highlights"><span class="itin-highlight">101 Reykjavik</span><span class="itin-highlight">Vik Guesthouse</span><span class="itin-highlight">Jokulsarlon Area</span></div>
-   <div class="itin-tip"><div class="itin-tip-label">On Aurora Chasing</div><div class="itin-tip-text">Book an aurora tour from Reykjavik. Licensed operators run every clear night, monitor conditions in real time, and know exactly where to go. We did both: chased it ourselves one night, joined a tour another. The tour wins every time. The guides read the sky in ways no app can replicate.</div></div>
-  </div>
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">🏨</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">Where to Stay</div>
+ <div class="itin-day-headline">Reykjavik · South Coast · Ring Road</div>
+ <div class="itin-day-story">Reykjavik: stay in the 101 district, walking distance from Hallgrimskirkja, the harbour and Laugavegur. Days 1 to 4 base here and drive out daily. Airbnb works particularly well: the apartments are well-heated, well-equipped, and often cheaper than hotels. South Coast detour: Vik or Selfoss for nights 5 and 6. Ring Road nights: a guesthouse near Jokulsarlon glacier lagoon gives you the best shot at an aurora reflection over the water.</div>
+ <div class="itin-tip"><div class="itin-tip-label">On Aurora Chasing</div><div class="itin-tip-text">Book an aurora tour from Reykjavik. Licensed operators run every clear night, monitor conditions in real time, and know exactly where to go. We did both: chased it ourselves one night, joined a tour another. The tour wins every time. The guides read the sky in ways no app can replicate.</div></div>
+ </div>
  </div>
 
  <div class="itin-day-row">
-  <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">💡</span></div></div>
-  <div class="itin-day-col-right">
-   <div class="itin-day-location-label">First-Timer Notes</div>
-   <div class="itin-day-headline">What Nobody Tells You</div>
-   <div class="itin-day-story">Iceland in January has 5 hours of usable daylight, roughly 11am to 4pm. Every outdoor activity happens in this window. You do not need to drive: every major site has licensed day tours from Reykjavik. Either approach works. Wind is the real weather event, not cold. A -2C day with 80km gusts is harder than a -10C calm day. Check road.is every morning if driving. Vegetarians are well catered for: onion soup and bread is on every menu, as are vegetable pastas and skyr desserts.</div>
-   <div class="itin-highlights"><span class="itin-highlight">road.is daily check</span><span class="itin-highlight">Vedur Aurora app</span><span class="itin-highlight">11am-4pm daylight window</span></div>
-   <div class="itin-tip"><div class="itin-tip-label">What to Wear</div><div class="itin-tip-text">Merino wool base layer, mid-layer fleece, waterproof and windproof outer shell. This is non-negotiable. Iceland's wind cuts through any jacket not rated for it. Waterproof boots with grip: the pavements in Reykjavik ice over completely and are not gritted. Gloves that work with a touchscreen, or a separate pair for the camera. Hand warmers are available at N1 petrol stations everywhere and are worth buying on Day 1.</div></div>
-  </div>
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">💡</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">First-Timer Notes</div>
+ <div class="itin-day-headline">What Nobody Tells You</div>
+ <div class="itin-day-story">Iceland in January has 5 hours of usable daylight, roughly 11am to 4pm. Every outdoor activity happens in this window. Wind is the real weather event, not cold. A -2C day with 80km gusts is harder than a -10C calm day. Check road.is every morning if driving. You do not need to drive: every major site has licensed day tours from Reykjavik. Either approach works.</div>
+ <div class="itin-tip"><div class="itin-tip-label">What to Wear</div><div class="itin-tip-text">Merino wool base layer, mid-layer fleece, waterproof and windproof outer shell. Non-negotiable. Waterproof boots with grip: Reykjavik pavements ice over completely and are not gritted. Gloves that work with a touchscreen, or a separate pair for the camera. Hand warmers at N1 petrol stations everywhere, buy on Day 1.</div></div>
+ </div>
+ </div>
+
+ <div class="itin-modal-days-hdr" style="margin-top:2rem;">Day by Day</div>
+ <div class="itin-modal-days-sub">Reykjavik · Golden Circle · South Coast · Ring Road · Jokulsarlon</div>
+
+ <div class="itin-day-row">
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">1</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">Reykjavik · Arrival</div>
+ <div class="itin-day-headline">The City That Glows in the Dark</div>
+ <div class="itin-day-story">Flight lands at Keflavik, 45 minutes from the city. Collect the rental car or take the Flybus (ISK 3,500) to the city centre. Check in. Walk Laugavegur from end to end in the afternoon light, which fades by 4pm. Hallgrimskirkja church is worth climbing for the city view in the last daylight. Dinner on the main strip. If the forecast is clear, your aurora tour operator will be in touch about tonight's run.</div>
+ <div class="itin-highlights"><span class="itin-highlight">Hallgrimskirkja</span><span class="itin-highlight">Laugavegur Street</span><span class="itin-highlight">Harpa Concert Hall</span><span class="itin-highlight">Aurora Attempt 1</span></div>
+ <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Dinner: Sjavargrillid (seafood grill, the langoustine soup is the thing to order). Budget option: Baejarins Beztu Pylsur, the famous hot dog stand near the harbour, open late, ISK 600 and genuinely good. Breakfast tomorrow: Braud and Co bakery on Frakkastigur, opens 7am, best cinnamon rolls in the city.</div></div>
+ </div>
  </div>
 
  <div class="itin-day-row">
-  <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">1</span></div></div>
-  <div class="itin-day-col-right">
-   <div class="itin-day-location-label">Reykjavik · Arrival</div>
-   <div class="itin-day-headline">The City That Glows in the Dark</div>
-   <div class="itin-day-story">Flight lands at Keflavik, 45 minutes from the city. If driving, collect the rental car at the airport. If not, the Flybus connects Keflavik to Reykjavik city centre for around ISK 3,500. Check in to your hotel or Airbnb. The city in January is small, walkable and colourful: painted corrugated iron houses, street art, geothermal steam rising from pavements. Walk Laugavegur from end to end in the afternoon light, which fades by 4pm. Hallgrimskirkja church is worth climbing for the city view in the last of the daylight. Dinner on the main strip. If the forecast is clear, your aurora tour operator will be in touch about tonight's run.</div>
-   <div class="itin-highlights"><span class="itin-highlight">Hallgrimskirkja</span><span class="itin-highlight">Laugavegur Street</span><span class="itin-highlight">Harpa Concert Hall</span><span class="itin-highlight">Aurora Attempt 1</span></div>
-   <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Dinner: Sjavargrillid (seafood grill, the langoustine soup is the thing to order). Budget option: Baejarins Beztu Pylsur, the famous hot dog stand near the harbour, open late, ISK 600 a dog and genuinely good. Breakfast tomorrow: Braud and Co bakery on Frakkastigur, opens 7am, best cinnamon rolls in the city.</div></div>
-  </div>
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">2</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">Golden Circle</div>
+ <div class="itin-day-headline">Geysers, Parliament and a Waterfall in a Crater</div>
+ <div class="itin-day-story">The Golden Circle is a 300km loop from Reykjavik covering three sites so different they feel like separate countries. Thingvellir National Park is where the Eurasian and North American tectonic plates are visibly pulling apart and where the Icelandic parliament was founded in 930 AD. Geysir is the original geyser, the word comes from this field. Strokkur erupts every 5-8 minutes and shoots 30 metres into the air with no warning. Gullfoss is a double waterfall dropping into a canyon; in January the surrounding rocks are ice-covered and the spray freezes mid-air. Do the loop clockwise to end at Gullfoss in the afternoon light.</div>
+ <div class="itin-highlights"><span class="itin-highlight">Thingvellir Park</span><span class="itin-highlight">Strokkur Geyser</span><span class="itin-highlight">Gullfoss Waterfall</span><span class="itin-highlight">Tectonic Ridge Walk</span></div>
+ <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch: Efstidalur II, a working dairy farm on the Golden Circle route. They make their own ice cream from the herd on site. Surreal to eat fresh ice cream in a blizzard, but correct. Dinner back in Reykjavik: Forrettabarinn for small plates. Aurora attempt 2 tonight: pulling over on the return drive gives you genuinely dark skies.</div></div>
+ </div>
  </div>
 
  <div class="itin-day-row">
-  <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">2</span></div></div>
-  <div class="itin-day-col-right">
-   <div class="itin-day-location-label">Golden Circle</div>
-   <div class="itin-day-headline">Geysers, Parliament and a Waterfall in a Crater</div>
-   <div class="itin-day-story">The Golden Circle is a 300km loop from Reykjavik covering three sites so different from each other they feel like separate countries. Thingvellir National Park is where the Eurasian and North American tectonic plates are visibly pulling apart and where the Icelandic parliament was founded in 930 AD. The park feels genuinely ancient. Geysir is the original geyser, the word comes from this field. Strokkur erupts every 5 to 8 minutes and shoots 30 metres into the air with no warning. Gullfoss is a double waterfall dropping into a canyon; in January the surrounding rocks are ice-covered and the spray freezes mid-air. Do the loop clockwise to end at Gullfoss in the afternoon light.</div>
-   <div class="itin-highlights"><span class="itin-highlight">Thingvellir Park</span><span class="itin-highlight">Strokkur Geyser</span><span class="itin-highlight">Gullfoss Waterfall</span><span class="itin-highlight">Tectonic Ridge Walk</span></div>
-   <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch: Efstidalur II, a working dairy farm on the Golden Circle route. They make their own ice cream from the herd on site. Surreal to eat fresh ice cream in a blizzard, but correct. Dinner back in Reykjavik: Forrettabarinn for small plates. Aurora attempt 2 tonight: pulling over on the return drive from the Golden Circle puts you in genuinely dark skies, ideal for aurora spotting.</div></div>
-  </div>
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">3</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">Reykjavik · Buffer Day</div>
+ <div class="itin-day-headline">The Day Iceland Keeps for Itself</div>
+ <div class="itin-day-story">This day is intentionally unplanned. Iceland's weather makes planning specific outdoor activities on specific days a losing game. The Blue Lagoon is 20 minutes from the airport and works perfectly on this day - book in advance, it sells out weeks ahead. The Reykjavik Art Museum and the Settlement Exhibition (the excavated Viking longhouse under the city) fill a wet afternoon. Alternatively, drive the Snaefellsnes Peninsula if weather allows - the glacier at the tip is where Jules Verne set Journey to the Centre of the Earth.</div>
+ <div class="itin-highlights"><span class="itin-highlight">Blue Lagoon</span><span class="itin-highlight">Snaefellsnes Peninsula</span><span class="itin-highlight">Settlement Exhibition</span><span class="itin-highlight">Reykjavik Art Museum</span></div>
+ <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">If Blue Lagoon: the in-water bar serves algae-infused cocktails while you float. Worth it once. Lunch in the city: Cafe Loki opposite Hallgrimskirkja for traditional Icelandic food - try the skyr cake and rye bread ice cream. Dinner: Grillmarkadurinn, the grill market, best lamb in Reykjavik.</div></div>
+ </div>
  </div>
 
  <div class="itin-day-row">
-  <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">3</span></div></div>
-  <div class="itin-day-col-right">
-   <div class="itin-day-location-label">Reykjavik · Buffer Day</div>
-   <div class="itin-day-headline">The Day Iceland Keeps for Itself</div>
-   <div class="itin-day-story">This day is intentionally unplanned. Iceland's weather makes planning specific outdoor activities on specific days a losing game. If yesterday's Golden Circle was cut short by a storm, today you finish it. If the aurora forecast is exceptional, sleep in and save your energy for a long night. The Blue Lagoon is 20 minutes from the airport and works perfectly on this day. Book in advance, it sells out weeks ahead. The Reykjavik Art Museum and the Settlement Exhibition (the excavated Viking longhouse under the city) fill a wet afternoon. Alternatively, take a longer drive down the Snaefellsnes Peninsula if weather allows. The glacier at the tip of the peninsula is where Jules Verne set Journey to the Centre of the Earth.</div>
-   <div class="itin-highlights"><span class="itin-highlight">Blue Lagoon</span><span class="itin-highlight">Snaefellsnes Peninsula</span><span class="itin-highlight">Settlement Exhibition</span><span class="itin-highlight">Reykjavik Art Museum</span></div>
-   <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">If Blue Lagoon: the in-water bar serves algae-infused cocktails and a beer while you float. Worth it once. Lunch in the city: Cafe Loki opposite Hallgrimskirkja for traditional Icelandic food. Try the skyr cake and the rye bread ice cream. Dinner: Grillmarkadurinn, the grill market, best lamb in Reykjavik. Icelandic lamb is grass-fed and roams free, it tastes different from anything you have had before.</div></div>
-  </div>
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">4</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">South Coast · West</div>
+ <div class="itin-day-headline">Waterfalls You Walk Behind and a Beach That Is Black</div>
+ <div class="itin-day-story">Drive east from Reykjavik on the Ring Road. Seljalandsfoss: a 60-metre waterfall with a path that takes you completely behind the curtain of water - in January this path is iced and the spray freezes on your jacket. Skogafoss: wider and more powerful, with a staircase to the top. Reynisfjara black sand beach near Vik: basalt columns rise from the sand, the sea steel-grey. Do not go near the water's edge - the waves arrive without warning and with enormous force. Overnight in Vik.</div>
+ <div class="itin-highlights"><span class="itin-highlight">Seljalandsfoss</span><span class="itin-highlight">Skogafoss</span><span class="itin-highlight">Reynisfjara Black Beach</span><span class="itin-highlight">Vik Village</span></div>
+ <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch: Gamla Fjosid near Selfoss, a converted barn serving soup and lamb stew. Dinner in Vik: Sudur Vik restaurant, small and local, the fish soup is the thing. Aurora attempt 3 tonight from Vik - almost no light pollution and on a clear night the aurora fills the entire southern sky over the black beach.</div></div>
+ </div>
  </div>
 
  <div class="itin-day-row">
-  <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">4</span></div></div>
-  <div class="itin-day-col-right">
-   <div class="itin-day-location-label">South Coast · West</div>
-   <div class="itin-day-headline">Waterfalls You Walk Behind and a Beach That Is Black</div>
-   <div class="itin-day-story">Drive east from Reykjavik on the Ring Road, stopping at Seljalandsfoss, a 60-metre waterfall with a path that takes you completely behind the curtain of water. In January this path is iced over and the spray freezes on your jacket instantly. Worth every second. Continue to Skogafoss, wider and more powerful, with a staircase to the top where the spray creates rainbows even in winter. The black sand beach at Reynisfjara near Vik is one of the most striking coastlines in the world: basalt columns rise from the sand, the sea steel-grey, hexagonal rock formations that look machined. Do not go near the water's edge. The waves here arrive without warning and with enormous force. Stay behind the safety markers. Overnight in Vik.</div>
-   <div class="itin-highlights"><span class="itin-highlight">Seljalandsfoss</span><span class="itin-highlight">Skogafoss</span><span class="itin-highlight">Reynisfjara Black Beach</span><span class="itin-highlight">Vik Village</span></div>
-   <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch: Gamla Fjosid near Selfoss, a converted barn serving soup and lamb stew, simple and exactly right for a cold January drive. Dinner in Vik: Sudur Vik restaurant, small and local, the fish soup is the thing. Aurora attempt 3 tonight from Vik. The village has almost no light pollution and on a clear night the aurora fills the entire southern sky over the black beach.</div></div>
-  </div>
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">5</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">Ring Road · Jokulsarlon</div>
+ <div class="itin-day-headline">The Glacier Lagoon at the End of the Road</div>
+ <div class="itin-day-story">Continue east on the Ring Road. Vatnajokull glacier dominates the horizon, Europe's largest ice cap. The glacier hike at Skaftafell is 2-3 hours with a certified guide - crampons provided, the surface is genuine glacier. Jokulsarlon glacier lagoon: icebergs calved from the glacier float slowly toward the sea. The lagoon is silent, the light extraordinary. Diamond Beach is immediately across the road: the same icebergs, washed ashore, on black sand. Stay overnight near the lagoon - aurora over the water is the photograph most people have seen without knowing where it was taken.</div>
+ <div class="itin-highlights"><span class="itin-highlight">Vatnajokull Glacier</span><span class="itin-highlight">Skaftafell Hike</span><span class="itin-highlight">Jokulsarlon Lagoon</span><span class="itin-highlight">Diamond Beach</span></div>
+ <div class="itin-tip"><div class="itin-tip-label">Glacier Hike</div><div class="itin-tip-text">Book with Troll Expeditions or Arctic Adventures. Do not walk on any glacier without a certified guide and crampons - crevasses are not visible from above. Physically moderate: if you can climb 3 flights of stairs, you can do it.</div></div>
+ </div>
  </div>
 
  <div class="itin-day-row">
-  <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">5</span></div></div>
-  <div class="itin-day-col-right">
-   <div class="itin-day-location-label">South Coast · East</div>
-   <div class="itin-day-headline">A Glacier You Walk On and a Lagoon Full of Icebergs</div>
-   <div class="itin-day-story">Continue east. Vatnajokull is the largest glacier in Europe and its outlet glaciers come down to the road level. You can walk onto the ice on a guided glacier hike. This is a 2-hour activity requiring crampons and a guide, which are provided. Do not attempt to walk on a glacier without a guide. Jokulsarlon glacier lagoon is where icebergs calve off Vatnajokull into a saltwater lake and then drift slowly out to sea. In January the lagoon is partly frozen and the icebergs are locked into the ice surface, a landscape that looks post-apocalyptic in the best way. The Diamond Beach immediately adjacent is where icebergs wash up on black sand and catch the light like cut glass. Overnight near Jokulsarlon for the best aurora position.</div>
-   <div class="itin-highlights"><span class="itin-highlight">Vatnajokull Glacier Hike</span><span class="itin-highlight">Jokulsarlon Lagoon</span><span class="itin-highlight">Diamond Beach</span><span class="itin-highlight">Fjadrargljufur Canyon</span></div>
-   <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch: Glacier Goose Cafe at Jokulsarlon, simple but warm and on-site. Dinner: your guesthouse or hotel will almost certainly serve dinner. Most Ring Road properties do, and the food is local and good after a long cold day. If self-catering, the nearest N1 petrol station has soup and hot food that is better than it sounds. If not, Humarhofnin in Hofn is 45 minutes east and serves the finest langoustine you will eat anywhere. Worth the detour.</div></div>
-  </div>
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">6-7</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">Ring Road · Back West</div>
+ <div class="itin-day-headline">Everything You Drove Past on the Way Out</div>
+ <div class="itin-day-story">Two days to drive back west along the Ring Road, stopping at what you passed. Fjadrargljufur Canyon: a 2km-long fissure canyon 100 metres deep that opens suddenly from flat farmland - completely unknown outside Iceland. The Lava Centre in Hvolsvollur has the best volcanic science exhibit in the country. By Day 7 you are back in Reykjavik for a final evening. Walk Laugavegur one more time, eat well. The Northern Lights sometimes appear over the city centre when the forecast is strong.</div>
+ <div class="itin-highlights"><span class="itin-highlight">Fjadrargljufur Canyon</span><span class="itin-highlight">Lava Centre</span><span class="itin-highlight">Kerith Crater</span><span class="itin-highlight">Final Reykjavik Evening</span></div>
+ <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Day 6 lunch on the road: N1 petrol station soup is genuinely good in Iceland and a local institution. Dinner back in Reykjavik: Fiskfelagid (Fish Company) for the tasting menu if budget allows, one of the best restaurants in the country. Day 7 last breakfast: Braud and Co again - buy extra cinnamon rolls for the flight.</div></div>
+ </div>
  </div>
 
  <div class="itin-day-row">
-  <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">6-7</span></div></div>
-  <div class="itin-day-col-right">
-   <div class="itin-day-location-label">Ring Road · Return</div>
-   <div class="itin-day-headline">Drive West, Stop Often, End in Reykjavik</div>
-   <div class="itin-day-story">Two days to drive back west along the Ring Road, which lets you stop at everything you drove past on the way out. Fjadrargljufur Canyon is a 2km-long fissure canyon 100 metres deep that opens suddenly from flat farmland. It looks Jurassic and is completely unknown outside Iceland. The Lava Centre in Hvolsvollur has the best volcanic science exhibit in the country and makes sense of everything you have been looking at. By Day 7 you are back in Reykjavik with one final evening. Walk Laugavegur one more time, eat well. The Northern Lights sometimes appear over the city centre when the forecast is strong. Stand on any hill facing north.</div>
-   <div class="itin-highlights"><span class="itin-highlight">Fjadrargljufur Canyon</span><span class="itin-highlight">Lava Centre Hvolsvollur</span><span class="itin-highlight">Kerith Crater</span><span class="itin-highlight">Final Reykjavik Evening</span></div>
-   <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Day 6 lunch on the road: N1 petrol station soup is genuinely good in Iceland and a local institution. Dinner back in Reykjavik: Fiskfelagid (Fish Company) for the tasting menu if the budget allows, one of the best restaurants in the country. Day 7 last breakfast: Braud and Co again. Buy extra cinnamon rolls for the flight.</div></div>
-  </div>
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">8</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">Reykjavik to Home</div>
+ <div class="itin-day-headline">The Last Morning and Keflavik</div>
+ <div class="itin-day-story">Drop the rental car at Keflavik Airport - allow 45 minutes extra for return paperwork and a walk-around inspection. Duty free here has the best selection of Icelandic wool products, Skyr, and Brennivin schnapps. If your connection is in a Nordic city and you have time, the layover city has earned a proper visit. You have seen Iceland in midwinter. Very few people have.</div>
+ <div class="itin-highlights"><span class="itin-highlight">Keflavik Duty Free</span><span class="itin-highlight">Icelandic Wool</span><span class="itin-highlight">Nordic Connection</span></div>
+ <div class="itin-tip"><div class="itin-tip-label">Souvenirs</div><div class="itin-tip-text">Lopapeysa (traditional Icelandic wool sweater) from Farmers Market or Handknitting Association in Reykjavik, not the airport shops. Skyr from any supermarket. Brennivin, the local caraway schnapps nicknamed Black Death. Icelandic sea salt. All significantly cheaper in the city than at the airport.</div></div>
+ </div>
  </div>
 
- <div class="itin-day-row">
-  <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">8</span></div></div>
-  <div class="itin-day-col-right">
-   <div class="itin-day-location-label">Reykjavik to Home</div>
-   <div class="itin-day-headline">The Last Morning, Keflavik, and Wherever You Go Next</div>
-   <div class="itin-day-story">Drop the rental car at Keflavik Airport, allow 45 minutes extra for the return paperwork and a walk-around inspection. The airport is small and efficient. Duty free here has the best selection of Icelandic wool products, Skyr, and the Brennivin schnapps that you should buy at least one bottle of. If your connection is in a Nordic city and you have time, the layover city has earned a proper visit at this point. You have seen Iceland in midwinter. Very few people have.</div>
-   <div class="itin-highlights"><span class="itin-highlight">Keflavik Duty Free</span><span class="itin-highlight">Icelandic Wool</span><span class="itin-highlight">Nordic Connection</span></div>
-   <div class="itin-tip"><div class="itin-tip-label">Souvenirs</div><div class="itin-tip-text">Lopapeysa (traditional Icelandic wool sweater) from Farmers Market or Handknitting Association in Reykjavik, not the airport souvenir shops. Skyr from any supermarket (Bonus is the local budget chain). Brennivin, the local caraway schnapps nicknamed Black Death. Icelandic sea salt. All significantly cheaper in the city than at the airport.</div></div>
-  </div>
  </div>
 
-</div>
-
-<div class="itin-modal-budget">
+ <div class="itin-modal-budget">
  <div class="itin-modal-budget-hdr">Budget Signal</div>
  <div class="itin-modal-budget-sub">Per couple · 8 nights · Includes accommodation, meals, activities, rental car & aurora tours</div>
  <div class="itin-modal-budget-rows">
-  <div class="itin-modal-budget-row">
-   <div class="itin-modal-budget-tier">Budget</div>
-   <div class="itin-modal-budget-amt">Rs.2.5 - 3 Lakhs</div>
-   <div class="itin-modal-budget-desc">Guesthouses, budget hotels or Airbnb, self-catering some meals, skip Blue Lagoon and glacier hike</div>
-  </div>
-  <div class="itin-modal-budget-row itin-modal-budget-row--mid">
-   <div class="itin-modal-budget-tier">Mid-Range</div>
-   <div class="itin-modal-budget-amt">Rs.4 - 5.5 Lakhs</div>
-   <div class="itin-modal-budget-desc">Good guesthouses, hotels or Airbnb apartments, all meals out, Blue Lagoon, glacier hike, aurora tour one night</div>
-  </div>
-  <div class="itin-modal-budget-row">
-   <div class="itin-modal-budget-tier">Luxury</div>
-   <div class="itin-modal-budget-amt">Rs.8 - 12 Lakhs</div>
-   <div class="itin-modal-budget-desc">Ion Adventure Hotel, 101 Hotel Reykjavik, private aurora guides, helicopter glacier</div>
-  </div>
+ <div class="itin-modal-budget-row">
+ <div class="itin-modal-budget-tier">Budget</div>
+ <div class="itin-modal-budget-amt">Rs.2.5 - 3 Lakhs</div>
+ <div class="itin-modal-budget-desc">Guesthouses, budget hotels or Airbnb, self-catering some meals, skip Blue Lagoon and glacier hike</div>
  </div>
-</div>
+ <div class="itin-modal-budget-row itin-modal-budget-row--mid">
+ <div class="itin-modal-budget-tier">Mid-Range</div>
+ <div class="itin-modal-budget-amt">Rs.4 - 5.5 Lakhs</div>
+ <div class="itin-modal-budget-desc">Good guesthouses, all meals out, Blue Lagoon, glacier hike, aurora tour one night</div>
+ </div>
+ <div class="itin-modal-budget-row">
+ <div class="itin-modal-budget-tier">Luxury</div>
+ <div class="itin-modal-budget-amt">Rs.8 - 12 Lakhs</div>
+ <div class="itin-modal-budget-desc">Ion Adventure Hotel, 101 Hotel Reykjavik, private aurora guides, helicopter over glacier</div>
+ </div>
+ </div>
+ </div>
 
-<div class="itin-modal-cta">
+ <div class="itin-modal-cta">
  <div class="itin-modal-cta-eyebrow">Plan Your Own Journey</div>
  <h3 class="itin-modal-cta-title">Want to See the<br><em>Northern Lights?</em></h3>
- <p class="itin-modal-cta-sub">We went in January and chased the aurora for three nights. We know which roads to take, which forecasts to trust, and exactly how cold it gets. Message us, we'll plan it around you.</p>
+ <p class="itin-modal-cta-sub">We went in January and chased the aurora for three nights. We know which roads to take, which forecasts to trust, and exactly how cold it gets at Jokulsarlon at midnight. Message us, we'll plan it around you.</p>
  <a href="https://wa.me/919845602165" class="itin-modal-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'journey_modal'});">Talk to Us on WhatsApp</a>
  <div class="itin-modal-cta-note">WhatsApp & Calls · Mon-Sat, 10am-7pm IST</div>
  <a href="/iceland-itinerary.html" class="itin-modal-cta-read" style="display:block;margin-top:1.2rem;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(245,239,230,0.45);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#d4a96a'" onmouseout="this.style.color='rgba(245,239,230,0.45)'">Read Full Itinerary &rarr;</a>
-</div>`
+ </div>`,
+
+  korea: `
+    <div class="itin-modal-hero">
+      <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/journeys/South%20Korea%20Inside.JPG" alt="South Korea">
+      <div class="itin-modal-hero-overlay"></div>
+      <div class="itin-modal-hero-content">
+        <div class="itin-modal-tag">11 Days · November</div>
+        <h2 class="itin-modal-title">Seoul, Jeju<br>& <em>Busan</em></h2>
+        <div class="itin-modal-meta">
+          <div class="itin-modal-meta-item">Destinations <span>Seoul, Jeju, Busan</span></div>
+          <div class="itin-modal-meta-item">Best Season <span>Apr–Jun, Sep–Nov</span></div>
+          <div class="itin-modal-meta-item">Fly into <span>Seoul (Incheon)</span></div>
+          <div class="itin-modal-meta-item">Fly out of <span>Seoul (Incheon)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="itin-modal-intro">
+      <div class="itin-modal-intro-label">Trip Architecture</div>
+      <p>Korea works as a loop, not a line. Unlike Japan where open jaw makes perfect sense because the country has a clear geographic spine, Korea fans out from Seoul in multiple directions. Jeju is an island you reach only by air, and Busan is 2.5 hours south by KTX. The cleanest routing is Seoul to Jeju by air, Jeju to Busan by air, then KTX back to Seoul for your flight out. You cover everything, never backtrack, and always end where you need to be. <em>Open jaw does not work here</em>. There is no second international gateway that makes geographic sense for a trip this length. Fly Seoul return, build the circuit inland.</p>
+    </div>
+
+    <div class="itin-modal-facts">
+      <div class="itin-modal-fact"><div class="itin-modal-fact-num">11</div><div class="itin-modal-fact-label">Days</div></div>
+      <div class="itin-modal-fact"><div class="itin-modal-fact-num">3</div><div class="itin-modal-fact-label">Cities</div></div>
+      <div class="itin-modal-fact"><div class="itin-modal-fact-num">2</div><div class="itin-modal-fact-label">Domestic flights</div></div>
+      <div class="itin-modal-fact"><div class="itin-modal-fact-num">KTX</div><div class="itin-modal-fact-label">Busan to Seoul</div></div>
+    </div>
+
+    <div class="itin-modal-days">
+      <div class="itin-modal-days-hdr">Why We Built It This Way</div>
+      <div class="itin-modal-days-sub">Routing · Transit Card · Korea vs Japan · First-timer Notes</div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">🏨</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Where to Stay</div>
+          <div class="itin-day-headline">Seoul · Jeju · Busan</div>
+          <div class="itin-day-story"><strong>Seoul:</strong> Stay near Seoul Station for Days 1 to 4. The AREX airport express terminates here, every subway line passes through, and you are 20 minutes from the palaces and 15 from Myeongdong. Convenient from the moment you land to the moment you leave.<br><br><strong>Jeju:</strong> Any hotel near Jeju City centre works for the base. You will be on tours both days so location matters less than price.<br><br><strong>Busan:</strong> Stay near Gwangalli Beach rather than Haeundae. Gwangalli is quieter, more local, food at street level is better, and the night views of the Gwangan Bridge from the beach are one of the best free sights in Korea.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Seoul Station area</span><span class="itin-highlight">AREX Express</span><span class="itin-highlight">Gwangalli Beach</span></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">💡</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Before You Go</div>
+          <div class="itin-day-headline">T-Money Card · Discover Seoul Pass · Transport</div>
+          <div class="itin-day-story">Pick up a T-Money climate card the moment you land at Incheon. It covers every subway line, every bus, and the AREX airport express. Top it up at any convenience store. Get one per person. The Discover Seoul Pass (DSP) covers palace entries, the Han River cruise, Namsan cable car, and the city bus night tour, and pays for itself if you do all four. Buy it for Days 1 and 2. Seoul's subway is among the best-signed in the world, with English on every platform.</div>
+          <div class="itin-highlights"><span class="itin-highlight">T-Money Card</span><span class="itin-highlight">Discover Seoul Pass</span><span class="itin-highlight">Line 4 (Blue)</span></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">✈</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Arrival · Seoul</div>
+          <div class="itin-day-headline">Incheon to Seoul Station</div>
+          <div class="itin-day-story">Fly into Incheon. Clear immigration, collect your T-Money card, take the AREX express to Seoul Station (43 minutes). Check in near Seoul Station and get your bearings. If your flight connects through Hong Kong and the layover is four hours or more, Tim Ho Wan inside the airport is Michelin-starred dim sum with no queue and no need to exit. The Star Ferry across Victoria Harbour takes 8 minutes and costs almost nothing.</div>
+          <div class="itin-highlights"><span class="itin-highlight">AREX Express</span><span class="itin-highlight">Seoul Station</span><span class="itin-highlight">Tim Ho Wan HK (if stopover)</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Dinner: Myeongdong Street Food strip, 10 minutes from Seoul Station. Tteokbokki (spicy rice cakes), hotteok (sweet pancake), Korean fried chicken. Eat standing, keep moving. Loud, touristy, genuinely delicious.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">1</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Seoul · Day 1</div>
+          <div class="itin-day-headline">Palaces, Hanbok & Namsan at Sunset</div>
+          <div class="itin-day-story">Start at Gyeongbokgung Palace. The changing of the guard happens at 10AM, time your arrival around it. Rent a hanbok from Hanboknam nearby and palace entry is free in traditional dress. Walk to Bukchon Hanok Village, the preserved neighbourhood of traditional wooden houses above the city. In the afternoon, Changdeokgung Palace with the Secret Garden is a separate ticket and a completely different experience: smaller, forested, and far less visited. End the day at Namsan Tower by cable car. The city at sunset from up there earns every photograph.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Gyeongbokgung Palace</span><span class="itin-highlight">Hanboknam Dress Rental</span><span class="itin-highlight">Bukchon Hanok Village</span><span class="itin-highlight">Changdeokgung Secret Garden</span><span class="itin-highlight">Namsan Tower</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch: Tosokchon Samgyetang, the most famous ginseng chicken soup in Korea. A whole young chicken stuffed with glutinous rice and ginseng, slow-cooked until the meat falls apart. Queue starts before opening, moves fast. Near Gyeongbokgung. Dinner: Myeongdong street food or sit-down Korean BBQ nearby.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">2</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Seoul · Day 2</div>
+          <div class="itin-day-headline">Gangnam, Han River & Hongdae by Night</div>
+          <div class="itin-day-story">Gangnam is worth a morning for what it represents as much as what it looks like. COEX Mall and the Starfield Library inside it are genuinely striking: a multi-storey open library built inside a shopping mall, entirely free to walk through. The Han River sunset cruise in the late afternoon is easy to book via DSP and reliably good. In the evening, take the train to Hongdae. The university neighbourhood comes alive after 7PM with street performances, independent restaurants, and a crowd that is young and entirely unself-conscious. Korean BBQ here costs a third of what you pay near the palaces.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Starfield Library COEX</span><span class="itin-highlight">Han River Sunset Cruise</span><span class="itin-highlight">Hongdae</span><span class="itin-highlight">City Bus Night Tour</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch: Lotte World Mall food court or The Chefs at COEX. Dinner: Korean BBQ in Hongdae at GIT TTEUL. Order the beef short rib and the pork belly. The combination of grilled meat, banchan side dishes, and soju at a low table with overhead ventilation is the defining Korea dining experience.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">3</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Seoul · Day 3</div>
+          <div class="itin-day-headline">Nami Island, Morning Calm Garden & Railbike</div>
+          <div class="itin-day-story">A full day tour out of Seoul and one of the best single days on the itinerary. The combination covers three entirely different experiences in one loop: Nami Island (the tree-lined island made famous by a Korean drama), the Garden of Morning Calm (a formal garden at peak autumn foliage), and the Gapyeong Railbike (a two-person bike on an old train track cutting through the countryside). Book through Klook. Tours depart early morning and return by 7:30PM. It is a long day that never drags.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Nami Island</span><span class="itin-highlight">Garden of Morning Calm</span><span class="itin-highlight">Gapyeong Railbike</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Most Klook tours include a lunch stop. Dinner back in Seoul: the area around Seoul Station has good options for a late meal after a long day. Alternatively, Insadong has a cluster of traditional Korean restaurants worth trying if you have the energy.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">4</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Seoul · Day 4</div>
+          <div class="itin-day-headline">DMZ Tour</div>
+          <div class="itin-day-story">Standing at the most heavily militarised border in the world, looking into North Korea across a few hundred metres of silence, is an experience that does not translate into photographs. Half-day and full-day tours depart from central Seoul. The full-day version includes the Joint Security Area at Panmunjom where you can technically stand on North Korean soil under UN supervision. Book through an authorised operator. Carry your original passport, not a copy. Check current access rules with your operator at booking as they change periodically.</div>
+          <div class="itin-highlights"><span class="itin-highlight">DMZ</span><span class="itin-highlight">Joint Security Area</span><span class="itin-highlight">Panmunjom</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Most DMZ tours include lunch. Evening back in Seoul: Cheonggyecheon Stream is walking distance from central Seoul and beautiful at night with the LED light installations. Good final evening in the city before flying to Jeju the next day.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">5</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Seoul to Jeju</div>
+          <div class="itin-day-headline">Fly Gimpo to Jeju</div>
+          <div class="itin-day-story">Fly from Gimpo, not Incheon. Gimpo is the domestic airport, 30 minutes from Seoul Station on the AREX all-stop service. The flight to Jeju is under an hour. Afternoon free to explore near your hotel. The island is large and driving makes sense if you are comfortable on Korean roads, otherwise book guided tours for both days which cover the highlights efficiently and without the stress of navigation.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Gimpo Airport</span><span class="itin-highlight">AREX All-Stop</span><span class="itin-highlight">Jeju City</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Dinner in Jeju: Black pork (heukdwaeji) is the island speciality, a darker, richer breed of pig that is distinctly different from mainland Korean pork. Every local will point you to a black pork street near Jeju City. Go there for dinner on your first night.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">6</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Jeju · Day 6</div>
+          <div class="itin-day-headline">West & South Coast: Waterfalls, Cliffs & Lava Fields</div>
+          <div class="itin-day-story">Jeju's coastline is the main event. Volcanic rock formations, waterfalls that drop directly into the sea, crater lakes, and a pace that is noticeably slower than Seoul. The west and south coast tour covers the highlights in a single day. Cheonjeyeon and Cheonjiyeon waterfalls, Jusangjeolli Cliff (hexagonal basalt columns formed by ancient lava cooling at the sea), and Seongsan Ilchulbong (the sunrise peak, worth an early morning climb for the view of the crater inside). Book the full day tour through Klook.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Jusangjeolli Cliff</span><span class="itin-highlight">Seongsan Ilchulbong</span><span class="itin-highlight">Cheonjeyeon Falls</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch on tour. Dinner: Lotte Duty Free Mall shopping in the evening if that is on the agenda, then dinner nearby. Haenyeo (female divers) restaurants near the eastern coast serve the freshest seafood on the island, caught the same morning.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">7</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Jeju to Busan</div>
+          <div class="itin-day-headline">Fly Direct to Busan, Settle at Gwangalli</div>
+          <div class="itin-day-story">Fly Jeju to Busan directly, do not return to Seoul first. The route exists and saves you a full wasted day. Check in near Gwangalli Beach. Walk the beach in the evening. The Gwangan Bridge lights up at night and the strip of restaurants and cafes facing it is where Busan actually lives, as opposed to Haeundae which is more expensive and more tourist-facing.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Jeju to Busan direct</span><span class="itin-highlight">Gwangalli Beach</span><span class="itin-highlight">Gwangan Bridge at night</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Dinner at Gwangalli Beach: pick any restaurant facing the bridge and order whatever is grilled. The atmosphere does the rest. Busan fried chicken is a local institution, order it once while you are here.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">8</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Busan · Day 8</div>
+          <div class="itin-day-headline">Sky Capsule, Busan X The Sky & BIFF Square</div>
+          <div class="itin-day-story">The Haeundae Blueline Park Beach Train and Sky Capsule runs along the coast on a narrow-gauge track with views that are disproportionately cinematic for what is a slow train ride. Book the Sky Capsule ahead online, it is a 4-person glass pod on rails above the coast and always full. Busan X The Sky on the 100th floor of the Haeundae LCT is the highest observation deck in Korea. BIFF Square in Nampo-dong is Korea's answer to Hollywood's Walk of Fame, worth an evening walk, and Jagalchi Fish Market nearby is one of the best seafood markets in Asia.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Haeundae Sky Capsule</span><span class="itin-highlight">Busan X The Sky</span><span class="itin-highlight">BIFF Square</span><span class="itin-highlight">Jagalchi Market</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch: Jagalchi Fish Market. Walk the ground floor of live tanks, point at what you want, take it upstairs to a restaurant and it arrives at your table 10 minutes later. No fixed menu, no ambiguity. Best at lunch when the market is at full volume. Dinner: Haeundae Traditional Market for street food, or back to Gwangalli for the view.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">9</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Busan · Day 9</div>
+          <div class="itin-day-headline">Songdo Cable Car, Oryukdo Skywalk & Busan Luge</div>
+          <div class="itin-day-story">The Songdo Air Cruise cable car crosses the bay in glass-bottomed cars. Oryukdo Skywalk is a horseshoe-shaped glass walkway cantilevered over the sea at the southern tip of Busan's coastline. The Busan Luge is an outdoor gravity luge track cut into the hillside with city views. Centum City in the afternoon: holds the record as the world's largest department store and has a full spa inside if you need one after nine days of moving.</div>
+          <div class="itin-highlights"><span class="itin-highlight">Songdo Air Cruise</span><span class="itin-highlight">Oryukdo Skywalk</span><span class="itin-highlight">Busan Luge</span><span class="itin-highlight">Centum City Spa</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch: Songdo Beach area has good seafood restaurants at reasonable prices away from the tourist centre. Dinner: final night in Busan, splurge on a proper Korean BBQ sit-down near Gwangalli. Order the beef short rib. It is the right way to leave the city.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">10</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Busan to Seoul · KTX</div>
+          <div class="itin-day-headline">High Speed Train Back to Seoul</div>
+          <div class="itin-day-story">KTX from Busan to Seoul takes 2 hours 36 minutes. Take the 10:28AM departure and you arrive by 1PM with the afternoon free. Book on the Korail website or Let's Korail app, window seats on the left side going Seoul-bound give city views as you arrive. Gangnam for the last night: Lotte World area or near Cheonggyecheon Stream. The stream is beautiful at night with the seasonal light installations, free to walk, and a good final memory of the city.</div>
+          <div class="itin-highlights"><span class="itin-highlight">KTX Busan to Seoul</span><span class="itin-highlight">Cheonggyecheon Stream</span><span class="itin-highlight">Gangnam</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Lunch on the train or at Seoul Station on arrival. Dinner: anniversary dinner or final splurge in Gangnam. The neighbourhood has Seoul's best concentration of high-end restaurants. Alternatively, a Diamond Bay Yacht charter on the Han River is a fitting way to end the trip if the budget allows.</div></div>
+        </div>
+      </div>
+
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">11</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-location-label">Seoul · Departure</div>
+          <div class="itin-day-headline">Final Morning, Then Incheon</div>
+          <div class="itin-day-story">Final morning, checkout, AREX express from Seoul Station to Incheon in 43 minutes. Flight home, typically mid-afternoon from Incheon. Korea has a way of feeling both relentless and deeply satisfying at the same time. You will already be thinking about the next one before you board.</div>
+          <div class="itin-highlights"><span class="itin-highlight">AREX to Incheon</span><span class="itin-highlight">Seoul Station</span></div>
+          <div class="itin-tip"><div class="itin-tip-label">Meals</div><div class="itin-tip-text">Breakfast at hotel. Incheon Airport has a very good food court landside if you have time before security. Korean convenience store breakfast (GS25 or CU) is also entirely acceptable and better than it sounds.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="itin-modal-section-break">
+      <div class="itin-modal-section-title">Korea vs Japan: Not the Same Country</div>
+    </div>
+
+    <div class="itin-modal-days">
+      <div class="itin-day-row">
+        <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">◆</span></div></div>
+        <div class="itin-day-col-right">
+          <div class="itin-day-headline">The Most Common Question We Get</div>
+          <div class="itin-day-story">People who have done Japan ask whether Korea will feel repetitive. It does not. Japan is ancient, meditative, and obsessively precise. Korea is fast, loud, emotionally direct, and proudly modern. Japan's food culture is about restraint and technique. Korea's is about heat, fermentation, and abundance at the table. Japan asks you to walk slowly through something old. Korea surprises you with how alive a city can feel at midnight on a Tuesday. They share a broad geography and an aesthetic register. Everything else is different. Do not approach Korea trying to find what you loved about Japan. What it gives you instead is different and entirely worth the trip.</div>
+          <div class="itin-tip"><div class="itin-tip-label">If You've Done Japan First</div><div class="itin-tip-text">The temples are fewer and less prominent. The nature is different. What Korea offers instead: nightlife that runs until 5AM, the world's best fried chicken, beauty culture taken more seriously than in most European capitals, and a tech infrastructure that makes the rest of the world feel slow. Plan both trips. Do them in either order.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="itin-modal-budget">
+      <div class="itin-modal-budget-hdr">Budget Signal</div>
+      <div class="itin-modal-budget-sub">Per couple · 11 nights · Includes accommodation, meals, activities, 2 domestic flights & KTX</div>
+      <div class="itin-modal-budget-rows">
+        <div class="itin-modal-budget-row">
+          <div class="itin-modal-budget-tier">Budget</div>
+          <div class="itin-modal-budget-amt">₹2 – 2.5 Lakhs</div>
+          <div class="itin-modal-budget-desc">Guesthouses, street food and convenience stores, skip paid attractions</div>
+        </div>
+        <div class="itin-modal-budget-row itin-modal-budget-row--mid">
+          <div class="itin-modal-budget-tier">Mid-Range</div>
+          <div class="itin-modal-budget-amt">₹3.5 – 5 Lakhs</div>
+          <div class="itin-modal-budget-desc">Good city hotels, all meals out, Klook tours, Sky Capsule, KTX, 2 domestic flights included</div>
+        </div>
+        <div class="itin-modal-budget-row">
+          <div class="itin-modal-budget-tier">Luxury</div>
+          <div class="itin-modal-budget-amt">₹7 – 9 Lakhs</div>
+          <div class="itin-modal-budget-desc">JW Marriott or Lotte, private DMZ tour, yacht charter on the Han River, Centum City spa</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="itin-modal-cta">
+      <div class="itin-modal-cta-eyebrow">Plan Your Own Journey</div>
+      <h3 class="itin-modal-cta-title">Want to Do a Trip<br>Like <em>This One?</em></h3>
+      <p class="itin-modal-cta-sub">We've done this trip. We know exactly what worked, what to skip, and how to make every day count. Message us, we'll plan it around you.</p>
+      <a href="https://wa.me/919845602165" class="itin-modal-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'journey_modal'});">Plan My Korea Trip →</a>
+    </div>
+  `,
 };
 
 const tripTitles = {
- japan: 'Japan 14-Day Autumn Itinerary: Tokyo, Kyoto, Osaka & Kawaguchiko - Atlas & Archives',
- turkey: 'Turkey 12-Day Itinerary: Istanbul, Cappadocia & the Aegean Coast - Atlas & Archives',
- australia: 'Australia 15-Day Itinerary: Sydney, Melbourne & the Great Ocean Road - Atlas & Archives'
+ japan: 'Japan 14-Day Autumn Itinerary: Tokyo, Kyoto, Osaka & Kawaguchiko — Atlas & Archives',
+ turkey: 'Turkey 12-Day Itinerary: Istanbul, Cappadocia & the Aegean Coast — Atlas & Archives',
+ australia: 'Australia 15-Day Itinerary: Sydney, Melbourne & the Great Ocean Road — Atlas & Archives'
 };
 const baseTitle = document.title;
 
@@ -2620,7 +2839,7 @@ document.addEventListener('keydown', e => {
  });
 })();
 
-// ── Country search ────────────────────────────────────────────────────────
+// ── Country search ──
 function filterCountries(query) {
   const q = query.trim().toLowerCase();
   const clearBtn = document.getElementById('searchClear');
@@ -2628,7 +2847,6 @@ function filterCountries(query) {
   clearBtn.style.display = q ? 'block' : 'none';
 
   if (!q) {
-    // Reset everything
     document.querySelectorAll('.continent-card').forEach(c => c.classList.remove('search-hidden'));
     document.querySelectorAll('.country-tag').forEach(t => {
       t.classList.remove('search-dim', 'search-match');
@@ -2665,7 +2883,6 @@ function clearSearch() {
   filterCountries('');
   input.focus();
 }
-
 </script>
 
 </body>
