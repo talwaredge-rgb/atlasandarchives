@@ -1203,6 +1203,41 @@
   .itin-modal-map { width: 100%; background: #faf6f0; }
   .itin-modal-map svg { width: 100%; height: auto; display: block; }
   .itin-modal-map-label { font-size: 0.52rem; letter-spacing: 0.28em; text-transform: uppercase; color: #b8924a; padding: 1.2rem 2.5rem 0.4rem; }
+
+  .footer-social { display: flex; gap: 1.2rem; align-items: center; }
+  .footer-social a {
+    display: flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px;
+    border: 1px solid rgba(245,239,230,0.2);
+    border-radius: 50%;
+    color: rgba(245,239,230,0.35);
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 0.75rem;
+  }
+  .footer-social a:hover { border-color: var(--gold); color: var(--gold); }
+  .footer-social svg { width: 14px; height: 14px; fill: currentColor; }
+
+  /* Shorts strip */
+  .shorts-strip { background: var(--ink); padding: 3.5rem 0 2.5rem; overflow: hidden; }
+  .shorts-strip-hdr { text-align: center; margin-bottom: 2rem; }
+  .shorts-strip-eyebrow { font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+  .shorts-strip-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--parchment); }
+  .shorts-strip-title em { font-style: italic; color: var(--gold-light); }
+  .shorts-row { display: flex; gap: 1rem; padding: 0 3rem; overflow-x: auto; scrollbar-width: none; }
+  .shorts-row::-webkit-scrollbar { display: none; }
+  .short-card { flex-shrink: 0; width: 160px; cursor: pointer; text-decoration: none; }
+  .short-thumb { position: relative; width: 160px; height: 284px; overflow: hidden; border-radius: 8px; background: #2c2118; }
+  .short-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+  .short-card:hover .short-thumb img { transform: scale(1.04); }
+  .short-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(26,20,16,0.25); transition: background 0.2s; }
+  .short-card:hover .short-play { background: rgba(26,20,16,0.45); }
+  .short-play svg { width: 36px; height: 36px; fill: rgba(245,239,230,0.85); }
+  .short-label { font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,239,230,0.45); margin-top: 0.6rem; padding: 0 0.2rem; line-height: 1.5; }
+  .shorts-cta { text-align: center; margin-top: 1.8rem; }
+  .shorts-cta a { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); text-decoration: none; border: 1px solid rgba(184,146,74,0.4); padding: 0.6rem 1.6rem; transition: all 0.2s; }
+  .shorts-cta a:hover { background: var(--gold); color: var(--ink); }
+  @media(max-width:600px) { .short-card { width: 130px; } .short-thumb { width: 130px; height: 231px; } .shorts-row { padding: 0 1.2rem; } }
 </style>
 </head>
 <body>
@@ -1272,6 +1307,63 @@
  </div>
  </div>
  </div>
+</section>
+
+
+
+<!-- YOUTUBE SHORTS STRIP -->
+<section class="shorts-strip">
+  <div class="shorts-strip-hdr">
+    <div class="shorts-strip-eyebrow">Atlas &amp; Archives on YouTube</div>
+    <div class="shorts-strip-title">See the <em>Places</em> Come Alive</div>
+  </div>
+  <div class="shorts-row">
+    <a class="short-card" href="https://www.youtube.com/shorts/O2gD3E3vdTY" target="_blank" rel="noopener" onclick="gtag('event','shorts_click',{'event_category':'engagement','event_label':'turkey'});">
+      <div class="short-thumb">
+        <img src="https://img.youtube.com/vi/O2gD3E3vdTY/maxresdefault.jpg" alt="Hot Air Balloons · Cappadocia · Turkey" loading="lazy">
+        <div class="short-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="short-label">Hot Air Balloons · Cappadocia · Turkey</div>
+    </a>
+    <a class="short-card" href="https://www.youtube.com/shorts/tep8AD3qcn4" target="_blank" rel="noopener" onclick="gtag('event','shorts_click',{'event_category':'engagement','event_label':'paris'});">
+      <div class="short-thumb">
+        <img src="https://img.youtube.com/vi/tep8AD3qcn4/maxresdefault.jpg" alt="Eiffel Tower · Paris · France" loading="lazy">
+        <div class="short-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="short-label">Eiffel Tower · Paris · France</div>
+    </a>
+    <a class="short-card" href="https://www.youtube.com/shorts/dkWi4uuCrPo" target="_blank" rel="noopener" onclick="gtag('event','shorts_click',{'event_category':'engagement','event_label':'japan'});">
+      <div class="short-thumb">
+        <img src="https://img.youtube.com/vi/dkWi4uuCrPo/maxresdefault.jpg" alt="Shinkansen · Mt. Fuji · Japan" loading="lazy">
+        <div class="short-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="short-label">Shinkansen · Mt. Fuji · Japan</div>
+    </a>
+    <a class="short-card" href="https://www.youtube.com/shorts/ND5W1InyojU" target="_blank" rel="noopener" onclick="gtag('event','shorts_click',{'event_category':'engagement','event_label':'korea'});">
+      <div class="short-thumb">
+        <img src="https://img.youtube.com/vi/ND5W1InyojU/maxresdefault.jpg" alt="Gangchon Rail Bike · South Korea" loading="lazy">
+        <div class="short-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="short-label">Gangchon Rail Bike · South Korea</div>
+    </a>
+    <a class="short-card" href="https://www.youtube.com/shorts/wxbrBKKCbKY" target="_blank" rel="noopener" onclick="gtag('event','shorts_click',{'event_category':'engagement','event_label':'iceland'});">
+      <div class="short-thumb">
+        <img src="https://img.youtube.com/vi/wxbrBKKCbKY/maxresdefault.jpg" alt="Hallgrimskirkja · Reykjavik · Iceland" loading="lazy">
+        <div class="short-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="short-label">Hallgrimskirkja · Reykjavik · Iceland</div>
+    </a>
+    <a class="short-card" href="https://www.youtube.com/shorts/G_94KXJm5bU" target="_blank" rel="noopener" onclick="gtag('event','shorts_click',{'event_category':'engagement','event_label':'vietnam'});">
+      <div class="short-thumb">
+        <img src="https://img.youtube.com/vi/G_94KXJm5bU/maxresdefault.jpg" alt="Streets of Vietnam" loading="lazy">
+        <div class="short-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="short-label">Streets of Vietnam</div>
+    </a>
+  </div>
+  <div class="shorts-cta">
+    <a href="https://www.youtube.com/@Atlas0Archives/shorts" target="_blank" rel="noopener" onclick="gtag('event','youtube_channel_click',{'event_category':'engagement','event_label':'shorts_strip'});">View All Shorts on YouTube →</a>
+  </div>
 </section>
 
 <!-- MAP SECTION -->
@@ -1684,6 +1776,7 @@
  </div>
 </section>
 
+
 <!-- FOOTER -->
 <footer>
  <div>
@@ -1696,6 +1789,14 @@
  <a href="#restaurants">Dining</a>
  <a href="#journal">Journal</a>
  <a href="https://wa.me/919845602165" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'cta_section'});">Contact</a>
+ </div>
+ <div class="footer-social">
+ <a href="https://www.instagram.com/atlasandarchives" target="_blank" rel="noopener" title="Instagram" onclick="gtag('event','social_click',{'event_category':'engagement','event_label':'instagram_footer'});">
+   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+ </a>
+ <a href="https://www.youtube.com/@Atlas0Archives/shorts" target="_blank" rel="noopener" title="YouTube" onclick="gtag('event','social_click',{'event_category':'engagement','event_label':'youtube_footer'});">
+   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+ </a>
  </div>
  <div class="footer-copy">© 2026 Atlas &amp; Archives. All rights reserved.</div>
  <div class="footer-disclaimer">All photographs, itineraries, and written content on this website are the original work of Atlas &amp; Archives and are protected under copyright law. No image, text, or itinerary may be reproduced, distributed, or used in any form without prior written permission from the authors. For licensing or usage enquiries, contact us on WhatsApp.</div>
