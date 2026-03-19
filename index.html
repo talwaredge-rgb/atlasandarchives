@@ -1236,6 +1236,56 @@
   .shorts-cta a { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); text-decoration: none; border: 1px solid rgba(184,146,74,0.4); padding: 0.6rem 1.6rem; transition: all 0.2s; }
   .shorts-cta a:hover { background: var(--gold); color: var(--ink); }
   @media(max-width:600px) { .short-card { width: 130px; } .short-thumb { width: 130px; height: 231px; } .shorts-row { padding: 0 1.2rem; } }
+
+  /* ── DESTINATION PILLS (mobile hero) ── */
+  .hero-dest-pills {
+    display: none;
+  }
+  @media(max-width:768px) {
+    .hero-dest-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0 1.2rem;
+    }
+    .hero-dest-pill {
+      font-size: 0.58rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(184,146,74,0.45);
+      padding: 0.35rem 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: transparent;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+    }
+    .hero-dest-pill:hover, .hero-dest-pill:active {
+      background: var(--gold);
+      color: var(--ink);
+    }
+    .hero-eyebrow {
+      font-size: 0.6rem;
+    }
+    .hero-sub {
+      font-weight: 300;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .hero-mobile-utility {
+      display: block;
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+  }
+  @media(min-width:769px) {
+    .hero-mobile-utility { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -1256,12 +1306,20 @@
 <!-- HERO -->
 <section class="hero">
  <div class="hero-left">
- <div class="hero-eyebrow">Curated Since 2005</div>
+ <div class="hero-eyebrow">Free Travel Itineraries &nbsp;·&nbsp; Real Trips &nbsp;·&nbsp; Honest Advice</div>
  <h1 class="hero-title">
  50+ Countries.<br>
  Two <em>Obsessive</em><br>
  Travellers.
  </h1>
+ <div class="hero-dest-pills">
+  <span class="hero-dest-pill" onclick="openItinerary('japan')">Japan 14 Days</span>
+  <span class="hero-dest-pill" onclick="openItinerary('korea')">South Korea 11 Days</span>
+  <span class="hero-dest-pill" onclick="openItinerary('iceland')">Iceland 8 Days</span>
+  <span class="hero-dest-pill" onclick="openItinerary('turkey')">Turkey 12 Days</span>
+  <span class="hero-dest-pill" onclick="openItinerary('australia')">Australia 15 Days</span>
+  <span class="hero-dest-pill" onclick="openItinerary('seychelles')">Seychelles 7 Days</span>
+ </div>
  <p class="hero-sub">
  Not a travel agency. Not an algorithm. A couple who has spent two decades eating, sleeping, and living in the world's most extraordinary places, so you don't have to figure it out alone. Every photograph on this site is ours.
  </p>
