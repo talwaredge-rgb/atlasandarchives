@@ -1434,7 +1434,7 @@
  <div class="continent-count">27</div>
  <div class="continent-name">Europe</div>
  </div>
- <div class="continent-countries"><span class="country-tag">Austria</span><span class="country-tag">Belgium</span><span class="country-tag">Croatia</span><span class="country-tag">Czech Republic</span><span class="country-tag">Denmark</span><span class="country-tag">England</span><span class="country-tag">Estonia</span><span class="country-tag">Finland</span><span class="country-tag">France</span><span class="country-tag">Germany</span><span class="country-tag">Greece</span><span class="country-tag">Hungary</span><span class="country-tag country-tag--linked" onclick="openItinerary('iceland')" style="cursor:pointer;" title="View Iceland itinerary">Iceland →</span><span class="country-tag">Ireland</span><span class="country-tag">Italy</span><span class="country-tag">Netherlands</span><span class="country-tag">Norway</span><span class="country-tag">Poland</span><span class="country-tag">San Marino</span><span class="country-tag">Scotland</span><span class="country-tag">Slovakia</span><span class="country-tag">Slovenia</span><span class="country-tag">Spain</span><span class="country-tag">Sweden</span><span class="country-tag">Switzerland</span><span class="country-tag country-tag--linked" onclick="openItinerary('turkey')" style="cursor:pointer;" title="View Turkey itinerary">Turkey →</span><span class="country-tag">Vatican City</span></div>
+ <div class="continent-countries"><span class="country-tag">Austria</span><span class="country-tag">Belgium</span><span class="country-tag">Croatia</span><span class="country-tag">Czech Republic</span><span class="country-tag">Denmark</span><span class="country-tag">England</span><span class="country-tag">Estonia</span><span class="country-tag">Finland</span><span class="country-tag">France</span><span class="country-tag">Germany</span><span class="country-tag">Greece</span><span class="country-tag">Hungary</span><span class="country-tag country-tag--linked" onclick="openItinerary('iceland')" style="cursor:pointer;" title="View Iceland itinerary">Iceland →</span><span class="country-tag">Ireland</span><span class="country-tag">Italy</span><span class="country-tag">Netherlands</span><span class="country-tag">Norway</span><span class="country-tag">Poland</span><span class="country-tag">San Marino</span><span class="country-tag country-tag--linked" onclick="openItinerary('scotland')" style="cursor:pointer;" title="View Scotland itinerary">Scotland →</span><span class="country-tag">Slovakia</span><span class="country-tag">Slovenia</span><span class="country-tag">Spain</span><span class="country-tag">Sweden</span><span class="country-tag">Switzerland</span><span class="country-tag country-tag--linked" onclick="openItinerary('turkey')" style="cursor:pointer;" title="View Turkey itinerary">Turkey →</span><span class="country-tag">Vatican City</span></div>
  </div>
  <div class="continent-card" style="">
  <div class="continent-header">
@@ -1552,15 +1552,15 @@
  <div class="card-meta">Best in <span>May–Oct (Dry Season)</span></div>
  </div>
  </div>
- <div class="itinerary-card itinerary-scotland" style="cursor:default;">
+ <div class="itinerary-card itinerary-scotland" onclick="openItinerary('scotland')" style="cursor:pointer;">
  <div class="card-img">
  <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/journeys/Scotland.jpeg" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Scottish Highlands">
  <div class="card-gradient-overlay"></div>
  </div>
  <div class="card-body">
- <div class="card-tag">Scotland</div>
- <div class="card-title">Highlands, Lochs<br>&amp; the Road North</div>
- <div class="card-meta"><span>Coming Soon</span></div>
+ <div class="card-tag">8 Days · Scotland</div>
+ <div class="card-title">Inverness, Skye,<br>Glasgow &amp; Edinburgh</div>
+ <div class="card-meta">Best in <span>May-Sep (Summer)</span></div>
  </div>
  </div>
  <div class="itinerary-card itinerary-vietnam" onclick="openItinerary('vietnam')" style="cursor:pointer;">
@@ -3764,6 +3764,151 @@ const itinData = {
  <div class="itin-modal-cta-note">WhatsApp &amp; Calls · Mon-Sat, 10am-7pm IST</div>
  <a href="/vietnam-itinerary.html" class="itin-modal-cta-read" style="display:block;margin-top:1.2rem;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(245,239,230,0.45);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#d4a96a'" onmouseout="this.style.color='rgba(245,239,230,0.45)'">Read Full Itinerary &rarr;</a>
  </div>`,
+ scotland: `
+ <div class="itin-modal-hero">
+ <img src="https://raw.githubusercontent.com/talwaredge-rgb/atlasandarchives/main/images/journeys/Scotland.jpeg" alt="Scotland">
+ <div class="itin-modal-hero-overlay"></div>
+ <div class="itin-modal-hero-content">
+ <div class="itin-modal-tag">8 Days · June</div>
+ <h2 class="itin-modal-title">Scotland, <em>Deeply Green</em></h2>
+ <div class="itin-modal-meta">
+ <div class="itin-modal-meta-item">Cities <span>Inverness · Isle of Skye · Glasgow · Edinburgh</span></div>
+ <div class="itin-modal-meta-item">Best Season <span>May-Sep (Summer)</span></div>
+ <div class="itin-modal-meta-item">Fly into <span>Inverness via London</span></div>
+ <div class="itin-modal-meta-item">Fly out of <span>Edinburgh</span></div>
+ </div>
+ </div>
+ </div>
+
+ <div class="itin-modal-intro">
+ <div class="itin-modal-intro-label">Trip Architecture</div>
+ <p>Fly into London, connect to Inverness and start from the north. A full-day Highlands tour covers Isle of Skye and Eilean Donan Castle. Train south to Glasgow for two days. Train east to Edinburgh for three days. No car needed. The whole route moves in one clean direction.</p>
+ </div>
+
+ <div class="itin-modal-facts">
+ <div class="itin-modal-fact"><div class="itin-modal-fact-num">8</div><div class="itin-modal-fact-label">Days</div></div>
+ <div class="itin-modal-fact"><div class="itin-modal-fact-num">4</div><div class="itin-modal-fact-label">Cities</div></div>
+ <div class="itin-modal-fact"><div class="itin-modal-fact-num">0</div><div class="itin-modal-fact-label">Car needed</div></div>
+ <div class="itin-modal-fact"><div class="itin-modal-fact-num">Jun</div><div class="itin-modal-fact-label">When we went</div></div>
+ </div>
+
+ <div class="itin-modal-days">
+ <div class="itin-modal-days-hdr">Day by Day</div>
+ <div class="itin-modal-days-sub">Inverness · Skye · Glasgow · Edinburgh</div>
+
+ <div class="itin-day-row">
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">1</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">Inverness · Arrival</div>
+ <div class="itin-day-headline">Late Night Landing in the Highland Capital</div>
+ <div class="itin-day-story">British Airways from London lands around nine in the evening. Small airport, bags come quickly. Taxi to your hotel on the River Ness. Set your alarm early. Tomorrow is the best day of the trip.</div>
+ <div class="itin-highlights"><span class="itin-highlight">Inverness Airport</span><span class="itin-highlight">River Ness</span><span class="itin-highlight">City Centre</span></div>
+ </div>
+ </div>
+
+ <div class="itin-day-row">
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">2</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">Isle of Skye · Eilean Donan</div>
+ <div class="itin-day-headline">The Day That Makes the Whole Trip</div>
+ <div class="itin-day-story">Timberbush Tours departs Farraline Park Bus Station at 8am. A full day through the Highlands, across the Skye Bridge, into Portree. Lunch at the Lower Deck on the harbour. Fish and chips with the painted houses reflected in the water. Eilean Donan Castle on the return, where both a Bollywood classic and a James Bond film were shot. Back to Inverness by eight.</div>
+ <div class="itin-highlights"><span class="itin-highlight">Timberbush Tours</span><span class="itin-highlight">Isle of Skye</span><span class="itin-highlight">Portree</span><span class="itin-highlight">Lower Deck</span><span class="itin-highlight">Eilean Donan</span></div>
+ <div class="itin-tip"><div class="itin-tip-label">Book in Advance</div><div class="itin-tip-text">Timberbush books out in June and July. Reserve online at least two weeks ahead.</div></div>
+ </div>
+ </div>
+
+ <div class="itin-day-row">
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">3</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">Inverness to Glasgow</div>
+ <div class="itin-day-headline">Morning Train South Through the Cairngorms</div>
+ <div class="itin-day-story">ScotRail from Inverness at 9:42am. Three and a half hours through the Cairngorms. Arrive Glasgow Queen Street at 1:15pm. Hotel five minutes walk. Afternoon city tour and dinner in Merchant City.</div>
+ <div class="itin-highlights"><span class="itin-highlight">ScotRail Train</span><span class="itin-highlight">Cairngorms</span><span class="itin-highlight">Glasgow Queen Street</span><span class="itin-highlight">Merchant City</span></div>
+ </div>
+ </div>
+
+ <div class="itin-day-row">
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">4</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">Glasgow · Full Day</div>
+ <div class="itin-day-headline">George Square, the Cathedral and Market Berries</div>
+ <div class="itin-day-story">George Square, Glasgow Cathedral, Buchanan Street. Then the local market for summer berries. Scotland in June has strawberries, raspberries, blueberries and cherries at their absolute peak for almost nothing. Evening at the casino or dinner in Finnieston along the river.</div>
+ <div class="itin-highlights"><span class="itin-highlight">George Square</span><span class="itin-highlight">Glasgow Cathedral</span><span class="itin-highlight">Buchanan Street</span><span class="itin-highlight">Local Market</span><span class="itin-highlight">Finnieston</span></div>
+ </div>
+ </div>
+
+ <div class="itin-day-row">
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">5</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">Glasgow to Edinburgh</div>
+ <div class="itin-day-headline">Fifty Minutes Between Two Very Different Cities</div>
+ <div class="itin-day-story">The Glasgow to Edinburgh train takes fifty minutes and runs every fifteen minutes. Arrive at Waverley with the castle looming above. Afternoon on the Royal Mile walking from Holyroodhouse to the castle, stopping at the closes and wynds along the way.</div>
+ <div class="itin-highlights"><span class="itin-highlight">Glasgow to Edinburgh</span><span class="itin-highlight">Edinburgh Waverley</span><span class="itin-highlight">Royal Mile</span><span class="itin-highlight">Old Town</span></div>
+ </div>
+ </div>
+
+ <div class="itin-day-row">
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">6</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">Edinburgh · Castle and Whisky</div>
+ <div class="itin-day-headline">A Thousand Years of History and a Very Good Dram</div>
+ <div class="itin-day-story">Edinburgh Castle in the morning including the Scottish Crown Jewels and the views across the city. Book entry in advance. Afternoon at the Scotch Whisky Experience on the Royal Mile: the barrel ride and a tasting that introduces you to at least one whisky you had not considered before.</div>
+ <div class="itin-highlights"><span class="itin-highlight">Edinburgh Castle</span><span class="itin-highlight">Scottish Crown Jewels</span><span class="itin-highlight">Scotch Whisky Experience</span><span class="itin-highlight">Royal Mile</span></div>
+ </div>
+ </div>
+
+ <div class="itin-day-row">
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">7</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">Edinburgh · Arthur's Seat</div>
+ <div class="itin-day-headline">The Extinct Volcano in the Middle of the City</div>
+ <div class="itin-day-story">Arthur's Seat rises 251 metres from Holyrood Park, twenty minutes walk from the Old Town. Forty-five minutes to the summit. The view across the city and Firth of Forth is one of the finest urban panoramas in Europe. Afternoon in the New Town and Princes Street Gardens.</div>
+ <div class="itin-highlights"><span class="itin-highlight">Arthur's Seat</span><span class="itin-highlight">Holyrood Park</span><span class="itin-highlight">New Town</span><span class="itin-highlight">Princes Street Gardens</span></div>
+ </div>
+ </div>
+
+ <div class="itin-day-row">
+ <div class="itin-day-col-left"><div class="itin-day-dot"><span class="itin-day-dot-num">8</span></div></div>
+ <div class="itin-day-col-right">
+ <div class="itin-day-location-label">Edinburgh · Departure</div>
+ <div class="itin-day-headline">Victoria Street and Home</div>
+ <div class="itin-day-story">Walk Victoria Street and the Grassmarket in the morning. Airlink bus from Waverley Bridge to Edinburgh Airport takes thirty minutes and runs every ten minutes. Most international departures connect through London for long-haul flights home.</div>
+ <div class="itin-highlights"><span class="itin-highlight">Victoria Street</span><span class="itin-highlight">Grassmarket</span><span class="itin-highlight">Edinburgh Airport</span></div>
+ </div>
+ </div>
+
+ </div>
+
+ <div class="itin-modal-budget">
+ <div class="itin-modal-budget-hdr">Budget Signal</div>
+ <div class="itin-modal-budget-sub">Per couple · 8 nights · Includes accommodation, meals, trains and activities</div>
+ <div class="itin-modal-budget-rows">
+ <div class="itin-modal-budget-row">
+ <div class="itin-modal-budget-tier">Budget</div>
+ <div class="itin-modal-budget-amt">Rs.1.5-2 Lakhs</div>
+ <div class="itin-modal-budget-desc">Budget hotels, supermarket meals, advance train fares</div>
+ </div>
+ <div class="itin-modal-budget-row itin-modal-budget-row--mid">
+ <div class="itin-modal-budget-tier">Mid-Range</div>
+ <div class="itin-modal-budget-amt">Rs.3-4.5 Lakhs</div>
+ <div class="itin-modal-budget-desc">Good hotels, all meals out, Timberbush tour, castle entry, all trains</div>
+ </div>
+ <div class="itin-modal-budget-row">
+ <div class="itin-modal-budget-tier">Luxury</div>
+ <div class="itin-modal-budget-amt">Rs.7-10 Lakhs</div>
+ <div class="itin-modal-budget-desc">Five-star hotels, private Highlands tour, fine dining</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="itin-modal-cta">
+ <div class="itin-modal-cta-eyebrow">Plan Your Own Journey</div>
+ <h3 class="itin-modal-cta-title">Eight Days,<br><em>No Car Required.</em></h3>
+ <p class="itin-modal-cta-sub">We covered Inverness, Skye, Glasgow and Edinburgh in eight days by train. We know the timings, the tours worth booking, and exactly what to eat at every stop.</p>
+ <a href="https://wa.me/919845602165" class="itin-modal-cta-btn" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'journey_modal'});">Talk to Us on WhatsApp</a>
+ <div class="itin-modal-cta-note">WhatsApp &amp; Calls · Mon-Sat, 10am-7pm IST</div>
+ <a href="/scotland-itinerary.html" class="itin-modal-cta-read" style="display:block;margin-top:1.2rem;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(245,239,230,0.45);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#d4a96a'" onmouseout="this.style.color='rgba(245,239,230,0.45)'">Read Full Itinerary &rarr;</a>
+ </div>`,
 
 };
 
@@ -3772,7 +3917,8 @@ const tripTitles = {
  turkey: 'Turkey 12-Day Itinerary: Istanbul, Cappadocia & the Aegean Coast - Atlas & Archives',
  australia: 'Australia 15-Day Itinerary: Sydney, Melbourne & the Great Ocean Road - Atlas & Archives',
  seychelles: 'Seychelles 7-Day Itinerary: Mahe, Praslin & La Digue - Atlas & Archives',
- vietnam: 'Vietnam 10-Day Itinerary: Hanoi, Da Nang, Hoi An and Ho Chi Minh City - Atlas & Archives'
+ vietnam: 'Vietnam 10-Day Itinerary: Hanoi, Da Nang, Hoi An and Ho Chi Minh City - Atlas & Archives',
+ scotland: 'Scotland 8-Day Itinerary: Inverness, Isle of Skye, Glasgow and Edinburgh - Atlas & Archives'
 };
 const baseTitle = document.title;
 
