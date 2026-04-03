@@ -68,7 +68,7 @@
  --rust: #8b4a2a;
  --sage: #7a8c6e;
  --text-body: #3d3028;
- --text-muted: #8a7a6a;
+ --text-muted: #6a5a48;
  }
 
  html { scroll-behavior: smooth; }
@@ -382,7 +382,7 @@
  color: white;
  }
 .card-tag {
- font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+ font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
  color: var(--gold-light); margin-bottom: 0.6rem;
  display: flex; align-items: center; gap: 0.5rem;
  }
@@ -394,8 +394,8 @@
  }
 .itinerary-card:first-child.card-title { font-size: 2.1rem; }
 .card-meta {
- font-size: 0.62rem; letter-spacing: 0.15em;
- color: rgba(255,255,255,0.55); text-transform: uppercase;
+ font-size: 0.72rem; letter-spacing: 0.15em;
+ color: rgba(255,255,255,0.65); text-transform: uppercase;
  }
 .card-meta span { color: rgba(255,255,255,0.8); }
 
@@ -897,14 +897,14 @@
  border-bottom: 1px solid #e8ddd0;
  }
 .itin-modal-intro-label {
- font-size: 0.58rem; letter-spacing: 0.28em; text-transform: uppercase;
+ font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
  color: #b8924a; margin-bottom: 1rem;
  display: flex; align-items: center; gap: 0.7rem;
  }
 .itin-modal-intro-label::after { content: ''; flex: 1; max-width: 3rem; height: 1px; background: #b8924a; opacity: 0.4; }
 .itin-modal-intro p {
  font-family: 'Cormorant Garamond', serif;
- font-size: 1.2rem; font-weight: 300; line-height: 1.8; color: #1a1410;
+ font-size: 1.3rem; font-weight: 300; line-height: 1.8; color: #1a1410;
  }
 
  /* QUICK FACTS BAR */
@@ -968,7 +968,7 @@
  line-height: 1.2; margin-bottom: 0.8rem;
  }
 .itin-day-story {
- font-size: 0.72rem; line-height: 1.95; color: #6a5a4a;
+ font-size: 0.85rem; line-height: 1.95; color: #4a3a2a;
  letter-spacing: 0.025em; margin-bottom: 0.9rem;
  }
 .itin-highlights {
@@ -990,7 +990,7 @@
  font-family: 'Josefin Sans', sans-serif;
  }
 .itin-tip-text {
- font-size: 0.67rem; line-height: 1.65; color: #3d3028;
+ font-size: 0.8rem; line-height: 1.65; color: #3d3028;
  font-family: 'Josefin Sans', sans-serif;
  }
 
@@ -1028,7 +1028,7 @@
  font-size: 1.05rem; font-weight: 700; color: #2c2118;
  }
 .itin-modal-budget-desc {
- font-size: 0.8rem; color: #6b5a4a; line-height: 1.4;
+ font-size: 0.9rem; color: #5a4a38; line-height: 1.4;
  }
  @media (max-width: 600px) {
 .itin-modal-budget-row {
@@ -1054,7 +1054,7 @@
  }
 .itin-modal-cta-title em { font-style: italic; color: #d4a96a; }
 .itin-modal-cta-sub {
- font-size: 0.66rem; line-height: 1.9; color: rgba(245,239,230,0.4);
+ font-size: 0.78rem; line-height: 1.9; color: rgba(245,239,230,0.55);
  max-width: 380px; margin: 0 auto 2rem; letter-spacing: 0.04em;
  }
 .itin-modal-cta-btn {
@@ -1282,6 +1282,12 @@
       margin-bottom: 0.8rem;
       font-family: 'Josefin Sans', sans-serif;
     }
+    .itin-day-story { font-size: 0.92rem; }
+    .itin-tip-text { font-size: 0.85rem; }
+    .itin-modal-cta-sub { font-size: 0.82rem; }
+    .card-tag { font-size: 0.72rem; }
+    .card-meta { font-size: 0.75rem; }
+    .hero-dest-pill { font-size: 0.65rem; }
   }
   @media(min-width:769px) {
     .hero-mobile-utility { display: none; }
