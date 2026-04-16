@@ -112,6 +112,20 @@
   </div>
 </div>
 
+
+<div style="background:var(--cream);border-bottom:1px solid rgba(184,146,74,0.15);padding:2rem 2rem;">
+  <div style="max-width:520px;margin:0 auto;text-align:center;">
+    <p style="font-family:'Josefin Sans',sans-serif;font-size:0.55rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin:0 0 0.6rem;">No time to read everything?</p>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:300;font-style:italic;color:var(--ink);margin:0 0 1.2rem;line-height:1.5;">Share your email — we will send you the full Turkey itinerary with packing list and booking tips.</p>
+    <form action="https://formspree.io/f/xyklkqpq" method="POST" style="display:flex;gap:0;max-width:420px;margin:0 auto;" onsubmit="handleTopSubmit(event,'turkey')">
+      <input type="hidden" name="destination" value="Turkey">
+      <input type="hidden" name="form_location" value="top_banner">
+      <input type="email" name="email" id="topEmail_turkey" placeholder="your@email.com" required style="flex:1;padding:0.65rem 1rem;border:1px solid rgba(184,146,74,0.4);border-right:none;background:transparent;font-family:'Josefin Sans',sans-serif;font-size:0.72rem;letter-spacing:0.05em;color:var(--text);outline:none;min-width:0;">
+      <button type="submit" style="padding:0.65rem 1.4rem;background:var(--ink);border:1px solid var(--ink);color:var(--gold-light);font-family:'Josefin Sans',sans-serif;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;white-space:nowrap;flex-shrink:0;">Send</button>
+    </form>
+    <p id="topConfirm_turkey" style="display:none;font-size:0.68rem;color:var(--gold);margin:0.6rem 0 0;letter-spacing:0.05em;">Done. Check your inbox shortly.</p>
+  </div>
+</div>
 <div class="article-wrap">
 
   <p class="article-intro">Turkey refuses to be summarised. Istanbul alone could swallow a week, Byzantine, Ottoman and modern all jostling in a city of 16 million. Then Cappadocia delivers something from another planet: fairy chimneys, underground cities, and a dawn sky filled with a hundred hot air balloons. The Aegean coast closes it out with Roman ruins, thermal pools and seafood three feet from the water. This is a return trip, fly into Istanbul and out of Istanbul, with three internal flights connecting the dots and a rental car covering the Aegean stretch.</p>
@@ -355,9 +369,22 @@
 
 </div>
 
+
+<div style="max-width:740px;margin:0 auto;padding:2.5rem 2rem;border-top:1px solid rgba(184,146,74,0.15);">
+  <p style="font-family:'Josefin Sans',sans-serif;font-size:0.55rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin:0 0 0.4rem;">Save This Itinerary</p>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;font-weight:300;color:var(--ink);margin:0 0 1.1rem;line-height:1.5;">Get the complete Turkey itinerary in your inbox, with packing list and booking tips.</p>
+  <form action="https://formspree.io/f/xyklkqpq" method="POST" style="display:flex;gap:0;max-width:400px;" onsubmit="handleBottomSubmit(event,'turkey')">
+    <input type="hidden" name="destination" value="Turkey">
+    <input type="hidden" name="form_location" value="bottom_page">
+    <input type="email" name="email" id="botEmail_turkey" placeholder="your@email.com" required style="flex:1;padding:0.65rem 1rem;border:1px solid rgba(184,146,74,0.4);border-right:none;background:transparent;font-family:'Josefin Sans',sans-serif;font-size:0.72rem;letter-spacing:0.05em;color:var(--text);outline:none;min-width:0;">
+    <button type="submit" style="padding:0.65rem 1.4rem;background:transparent;border:1px solid var(--gold);color:var(--gold);font-family:'Josefin Sans',sans-serif;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;white-space:nowrap;flex-shrink:0;">Send</button>
+  </form>
+  <p id="botConfirm_turkey" style="display:none;font-size:0.68rem;color:var(--gold);margin:0.6rem 0 0;letter-spacing:0.05em;">Done. Check your inbox shortly.</p>
+</div>
+
 <div class="blog-cta">
   <p>Planning a Turkey trip? We went in April and know the balloon operators worth booking, the cave hotels worth paying for, and the Ephesus guides worth hiring.</p>
-  <a href="https://wa.me/919845602165" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'turkey_itin_cta'});">Talk to Us on WhatsApp</a>
+  <a href="https://wa.me/919845602165?text=Hi%2C%20I%20came%20across%20your%20Turkey%20itinerary%20and%20would%20love%20help%20planning%20my%20trip" onclick="gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'turkey_itin_cta'});">Talk to Us on WhatsApp</a>
   <a href="/turkey.html" class="read-link">Read the Turkey Journal &rarr;</a>
 </div>
 
@@ -379,5 +406,15 @@
   </div>
 </div>
 
+
+<script>
+async function submitEmailForm(formEl,confirmId,dest,loc){
+  const res=await fetch("https://formspree.io/f/xyklkqpq",{method:"POST",body:new FormData(formEl),headers:{"Accept":"application/json"}});
+  if(res.ok){document.getElementById(confirmId).style.display="block";formEl.reset();
+  if(typeof gtag!=="undefined")gtag("event","email_capture",{"event_category":"engagement","event_label":dest+"_"+loc});}
+}
+function handleTopSubmit(e,dest){e.preventDefault();submitEmailForm(e.target,"topConfirm_"+dest,dest,"top");}
+function handleBottomSubmit(e,dest){e.preventDefault();submitEmailForm(e.target,"botConfirm_"+dest,dest,"bottom");}
+</script>
 </body>
 </html>
