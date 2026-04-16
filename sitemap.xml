@@ -66,21 +66,28 @@
 
   <url>
     <loc>https://www.atlasandarchives.com/japan.html</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.atlasandarchives.com/turkey.html</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.atlasandarchives.com/australia.html</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.atlasandarchives.com/korea.html</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
